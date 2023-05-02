@@ -16,6 +16,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
 
 
   @Input() pokemon: PokemonDex;
+  @Input() level: number;
   @Output() stats: EventEmitter<PokemonStats> = new EventEmitter<PokemonStats>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
@@ -131,7 +132,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       base: base,
       ivs: ivs,
       evs: evs,
-      total: this.pokemonStatsService.calcStat(statId, 50, base, ivs, evs)
+      total: this.pokemonStatsService.calcStat(statId, this.level, base, ivs, evs)
     } as PokemonStat;
   }
 

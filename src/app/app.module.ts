@@ -14,6 +14,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { PokemonAutocompleteComponent } from './components/pokemon-autocomplete/pokemon-autocomplete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonStatsComponent } from './components/pokemon-stats/pokemon-stats.component';
+import { PokemonTypeComponent } from './components/pokemon-type/pokemon-type.component';
+import { PokemonLevelComponent } from './components/pokemon-level/pokemon-level.component';
+import { PokemonMoveComponent } from './components/pokemon-move/pokemon-move.component';
+import { PokemonNatureComponent } from './components/pokemon-nature/pokemon-nature.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { PokemonStatsComponent } from './components/pokemon-stats/pokemon-stats.
     IndexComponent,
     PokemonCardComponent,
     PokemonAutocompleteComponent,
-    PokemonStatsComponent
+    PokemonStatsComponent,
+    PokemonTypeComponent,
+    PokemonLevelComponent,
+    PokemonMoveComponent,
+    PokemonNatureComponent
   ],
   imports: [
     BrowserModule,

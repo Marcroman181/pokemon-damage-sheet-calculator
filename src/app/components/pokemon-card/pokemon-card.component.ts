@@ -38,6 +38,11 @@ export class PokemonCardComponent implements OnInit {
     this.pokemonModified.emit(this.pokemon);
   }
 
+  selectLevel(level: number): void {
+    this.pokemon.level = level;
+    this.pokemonModified.emit(this.pokemon);
+  }
+
   changeStats(pokemonStats: PokemonStats): void {
     this.pokemon.stats = pokemonStats;
     this.pokemonModified.emit(this.pokemon);

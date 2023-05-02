@@ -16,8 +16,14 @@
 
             <div class="mat-elevation-z8">
 
+                <pokemon-level 
+                    [initializedLevel]="50"
+                    (level)="selectLevel($event)">
+                </pokemon-level>
+
                 <pokemon-stats *ngIf="pokemonDex"
                     [pokemon]="pokemonDex"
+                    [level]="pokemon.level"
                     (stats)="changeStats($event)">
                 </pokemon-stats>
 

@@ -44,13 +44,12 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    if(this.form) {
+    if (this.form) {
       this.setFormWithDex(this.pokemon);
     }
   }
 
   initializeFormWithDex(pokemon: PokemonDex): void {
-    console.log("POKEMON CARD -> INITILIAZE WITH DEX");
 
     this.form = this.fb.group({
       hpBase: pokemon.bs.get("hp"),
@@ -77,30 +76,27 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   }
 
   setFormWithDex(pokemon: PokemonDex): void {
-    console.log("POKEMON CARD -> INITILIAZE WITH DEX");
 
     this.form.setValue({
       hpBase: pokemon.bs.get("hp"),
-      hpIVs: 31,//pokemon.stats.hp.ivs,
-      hpEVs: 0, //pokemon.stats.hp.evs,
+      hpIVs: 31,
+      hpEVs: 0,
       atkBase: pokemon.bs.get("atk"),
-      atkIVs: 31, //pokemon.stats.atk.ivs,
-      atkEVs: 0, //pokemon.stats.atk.evs,
+      atkIVs: 31,
+      atkEVs: 0,
       defBase: pokemon.bs.get("def"),
-      defIVs: 31,//pokemon.stats.def.ivs,
-      defEVs: 0, //pokemon.stats.def.evs,
+      defIVs: 31,
+      defEVs: 0,
       spaBase: pokemon.bs.get("spa"),
-      spaIVs: 31, //pokemon.stats.spa.ivs,
-      spaEVs: 0, //pokemon.stats.spa.evs,
+      spaIVs: 31,
+      spaEVs: 0,
       spdBase: pokemon.bs.get("spd"),
-      spdIVs: 31, //pokemon.stats.spd.ivs,
-      spdEVs: 0, //pokemon.stats.spd.evs,
+      spdIVs: 31,
+      spdEVs: 0,
       speBase: pokemon.bs.get("spe"),
-      speIVs: 31, //pokemon.stats.spe.ivs,
-      speEVs: 0 //pokemon.stats.spe.evs,
+      speIVs: 31,
+      speEVs: 0
     });
-
-    this.updateStats(this.form.value);
   }
 
   private subscribePokemon(): void {
@@ -111,7 +107,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   }
 
   private updateStats(dataForm: any): void {
-    console.log("Pokemon Card -> update");
+    console.log("Pokemon Stats -> update");
 
     const stats: PokemonStats = this.resolvePokemonStats(dataForm);
 

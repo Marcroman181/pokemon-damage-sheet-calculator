@@ -1,1 +1,44 @@
-<p>pokemon-stats works!</p>
+
+
+<form [formGroup]="form">
+
+    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+
+        <ng-container matColumnDef="stat">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.stat}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="base">
+            <mat-header-cell *matHeaderCellDef>Base</mat-header-cell>
+            <mat-cell class="description-cell" *matCellDef="let row">
+                <input [disabled]="true" matInput type="number" min="0" max="255" [defaultValue]="80" formControlName="{{row.id}}Base">
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="ivs">
+            <mat-header-cell *matHeaderCellDef>IVs</mat-header-cell>
+            <mat-cell class="duration-cell" *matCellDef="let row">
+                <input matInput type="number" min="0" max="31" [defaultValue]="31" formControlName="{{row.id}}IVs">
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="evs">
+            <mat-header-cell *matHeaderCellDef>EVs</mat-header-cell>
+            <mat-cell class="duration-cell" *matCellDef="let row">
+                <input matInput type="number" min="0" max="252" step="4" [defaultValue]="0" formControlName="{{row.id}}EVs">
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="total">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row"><span>{{row.total}}</span></mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+    </mat-table>
+    
+</form>

@@ -43,6 +43,16 @@ export class PokemonCardComponent implements OnInit {
     this.pokemonModified.emit(this.pokemon);
   }
 
+  selectType(type: string): void {
+    this.pokemon.type = type;
+    this.pokemonModified.emit(this.pokemon);
+  }
+
+  selectType2(type2: string): void {
+    this.pokemon.type2 = type2;
+    this.pokemonModified.emit(this.pokemon);
+  }
+
   changeStats(pokemonStats: PokemonStats): void {
     this.pokemon.stats = pokemonStats;
     this.pokemonModified.emit(this.pokemon);

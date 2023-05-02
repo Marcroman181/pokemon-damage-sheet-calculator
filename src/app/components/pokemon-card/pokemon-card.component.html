@@ -21,6 +21,16 @@
                     (level)="selectLevel($event)">
                 </pokemon-level>
 
+                <pokemon-type 
+                    [type]="pokemonDex.type"
+                    (changeType)="selectType($event)">
+                </pokemon-type>
+
+                <pokemon-type 
+                    [type]="pokemonDex.type2"
+                    (changeType)="selectType2($event)">
+                </pokemon-type>
+
                 <pokemon-stats *ngIf="pokemonDex"
                     [pokemon]="pokemonDex"
                     [level]="pokemon.level"

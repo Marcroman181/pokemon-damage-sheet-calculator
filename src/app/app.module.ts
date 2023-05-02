@@ -18,6 +18,8 @@ import { PokemonTypeComponent } from './components/pokemon-type/pokemon-type.com
 import { PokemonLevelComponent } from './components/pokemon-level/pokemon-level.component';
 import { PokemonMoveComponent } from './components/pokemon-move/pokemon-move.component';
 import { PokemonNatureComponent } from './components/pokemon-nature/pokemon-nature.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { PokemonNatureComponent } from './components/pokemon-nature/pokemon-natu
     MatTableModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent]

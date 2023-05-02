@@ -34,5 +34,4 @@ export class PokemonLevelComponent implements OnInit {
       .subscribe(dataForm => this.level.emit(dataForm.level));
   } 
 
-
 }

@@ -1,1 +1,11 @@
-<p>pokemon-type works!</p>
+<form [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let pokemonType of types" [value]="pokemonType">
+                {{pokemonType}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

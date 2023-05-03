@@ -17,6 +17,8 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
 
   @Input() pokemon: PokemonDex;
   @Input() level: number;
+  @Input() nature: string;
+  
   @Output() stats: EventEmitter<PokemonStats> = new EventEmitter<PokemonStats>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
@@ -45,6 +47,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    console.log("CHANGES");
     if (this.form) {
       this.setFormWithDex(this.pokemon);
     }
@@ -72,8 +75,6 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       speIVs: 31,
       speEVs: 0
     });
-
-    this.updateStats(this.form.value);
   }
 
   setFormWithDex(pokemon: PokemonDex): void {
@@ -132,7 +133,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       base: base,
       ivs: ivs,
       evs: evs,
-      total: this.pokemonStatsService.calcStat(statId, this.level, base, ivs, evs)
+      total: this.pokemonStatsService.calcStat(statId, this.level, this.nature, base, ivs, evs)
     } as PokemonStat;
   }
 

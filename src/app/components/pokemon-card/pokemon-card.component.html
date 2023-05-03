@@ -31,9 +31,15 @@
                     (changeType)="selectType2($event)">
                 </pokemon-type>
 
+                <pokemon-nature 
+                    [nature]=""
+                    (changeNature)="selectNature($event)">
+                </pokemon-nature>
+
                 <pokemon-stats *ngIf="pokemonDex"
                     [pokemon]="pokemonDex"
                     [level]="pokemon.level"
+                    [nature]="pokemon.nature"
                     (stats)="changeStats($event)">
                 </pokemon-stats>
 

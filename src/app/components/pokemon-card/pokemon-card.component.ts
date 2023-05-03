@@ -40,7 +40,7 @@ export class PokemonCardComponent implements OnInit {
 
   selectLevel(level: number): void {
     this.pokemon.level = level;
-    this.pokemonModified.emit(this.pokemon);
+   // this.pokemonModified.emit(this.pokemon);
   }
 
   selectType(type: string): void {
@@ -51,6 +51,11 @@ export class PokemonCardComponent implements OnInit {
   selectType2(type2: string): void {
     this.pokemon.type2 = type2;
     this.pokemonModified.emit(this.pokemon);
+  }
+
+  selectNature(nature: string): void {
+    this.pokemon.nature = nature;
+  //  this.pokemonModified.emit(this.pokemon);
   }
 
   changeStats(pokemonStats: PokemonStats): void {

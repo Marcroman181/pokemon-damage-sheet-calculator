@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PokemonDex } from '../model/pokemon-dex/pokemonDex';
 import pokedex from "../../assets/pokedex.json"
+
 @Injectable({
   providedIn: 'root'
 })

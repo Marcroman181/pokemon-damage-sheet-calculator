@@ -1,1 +1,22 @@
-<p>pokemon-move works!</p>
+<form [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Move</mat-label>
+      <input type="text"
+             placeholder=""
+             aria-label="Number"
+             matInput
+             formControlName="name"
+             [matAutocomplete]="auto"
+             (click)="clearSearch()">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="selectMove($event)">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <span>{{selectedMove.bp}}</span>
+    <span>{{selectedMove.type}}</span>
+    <span>{{selectedMove.category}}</span>
+
+  </form>

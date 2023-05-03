@@ -18,7 +18,6 @@ export class PokemonAutocompleteComponent implements OnInit {
   myControl = new FormControl('');
   filteredOptions: Observable<Array<string>>;
 
-
   ngOnInit() {
 
     if (this.initializedPokemon) {
@@ -42,6 +41,10 @@ export class PokemonAutocompleteComponent implements OnInit {
 
     this.selectedPokemon.emit($event.option.value);
     console.log("Pokemon Autocomplete Selected => " + $event.option.value);
+  }
+
+  clearSearch(): void {
+    this.myControl.setValue('');
   }
 
 }

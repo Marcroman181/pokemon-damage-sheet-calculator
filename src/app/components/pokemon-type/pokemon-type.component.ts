@@ -15,8 +15,10 @@ export class PokemonTypeComponent implements OnInit {
   @Output() changeType: EventEmitter<string> = new EventEmitter<string>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
+  
   form: FormGroup;
   types: Array<string> = [];
+
   constructor(private readonly pokemonTypesService: PokemonTypesService,
     private readonly fb: FormBuilder) {
   }

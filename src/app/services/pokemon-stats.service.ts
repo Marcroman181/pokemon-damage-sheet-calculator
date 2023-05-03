@@ -23,11 +23,7 @@ export class PokemonStatsService {
       nature: '',
       type: pokemon.type,
       type2: pokemon.type2,
-      currentHp: 100,
-      move1: '',
-      move2: '',
-      move3: '',
-      move4: ''
+      currentHp: 100
     } as PokemonSet;
   }
 

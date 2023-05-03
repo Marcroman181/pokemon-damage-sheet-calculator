@@ -43,6 +43,26 @@
                     (stats)="changeStats($event)">
                 </pokemon-stats>
 
+                <pokemon-move 
+                    [move]="undefined"
+                    (changeMove)="selectMove(1, $event)">
+                </pokemon-move>
+
+                <pokemon-move 
+                    [move]="undefined"
+                    (changeMove)="selectMove(2, $event)">
+                </pokemon-move>
+
+                <pokemon-move 
+                    [move]="undefined"
+                    (changeMove)="selectMove(3, $event)">
+                </pokemon-move>
+
+                <pokemon-move 
+                    [move]="undefined"
+                    (changeMove)="selectMove(4, $event)">
+                </pokemon-move>
+
             </div>
 
         </mat-card-content>

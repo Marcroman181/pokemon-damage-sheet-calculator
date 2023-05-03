@@ -4,6 +4,7 @@ import { PokedexService } from 'src/app/services/pokedex.service';
 import { PokemonDex } from 'src/app/model/pokemon-dex/pokemonDex';
 import { PokemonStatsService } from 'src/app/services/pokemon-stats.service';
 import { PokemonStats } from 'src/app/model/pokemon-stats/pokemon-stats';
+import { Move } from 'src/app/model/move/move';
 
 @Component({
   selector: 'pokemon-card',
@@ -60,6 +61,22 @@ export class PokemonCardComponent implements OnInit {
 
   changeStats(pokemonStats: PokemonStats): void {
     this.pokemon.stats = pokemonStats;
+    this.pokemonModified.emit(this.pokemon);
+  }
+
+  selectMove(index: number, move: Move): void {
+    if(index === 1) {
+      this.pokemon.move1 = move;
+    }
+    if(index === 2) {
+      this.pokemon.move2 = move;
+    }
+    if(index === 3) {
+      this.pokemon.move3 = move;
+    }
+    if(index === 4) {
+      this.pokemon.move4 = move;
+    }
     this.pokemonModified.emit(this.pokemon);
   }
 

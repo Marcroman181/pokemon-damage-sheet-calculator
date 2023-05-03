@@ -75,6 +75,8 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       speIVs: 31,
       speEVs: 0
     });
+
+    this.updateStats(this.form.value);
   }
 
   setFormWithDex(pokemon: PokemonDex): void {

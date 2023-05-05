@@ -12,7 +12,7 @@
         <ng-container matColumnDef="base">
             <mat-header-cell *matHeaderCellDef>Base</mat-header-cell>
             <mat-cell class="description-cell" *matCellDef="let row">
-                <input [disabled]="true" matInput type="number" min="0" max="255" [defaultValue]="80" formControlName="{{row.id}}Base">
+                <input matInput type="number" min="0" max="255" [defaultValue]="80" formControlName="{{row.id}}Base">
             </mat-cell>
         </ng-container>
 

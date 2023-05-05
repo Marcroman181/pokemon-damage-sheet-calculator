@@ -20,6 +20,10 @@ import { PokemonMoveComponent } from './components/pokemon-move/pokemon-move.com
 import { PokemonNatureComponent } from './components/pokemon-nature/pokemon-nature.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { OpponentPokemonContainerComponent } from './components/opponent-pokemon-container/opponent-pokemon-container.component';
+import { OpponentPokemonComponent } from './components/opponent-pokemon/opponent-pokemon.component';
+import { MatButtonModule } from '@angular/material/button';
+import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokemon-modal.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { MatSelectModule } from '@angular/material/select';
     PokemonTypeComponent,
     PokemonLevelComponent,
     PokemonMoveComponent,
-    PokemonNatureComponent
+    PokemonNatureComponent,
+    OpponentPokemonContainerComponent,
+    OpponentPokemonComponent,
+    EditPokemonModalComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,8 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent]

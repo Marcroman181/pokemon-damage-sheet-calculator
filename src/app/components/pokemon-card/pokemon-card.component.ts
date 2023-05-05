@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { PokedexService } from 'src/app/services/pokedex.service';
 import { PokemonDex } from 'src/app/model/pokemon-dex/pokemonDex';
@@ -13,6 +13,7 @@ import { Move } from 'src/app/model/move/move';
 })
 export class PokemonCardComponent implements OnInit {
 
+  @Input() initializePokemon: PokemonSet;
   @Output() pokemonModified: EventEmitter<PokemonSet> = new EventEmitter<PokemonSet>();
 
   pokedex: Map<string, PokemonDex> = new Map<string, PokemonDex>();
@@ -28,8 +29,13 @@ export class PokemonCardComponent implements OnInit {
   ngOnInit(): void {
     this.pokedex = this.pokedexService.getAllPokemon();
     this.pokedexSuggestions = Array.from(this.pokedex.keys());
-    this.pokemonDex = this.pokedex.values().next().value;
-    this.pokemon = this.pokemonStatsService.convertPokemonDexToPokemonSet(this.pokemonDex);
+    if(this.initializePokemon) {
+      this.pokemon = this.initializePokemon;
+      this.pokemonDex = this.pokedex.get(this.initializePokemon.name);
+    } else {
+      this.pokemonDex = this.pokedex.values().next().value;
+      this.pokemon = this.pokemonStatsService.convertPokemonDexToPokemonSet(this.pokemonDex);
+    }
   }
 
   selectPokemon(pokemon: string): void {
@@ -41,7 +47,6 @@ export class PokemonCardComponent implements OnInit {
 
   selectLevel(level: number): void {
     this.pokemon.level = level;
-   // this.pokemonModified.emit(this.pokemon);
   }
 
   selectType(type: string): void {
@@ -56,7 +61,6 @@ export class PokemonCardComponent implements OnInit {
 
   selectNature(nature: string): void {
     this.pokemon.nature = nature;
-  //  this.pokemonModified.emit(this.pokemon);
   }
 
   changeStats(pokemonStats: PokemonStats): void {

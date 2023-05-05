@@ -17,7 +17,7 @@
             <div class="mat-elevation-z8">
 
                 <pokemon-level 
-                    [initializedLevel]="50"
+                    [initializedLevel]="pokemon.level"
                     (level)="selectLevel($event)">
                 </pokemon-level>
 
@@ -32,34 +32,35 @@
                 </pokemon-type>
 
                 <pokemon-nature 
-                    [nature]=""
+                    [nature]="pokemon.nature"
                     (changeNature)="selectNature($event)">
                 </pokemon-nature>
 
-                <pokemon-stats *ngIf="pokemonDex"
-                    [pokemon]="pokemonDex"
+                <pokemon-stats *ngIf="pokemon"
+                    [pokemonStats]="pokemon.stats"
+                    [pokemonName]="pokemon.name"
                     [level]="pokemon.level"
                     [nature]="pokemon.nature"
-                    (stats)="changeStats($event)">
+                    (changeStats)="changeStats($event)">
                 </pokemon-stats>
 
                 <pokemon-move 
-                    [move]="undefined"
+                    [move]="pokemon.move1"
                     (changeMove)="selectMove(1, $event)">
                 </pokemon-move>
 
                 <pokemon-move 
-                    [move]="undefined"
+                    [move]="pokemon.move2"
                     (changeMove)="selectMove(2, $event)">
                 </pokemon-move>
 
                 <pokemon-move 
-                    [move]="undefined"
+                    [move]="pokemon.move3"
                     (changeMove)="selectMove(3, $event)">
                 </pokemon-move>
 
                 <pokemon-move 
-                    [move]="undefined"
+                    [move]="pokemon.move4"
                     (changeMove)="selectMove(4, $event)">
                 </pokemon-move>
 

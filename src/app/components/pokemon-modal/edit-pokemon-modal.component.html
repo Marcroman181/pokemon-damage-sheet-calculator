@@ -1,0 +1,17 @@
+<div class="modal-overlay">
+    <div class="edit-modal-container">
+
+        <pokemon-card [initializePokemon]="pokemon" 
+        (pokemonModified)="modifyPokemon($event)">
+
+        </pokemon-card>
+
+        <div>
+            <button mat-raised-button color="primary" (click)="add()" [innerText]="initializePokemon ? 'Edit Pokemon': 'Add Pokemon'"></button>
+        </div>
+        <div>
+            <button mat-raised-button (click)="close()">Close</button>
+        </div>
+
+    </div>
+</div>

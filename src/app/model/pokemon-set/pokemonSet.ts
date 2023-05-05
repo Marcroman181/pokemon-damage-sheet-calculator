@@ -2,6 +2,7 @@ import { Move } from "../move/move";
 import { PokemonStats } from "../pokemon-stats/pokemon-stats";
 
 export class PokemonSet {
+    id?: number;
     setName?: string
     name: string;
     level: number;

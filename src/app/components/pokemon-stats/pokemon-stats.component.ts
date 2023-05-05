@@ -15,11 +15,12 @@ import { PokemonStatsService } from 'src/app/services/pokemon-stats.service';
 export class PokemonStatsComponent implements OnInit, OnChanges {
 
 
-  @Input() pokemon: PokemonDex;
+  @Input() pokemonStats: PokemonStats;
+  @Input() pokemonName: string;
   @Input() level: number;
   @Input() nature: string;
-  
-  @Output() stats: EventEmitter<PokemonStats> = new EventEmitter<PokemonStats>();
+
+  @Output() changeStats: EventEmitter<PokemonStats> = new EventEmitter<PokemonStats>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
   form: FormGroup;
@@ -42,64 +43,70 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       { id: "spe", stat: "Speed", total: 100 }
     ];
 
-    this.initializeFormWithDex(this.pokemon);
+    this.initializeFormWithStats();
     this.subscribePokemon();
   }
 
-  ngOnChanges(): void {
-    console.log("CHANGES");
+  ngOnChanges(changes: SimpleChanges): void {
     if (this.form) {
-      this.setFormWithDex(this.pokemon);
+      if (changes["pokemonName"]) {
+        this.setForm();
+        console.log("POKEMON STATS --> CHANGES");
+      }
+      if (this.form && (changes["nature"] || changes["level"])) {
+        this.updateStats(this.form.value);
+        console.log("POKEMON STATS --> CHANGES");
+      }
     }
   }
 
-  initializeFormWithDex(pokemon: PokemonDex): void {
+  initializeFormWithStats(): void {
 
     this.form = this.fb.group({
-      hpBase: pokemon.bs.get("hp"),
-      hpIVs: 31,
-      hpEVs: 0,
-      atkBase: pokemon.bs.get("atk"),
-      atkIVs: 31,
-      atkEVs: 0,
-      defBase: pokemon.bs.get("def"),
-      defIVs: 31,
-      defEVs: 0,
-      spaBase: pokemon.bs.get("spa"),
-      spaIVs: 31,
-      spaEVs: 0,
-      spdBase: pokemon.bs.get("spd"),
-      spdIVs: 31,
-      spdEVs: 0,
-      speBase: pokemon.bs.get("spe"),
-      speIVs: 31,
-      speEVs: 0
+      hpBase: this.pokemonStats.hp.base,
+      hpIVs: this.pokemonStats.hp.ivs,
+      hpEVs: this.pokemonStats.hp.evs,
+      atkBase: this.pokemonStats.atk.base,
+      atkIVs: this.pokemonStats.atk.ivs,
+      atkEVs: this.pokemonStats.atk.evs,
+      defBase: this.pokemonStats.def.base,
+      defIVs: this.pokemonStats.def.ivs,
+      defEVs: this.pokemonStats.def.evs,
+      spaBase: this.pokemonStats.spa.base,
+      spaIVs: this.pokemonStats.spa.ivs,
+      spaEVs: this.pokemonStats.spa.evs,
+      spdBase: this.pokemonStats.spd.base,
+      spdIVs: this.pokemonStats.spd.ivs,
+      spdEVs: this.pokemonStats.spd.evs,
+      speBase: this.pokemonStats.spe.base,
+      speIVs: this.pokemonStats.spe.ivs,
+      speEVs: this.pokemonStats.spe.evs
     });
 
     this.updateStats(this.form.value);
   }
 
-  setFormWithDex(pokemon: PokemonDex): void {
+  setForm(): void {
 
     this.form.setValue({
-      hpBase: pokemon.bs.get("hp"),
-      hpIVs: 31,
-      hpEVs: 0,
-      atkBase: pokemon.bs.get("atk"),
-      atkIVs: 31,
-      atkEVs: 0,
-      defBase: pokemon.bs.get("def"),
-      defIVs: 31,
-      defEVs: 0,
-      spaBase: pokemon.bs.get("spa"),
-      spaIVs: 31,
-      spaEVs: 0,
-      spdBase: pokemon.bs.get("spd"),
-      spdIVs: 31,
-      spdEVs: 0,
-      speBase: pokemon.bs.get("spe"),
-      speIVs: 31,
-      speEVs: 0
+      hpBase: this.pokemonStats.hp.base,
+      hpIVs: this.pokemonStats.hp.ivs,
+      hpEVs: this.pokemonStats.hp.evs,
+      atkBase: this.pokemonStats.atk.base,
+      atkIVs: this.pokemonStats.atk.ivs,
+      atkEVs: this.pokemonStats.atk.evs,
+      defBase: this.pokemonStats.def.base,
+      defIVs: this.pokemonStats.def.ivs,
+      defEVs: this.pokemonStats.def.evs,
+      spaBase: this.pokemonStats.spa.base,
+      spaIVs: this.pokemonStats.spa.ivs,
+      spaEVs: this.pokemonStats.spa.evs,
+      spdBase: this.pokemonStats.spd.base,
+      spdIVs: this.pokemonStats.spd.ivs,
+      spdEVs: this.pokemonStats.spd.evs,
+      speBase: this.pokemonStats.spe.base,
+      speIVs: this.pokemonStats.spe.ivs,
+      speEVs: this.pokemonStats.spe.evs
     });
   }
 
@@ -122,7 +129,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
     this.dataSource.data[4].total = stats.spd.total;
     this.dataSource.data[5].total = stats.spe.total;
 
-    this.stats.emit(stats);
+    this.changeStats.emit(stats);
   }
 
   private convertToStat(dataForm: any, statId: string): PokemonStat {

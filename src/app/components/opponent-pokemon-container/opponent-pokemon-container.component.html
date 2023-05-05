@@ -1,0 +1,18 @@
+<div>
+  <button mat-raised-button color="primary" (click)="addPokemon()">Add Pokemon</button>
+</div>
+
+<ng-container *ngFor="let pokemon of pokemons.values()">
+    <opponent-pokemon [pokemon]="pokemon"
+                        (editPokemon)="editPokemon($event)"
+                        (deletePokemon)="deletePokemon($event)">
+
+    </opponent-pokemon>
+</ng-container>
+
+<edit-pokemon-modal *ngIf="showModal"
+    [initializePokemon]="pokemonToEdit"
+    (addPokemon)="savePokemon($event)"
+    (closeModal)="closeModal()">
+
+</edit-pokemon-modal>

@@ -1,11 +1,10 @@
 <form [formGroup]="form">
-    <mat-form-field appearance="fill">
-        <mat-label>Type</mat-label>
-        <mat-select formControlName="type">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let pokemonType of types" [value]="pokemonType">
+    <div class="form-group">
+        <select class="form-select" formControlName="type">
+            <option selected value="None">None</option>
+            <option *ngFor="let pokemonType of types" [value]="pokemonType">
                 {{pokemonType}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+            </option>
+        </select>
+    </div>
 </form>

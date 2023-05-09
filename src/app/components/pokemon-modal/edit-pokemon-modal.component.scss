@@ -3,12 +3,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 500px;
+    height: 600px;
     max-height: 100%;
-    width: 800px;
+    width: 100%;
+    padding: 5%;
     max-width: 100%;
     z-index: 1010;
-    overflow-y: auto;
+    overflow-y: auto;;
 }
 
 .modal-overlay {    

@@ -1,7 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, startWith, map } from 'rxjs';
-import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 
 @Component({
   selector: 'pokemon-autocomplete',
@@ -17,11 +16,15 @@ export class PokemonAutocompleteComponent implements OnInit {
 
   myControl = new FormControl('');
   filteredOptions: Observable<Array<string>>;
+  pokemon: string; 
+  
+  @ViewChild('pokemonInput') formInput: ElementRef;
 
   ngOnInit() {
 
     if (this.initializedPokemon) {
-      this.myControl.setValue(this.initializedPokemon);
+      this.myControl.setValue('');
+      this.pokemon = this.initializedPokemon;
     }
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -32,19 +35,24 @@ export class PokemonAutocompleteComponent implements OnInit {
 
   private _filter(value: string): Array<string> {
     const filterValue = value.toLowerCase();
-
     return this.pokedexSuggestions
       .filter(option => option.toLowerCase().includes(filterValue));
   }
 
-  selectPokemon($event: any): void {
-
-    this.selectedPokemon.emit($event.option.value);
-    console.log("Pokemon Autocomplete Selected => " + $event.option.value);
+  selectPokemon(option: string): void {
+    this.pokemon = option;
+    this.selectedPokemon.emit(option);
+    console.log("Pokemon Autocomplete Selected => " + option);
   }
 
-  clearSearch(): void {
+  initializeSearch(): void {
     this.myControl.setValue('');
+    this.isKeyboardActive();
+  }
+
+  isKeyboardActive() {
+     this.formInput.nativeElement.focus();
   }
 
 }
+

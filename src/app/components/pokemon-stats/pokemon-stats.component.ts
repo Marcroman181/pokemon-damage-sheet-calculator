@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatTableDataSource } from '@angular/material/table';
 import { Subject, takeUntil } from 'rxjs';
-import { PokemonDex } from 'src/app/model/pokemon-dex/pokemonDex';
 import { PokemonStat } from 'src/app/model/pokemon-stat/pokemon-stat';
 import { PokemonStats } from 'src/app/model/pokemon-stats/pokemon-stats';
 import { PokemonStatsService } from 'src/app/services/pokemon-stats.service';
@@ -25,24 +23,11 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   private readonly unsubscribe: Subject<void> = new Subject();
   form: FormGroup;
 
-  displayedColumns = ["stat", "base", "ivs", "evs", "total"];
-  dataSource: MatTableDataSource<any> = new MatTableDataSource();
-
   constructor(private readonly pokemonStatsService: PokemonStatsService,
     private readonly fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-
-    this.dataSource.data = [
-      { id: "hp", stat: "HP", total: 100 },
-      { id: "atk", stat: "Attack", total: 100 },
-      { id: "def", stat: "Defense", total: 100 },
-      { id: "spa", stat: "Sp. Atk", total: 100 },
-      { id: "spd", stat: "Sp. Def", total: 100 },
-      { id: "spe", stat: "Speed", total: 100 }
-    ];
-
     this.initializeFormWithStats();
     this.subscribePokemon();
   }
@@ -121,13 +106,6 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
     console.log("Pokemon Stats -> update");
 
     const stats: PokemonStats = this.resolvePokemonStats(dataForm);
-
-    this.dataSource.data[0].total = stats.hp.total;
-    this.dataSource.data[1].total = stats.atk.total;
-    this.dataSource.data[2].total = stats.def.total;
-    this.dataSource.data[3].total = stats.spa.total;
-    this.dataSource.data[4].total = stats.spd.total;
-    this.dataSource.data[5].total = stats.spe.total;
 
     this.changeStats.emit(stats);
   }

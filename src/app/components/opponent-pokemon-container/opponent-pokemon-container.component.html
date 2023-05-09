@@ -2,17 +2,17 @@
   <button mat-raised-button color="primary" (click)="addPokemon()">Add Pokemon</button>
 </div>
 
-<ng-container *ngFor="let pokemon of pokemons.values()">
-    <opponent-pokemon [pokemon]="pokemon"
-                        (editPokemon)="editPokemon($event)"
-                        (deletePokemon)="deletePokemon($event)">
+<div class="row">
+  <ng-container *ngFor="let pokemon of pokemons.values()">
+    <div class="col-lg-4 col-md-6 col-12">
+      <opponent-pokemon [pokemon]="pokemon" (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)">
 
-    </opponent-pokemon>
-</ng-container>
+      </opponent-pokemon>
+    </div>
+  </ng-container>
+</div>
 
-<edit-pokemon-modal *ngIf="showModal"
-    [initializePokemon]="pokemonToEdit"
-    (addPokemon)="savePokemon($event)"
-    (closeModal)="closeModal()">
+<edit-pokemon-modal *ngIf="showModal" [initializePokemon]="pokemonToEdit" (addPokemon)="savePokemon($event)"
+  (closeModal)="closeModal()">
 
 </edit-pokemon-modal>

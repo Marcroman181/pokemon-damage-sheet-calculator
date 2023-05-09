@@ -10,7 +10,7 @@ import { PokemonNaturesService } from 'src/app/services/pokemon-natures.service'
 })
 export class PokemonNatureComponent implements OnInit {
 
-  @Input() nature: string = '';
+  @Input() nature: string;
 
   @Output() changeNature: EventEmitter<string> = new EventEmitter<string>();
 
@@ -26,7 +26,7 @@ export class PokemonNatureComponent implements OnInit {
   ngOnInit(): void {
     this.natures = this.pokemonNaturesService.getAllPokemonNatures();
     this.form = this.fb.group({
-      nature: this.nature
+      nature: this.nature || ''
     });
 
     this.subscribeNatures();

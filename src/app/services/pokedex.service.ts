@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { PokemonDex } from '../model/pokemon-dex/pokemonDex';
-import pokedex from "../../assets/pokedex.json"
+import pokedex from "../../assets/pokedex.json";
+import {map, of, Subject, takeUntil} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokedexService {
 
-  pokedex: Map<string, PokemonDex>;
+  pokedex: Map<string, PokemonDex> = new Map<string, PokemonDex>();
+
+  private readonly unsubscribe: Subject<void> = new Subject();
 
   constructor() {
     this.resolvePokedex();
@@ -25,10 +28,12 @@ export class PokedexService {
 
   private resolvePokedex(): void {
 
-    this.pokedex = new Map<string, PokemonDex>();
-
-    Object.entries(JSON.parse(JSON.stringify(pokedex)))
-      .forEach((pokedexEntry: any) => this.pokedex.set(pokedexEntry[0], this.resolvePokemonDex(pokedexEntry)))
+    of(pokedex)
+      .pipe(
+        takeUntil(this.unsubscribe),
+        map((allPokedex: any) => Object.entries(JSON.parse(JSON.stringify(allPokedex))))
+        )
+      .subscribe((allPokedexEntries: any) => allPokedexEntries.forEach((pokedexEntry: any) => this.pokedex.set(pokedexEntry[0], this.resolvePokemonDex(pokedexEntry))));
   }
 
   private resolvePokemonDex(pokedexEntry: any): PokemonDex {

@@ -1,11 +1,10 @@
 <form [formGroup]="form">
-    <mat-form-field appearance="fill">
-        <mat-label>Nature</mat-label>
-        <mat-select formControlName="nature">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let natureEntry of natures | keyvalue" [value]="natureEntry.key">
+    <div class="form-group">
+        <select class="form-select" formControlName="nature">
+            <option value="">(None)</option>
+            <option *ngFor="let natureEntry of natures | keyvalue" [value]="natureEntry.key">
                 {{natureEntry.key}} <ng-container *ngIf="natureEntry.value[0] && natureEntry.value[1]">(+{{natureEntry.value[0]}}, -{{natureEntry.value[1]}})</ng-container>
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+            </option>
+        </select>
+    </div>
 </form>

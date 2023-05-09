@@ -26,7 +26,7 @@ export class PokemonTypeComponent implements OnInit {
   ngOnInit(): void {
     this.types = this.pokemonTypesService.getAllPokemonTypes();
     this.form = this.fb.group({
-      type: this.type
+      type: this.type && this.type !== '' ? this.type : 'None'
     });
 
     this.subscribeTypes();

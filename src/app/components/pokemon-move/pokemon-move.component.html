@@ -1,22 +1,31 @@
-<form [formGroup]="form">
-    <mat-form-field appearance="fill">
-      <mat-label>Select Move</mat-label>
-      <input type="text"
-             placeholder=""
-             aria-label="Number"
-             matInput
-             formControlName="name"
-             [matAutocomplete]="auto"
-             (click)="clearSearch()">
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="selectMove($event)">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{option}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
+<form class="select-move-container">
 
-    <span>{{selectedMove.bp}}</span>
-    <span>{{selectedMove.type}}</span>
-    <span>{{selectedMove.category}}</span>
+  <div class="dropdown">
+    <div class="row">
+      <div class="col-4">
 
-  </form>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          (click)="initializeSearch()">
+          {{selectedMove.name}}
+        </button>
+        <ul class="dropdown-menu">
+          <input #moveInput class="form-control" type="text" placeholder="" aria-label="Number"
+            [formControl]="autocompleteControl">
+          <ng-container *ngFor="let option of (filteredOptions | async).slice(0,10)">
+            <li><a class="dropdown-item" (click)="selectMove(option)">{{option}}</a></li>
+          </ng-container>
+        </ul>
+      </div>
+      <div class="col-2">
+        {{selectedMove.bp}}
+      </div>
+      <div class="col-3">
+        {{selectedMove.type}}
+      </div>
+      <div class="col-3">
+        {{selectedMove.category}}
+      </div>
+    </div>
+  </div>
+
+</form>

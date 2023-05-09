@@ -1,44 +1,161 @@
-
-
 <form [formGroup]="form">
 
-    <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+    <table class="table caption-top">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Base</th>
+                <th scope="col">IVs</th>
+                <th scope="col">EVs</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">HP</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="hpBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="hpIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="hpEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.hp.total || 100}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Attack</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="atkBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="atkIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="atkEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.atk.total || 100}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Defense</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="defBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="defIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="defEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.def.total || 100}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Sp. Attack</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="spaBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="spaIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="spaEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.spa.total || 100}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Sp. Defense</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="spdBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="spdIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="spdEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.hp.total || 100}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Speed</th>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="255" [defaultValue]="80"
+                            formControlName="speBase">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" min="0" max="31" [defaultValue]="31"
+                            formControlName="speIVs">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
+                            formControlName="speEVs">
+                    </div>
+                </td>
+                <td>
+                    <span class="form-control c-ta-center"> {{pokemonStats.spe.total || 100}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        <ng-container matColumnDef="stat">
-            <mat-header-cell *matHeaderCellDef></mat-header-cell>
-            <mat-cell *matCellDef="let row">{{row.stat}}</mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="base">
-            <mat-header-cell *matHeaderCellDef>Base</mat-header-cell>
-            <mat-cell class="description-cell" *matCellDef="let row">
-                <input matInput type="number" min="0" max="255" [defaultValue]="80" formControlName="{{row.id}}Base">
-            </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="ivs">
-            <mat-header-cell *matHeaderCellDef>IVs</mat-header-cell>
-            <mat-cell class="duration-cell" *matCellDef="let row">
-                <input matInput type="number" min="0" max="31" [defaultValue]="31" formControlName="{{row.id}}IVs">
-            </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="evs">
-            <mat-header-cell *matHeaderCellDef>EVs</mat-header-cell>
-            <mat-cell class="duration-cell" *matCellDef="let row">
-                <input matInput type="number" min="0" max="252" step="4" [defaultValue]="0" formControlName="{{row.id}}EVs">
-            </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="total">
-            <mat-header-cell *matHeaderCellDef></mat-header-cell>
-            <mat-cell *matCellDef="let row"><span>{{row.total}}</span></mat-cell>
-        </ng-container>
-
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-
-        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-
-    </mat-table>
-    
 </form>

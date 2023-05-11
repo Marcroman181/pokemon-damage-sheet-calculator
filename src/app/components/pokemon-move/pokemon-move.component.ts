@@ -45,6 +45,10 @@ export class PokemonMoveComponent implements OnInit {
     );
   }
 
+  ngOnChanges(): void {
+    this.selectedMove = this.move || this.moves.get("(No Move)");
+  }
+
   private convertToMove(moveName: string): Move {
 
     return this.moves.get(moveName);

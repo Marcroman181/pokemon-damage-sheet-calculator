@@ -93,7 +93,8 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       speBase: this.pokemonStats.spe.base,
       speIVs: this.pokemonStats.spe.ivs,
       speEVs: this.pokemonStats.spe.evs
-    });
+    }, 
+    {emitEvent: false});
   }
 
   private subscribePokemon(): void {

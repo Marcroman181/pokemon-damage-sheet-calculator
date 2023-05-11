@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { PokemonNaturesService } from 'src/app/services/pokemon-natures.service';
@@ -8,7 +8,7 @@ import { PokemonNaturesService } from 'src/app/services/pokemon-natures.service'
   templateUrl: './pokemon-nature.component.html',
   styleUrls: ['./pokemon-nature.component.scss']
 })
-export class PokemonNatureComponent implements OnInit {
+export class PokemonNatureComponent implements OnInit, OnChanges {
 
   @Input() nature: string;
 
@@ -30,6 +30,12 @@ export class PokemonNatureComponent implements OnInit {
     });
 
     this.subscribeNatures();
+  }
+
+  ngOnChanges(): void {
+    if (this.form) {
+      this.form.setValue({ nature: this.nature || '' }, {emitEvent: false});
+    }
   }
 
   private subscribeNatures(): void {

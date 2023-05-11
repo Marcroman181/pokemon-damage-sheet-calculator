@@ -9,7 +9,7 @@ import { PokemonTypesService } from 'src/app/services/pokemon-types.service';
   styleUrls: ['./pokemon-type.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PokemonTypeComponent implements OnInit {
+export class PokemonTypeComponent implements OnInit, OnChanges {
 
   @Input() type: string;
 
@@ -32,12 +32,12 @@ export class PokemonTypeComponent implements OnInit {
 
     this.subscribeTypes();
   }
-/*
+
   ngOnChanges(): void {
     if (this.form) {
-      this.form.setValue({ type: this.type && this.type !== '' ? this.type : 'None' });
+      this.form.setValue({ type: this.type && this.type !== '' ? this.type : 'None' }, {emitEvent: false});
     }
-  }*/
+  }
 
   private subscribeTypes(): void {
 

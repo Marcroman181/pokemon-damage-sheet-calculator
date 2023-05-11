@@ -17,6 +17,7 @@ import { PokemonNatureComponent } from './components/pokemon-nature/pokemon-natu
 import { OpponentPokemonContainerComponent } from './components/opponent-pokemon-container/opponent-pokemon-container.component';
 import { OpponentPokemonComponent } from './components/opponent-pokemon/opponent-pokemon.component';
 import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokemon-modal.component';
+import { CalcResultComponent } from './components/calc-result/calc-result.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokem
     PokemonNatureComponent,
     OpponentPokemonContainerComponent,
     OpponentPokemonComponent,
-    EditPokemonModalComponent
+    EditPokemonModalComponent,
+    CalcResultComponent
   ],
   imports: [
     BrowserModule,

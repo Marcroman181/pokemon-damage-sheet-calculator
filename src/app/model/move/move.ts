@@ -6,7 +6,7 @@ export class Move {
     category: MoveCategory;
 }
 
-enum MoveCategory {
-    Physical,
-    Special,
+export enum MoveCategory {
+    Physical = 'Physical',
+    Special = 'Special'
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { PokemonStat } from 'src/app/model/pokemon-stat/pokemon-stat';
@@ -8,7 +8,8 @@ import { PokemonStatsService } from 'src/app/services/pokemon-stats.service';
 @Component({
   selector: 'pokemon-stats',
   templateUrl: './pokemon-stats.component.html',
-  styleUrls: ['./pokemon-stats.component.scss']
+  styleUrls: ['./pokemon-stats.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonStatsComponent implements OnInit, OnChanges {
 

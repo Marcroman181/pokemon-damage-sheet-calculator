@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { IdGeneratorService } from 'src/app/services/id-generator.service';
 
@@ -9,6 +9,7 @@ import { IdGeneratorService } from 'src/app/services/id-generator.service';
 })
 export class OpponentPokemonContainerComponent {
 
+  @Input() userPokemon: PokemonSet;
 
   pokemons: Map<number, PokemonSet> = new Map<number, PokemonSet>();
 

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { PokemonTypesService } from 'src/app/services/pokemon-types.service';
@@ -6,7 +6,8 @@ import { PokemonTypesService } from 'src/app/services/pokemon-types.service';
 @Component({
   selector: 'pokemon-type',
   templateUrl: './pokemon-type.component.html',
-  styleUrls: ['./pokemon-type.component.scss']
+  styleUrls: ['./pokemon-type.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonTypeComponent implements OnInit {
 
@@ -15,7 +16,7 @@ export class PokemonTypeComponent implements OnInit {
   @Output() changeType: EventEmitter<string> = new EventEmitter<string>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
-  
+
   form: FormGroup;
   types: Array<string> = [];
 
@@ -31,6 +32,12 @@ export class PokemonTypeComponent implements OnInit {
 
     this.subscribeTypes();
   }
+/*
+  ngOnChanges(): void {
+    if (this.form) {
+      this.form.setValue({ type: this.type && this.type !== '' ? this.type : 'None' });
+    }
+  }*/
 
   private subscribeTypes(): void {
 

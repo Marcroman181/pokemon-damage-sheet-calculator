@@ -1,0 +1,28 @@
+import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+import { Damage } from 'src/app/model/damage/damage';
+import { Move } from 'src/app/model/move/move';
+import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
+import { DamageCalcService } from 'src/app/services/damage-calc.service';
+
+@Component({
+  selector: 'calc-result',
+  templateUrl: './calc-result.component.html',
+  styleUrls: ['./calc-result.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class CalcResultComponent implements OnChanges {
+
+  @Input() oponnentPokemon: PokemonSet;
+  @Input() pokemon: PokemonSet;
+  @Input() move: Move;
+
+  damages: Array<Damage> = [];
+
+  constructor(private readonly damageCalcService: DamageCalcService) {
+  }
+
+  ngOnChanges(): void {
+    this.damages = this.damageCalcService.calcDamage(this.pokemon, this.oponnentPokemon, this.move);
+  }
+  
+}

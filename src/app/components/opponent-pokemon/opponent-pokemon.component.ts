@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 
 @Component({
@@ -8,17 +8,18 @@ import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 })
 export class OpponentPokemonComponent {
 
+  @Input() oponnentPokemon: PokemonSet;
   @Input() pokemon: PokemonSet;
 
   @Output() editPokemon: EventEmitter<number> = new EventEmitter<number>();
   @Output() deletePokemon: EventEmitter<number> = new EventEmitter<number>();
 
   edit(): void {
-    this.editPokemon.emit(this.pokemon.id);
+    this.editPokemon.emit(this.oponnentPokemon.id);
   }
   
   delete(): void {
-    this.deletePokemon.emit(this.pokemon.id);
+    this.deletePokemon.emit(this.oponnentPokemon.id);
   }
   
 }

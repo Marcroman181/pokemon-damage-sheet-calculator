@@ -1,8 +1,25 @@
-<h3>{{pokemon.name}}</h3>
+<h3>{{oponnentPokemon.setName || oponnentPokemon.name}}</h3>
 <div>
-    <button mat-raised-button color="accent" (click)="edit()">Edit</button>
-  </div>
+  <button mat-raised-button color="accent" (click)="edit()">Edit</button>
+</div>
 
-  <div>
-    <button mat-raised-button color="warn" (click)="delete()">Delete</button>
+<div>
+  <button mat-raised-button color="warn" (click)="delete()">Delete</button>
+</div>
+<ng-container *ngIf="pokemon">
+  <div class="row" *ngIf="pokemon.move1">
+    <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move1"></calc-result>
   </div>
+  <div class="row" *ngIf="pokemon.move2">
+    <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move2"></calc-result>
+
+  </div>
+  <div class="row" *ngIf="pokemon.move3">
+    <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move3"></calc-result>
+
+  </div>
+  <div class="row" *ngIf="pokemon.move4">
+    <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move4"></calc-result>
+
+  </div>
+</ng-container>

@@ -1,9 +1,9 @@
 <div class="container">
-    <pokemon-card (pokemonModified)="modifyPokemon($event)">
+    <pokemon-card [initializePokemon]="pokemon" (pokemonModified)="modifyPokemon($event)">
 
     </pokemon-card>
 
-    <opponent-pokemon-container>
+    <opponent-pokemon-container [userPokemon]="pokemon">
 
     </opponent-pokemon-container>
 </div>

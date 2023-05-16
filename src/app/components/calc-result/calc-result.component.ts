@@ -17,12 +17,19 @@ export class CalcResultComponent implements OnChanges {
   @Input() move: Move;
 
   damages: Array<Damage> = [];
+  min: number = 0;
+  max: number = 100;
+  infoText: string = '';
 
   constructor(private readonly damageCalcService: DamageCalcService) {
   }
 
   ngOnChanges(): void {
     this.damages = this.damageCalcService.calcDamage(this.pokemon, this.oponnentPokemon, this.move);
+    this.min = this.damages[0].percentatge;
+    this.max = this.damages[this.damages.length-1].percentatge;
+    this.damages
+    .forEach((damage: Damage) => this.infoText += damage.hp + ' / ');
   }
   
 }

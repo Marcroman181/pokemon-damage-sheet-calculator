@@ -42,6 +42,7 @@ export class PokemonCardComponent implements OnInit {
 
     this.pokemonDex = this.pokedex.get(pokemon);
     this.pokemon = this.pokemonStatsService.convertPokemonDexToPokemonSet(this.pokemonDex);
+    this.pokemonModified.emit(this.pokemon);
   }
 
   selectLevel(level: number): void {

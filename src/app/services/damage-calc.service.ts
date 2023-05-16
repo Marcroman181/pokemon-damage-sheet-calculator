@@ -3,11 +3,15 @@ import { PokemonSet } from '../model/pokemon-set/pokemonSet';
 import { Move, MoveCategory } from '../model/move/move';
 import { Damage } from '../model/damage/damage';
 import { PokemonStats } from '../model/pokemon-stats/pokemon-stats';
+import { TypeEfectivenessService } from './type-efectiveness.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DamageCalcService {
+
+  constructor(private readonly typeEfectivenessService: TypeEfectivenessService) {
+  }
 
   calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): Array<Damage> {
 
@@ -24,7 +28,7 @@ export class DamageCalcService {
         damage = this.round(damage * 1.5);
       }
       //Type Effectiveness
-      damage = Math.floor(damage * 1);
+      damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(move.type, defender));
 
       //Min Damage Check
       damage = Math.max(1, damage);

@@ -18,6 +18,7 @@ import { OpponentPokemonContainerComponent } from './components/opponent-pokemon
 import { OpponentPokemonComponent } from './components/opponent-pokemon/opponent-pokemon.component';
 import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokemon-modal.component';
 import { CalcResultComponent } from './components/calc-result/calc-result.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CalcResultComponent } from './components/calc-result/calc-result.compon
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent]

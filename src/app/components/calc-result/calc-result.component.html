@@ -1,1 +1,9 @@
-{{move.name}} ==>  <ng-container *ngFor="let damage of damages">{{damage.hp + ' / '}}</ng-container>
+{{move.name}} ==> {{min}}% ~ {{max}}% 
+<button
+	type="button"
+	class="btn btn-outline-secondary me-2"
+	placement="top"
+	ngbPopover="{{infoText}}"
+>
+	Info
+</button>

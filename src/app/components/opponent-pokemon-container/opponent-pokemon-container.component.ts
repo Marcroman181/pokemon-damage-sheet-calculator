@@ -10,6 +10,7 @@ import { IdGeneratorService } from 'src/app/services/id-generator.service';
 export class OpponentPokemonContainerComponent {
 
   @Input() userPokemon: PokemonSet;
+  @Input() offensiveCalcs: boolean = false;
 
   pokemons: Map<number, PokemonSet> = new Map<number, PokemonSet>();
 

@@ -20,10 +20,6 @@ export class EditPokemonModalComponent implements OnInit {
   }
 
   modifyPokemon($event: PokemonSet): void {
-    console.log("MODAL");
-    console.log($event);
-    console.log("Fin MODAL");
-
     this.pokemon = $event;
   }
 

@@ -11,6 +11,7 @@ import { MoveCategory } from 'src/app/model/move/move';
 export class IndexComponent implements OnInit {
 
   pokemon: PokemonSet;
+  offensiveCalcs: boolean = false;
 
   ngOnInit(): void {
     this.pokemon = {
@@ -60,6 +61,11 @@ export class IndexComponent implements OnInit {
     this.pokemon = {...pokemonModified};
     this.ref.detectChanges();
     console.log(this.pokemon);
+  }
+
+  public setOffensivecalcs(offensiveCalcs: boolean): void {
+    this.offensiveCalcs = offensiveCalcs;
+    this.ref.detectChanges();
   }
 
   constructor(private ref: ChangeDetectorRef) {}

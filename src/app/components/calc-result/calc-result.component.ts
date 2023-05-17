@@ -15,6 +15,7 @@ export class CalcResultComponent implements OnChanges {
   @Input() oponnentPokemon: PokemonSet;
   @Input() pokemon: PokemonSet;
   @Input() move: Move;
+  @Input() offensiveCalcs: boolean = false;
 
   damages: Array<Damage> = [];
   min: number = 0;
@@ -27,9 +28,9 @@ export class CalcResultComponent implements OnChanges {
   ngOnChanges(): void {
     this.damages = this.damageCalcService.calcDamage(this.pokemon, this.oponnentPokemon, this.move);
     this.min = this.damages[0].percentatge;
-    this.max = this.damages[this.damages.length-1].percentatge;
+    this.max = this.damages[this.damages.length - 1].percentatge;
     this.damages
-    .forEach((damage: Damage) => this.infoText += damage.hp + ' / ');
+      .forEach((damage: Damage) => this.infoText += damage.hp + ' / ');
   }
-  
+
 }

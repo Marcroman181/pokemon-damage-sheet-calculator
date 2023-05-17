@@ -10,6 +10,7 @@ export class OpponentPokemonComponent {
 
   @Input() oponnentPokemon: PokemonSet;
   @Input() pokemon: PokemonSet;
+  @Input() offensiveCalcs: boolean = false;
 
   @Output() editPokemon: EventEmitter<number> = new EventEmitter<number>();
   @Output() deletePokemon: EventEmitter<number> = new EventEmitter<number>();

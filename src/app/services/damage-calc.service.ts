@@ -37,7 +37,7 @@ export class DamageCalcService {
       if (damage > 65535) {
         damage %= 65536;
       }
-      damages.push({ hp: damage, percentatge: damage * 100 / defender.stats.hp.total })
+      damages.push({ hp: damage, percentatge: this.calcPercentatge(damage, defender.stats.hp.total)});
     }
 
     return damages;
@@ -54,6 +54,11 @@ export class DamageCalcService {
 
   private round(num: number): number {
     return (num % 1 > 0.5) ? Math.ceil(num) : Math.floor(num);
+  }
+
+  private calcPercentatge(damage: number, hp: number): number {
+
+    return Number((damage * 100 / hp).toFixed(1));
   }
 
 }

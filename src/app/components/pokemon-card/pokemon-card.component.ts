@@ -23,6 +23,7 @@ export class PokemonCardComponent implements OnInit {
   pokemon: PokemonSet;
   pokemonSets: Map<string, PokemonSet> = new Map<string, PokemonSet>();
   pokemonSetsByPokemonName: Map<string, Array<string>> = new Map<string, Array<string>>();
+  showModal: boolean = false;
 
   constructor(private readonly pokedexService: PokedexService,
     private readonly pokemonStatsService: PokemonStatsService,
@@ -115,6 +116,19 @@ export class PokemonCardComponent implements OnInit {
     return values.has(pokemonName)
       ? [...values.get(pokemonName), setName]
       : [setName];
+  }
+
+  showSaveModal(): void {
+    this.showModal = true;
+  }
+
+  closeModal(): void {
+    this.showModal = false;
+  }
+
+  saveSet(setName: string): void {
+    this.pokemonSetsService.saveSet({...this.pokemon, setName: this.pokemon.name + ' ' + setName});
+    this.showModal = false;
   }
 
 }

@@ -1,0 +1,20 @@
+<form>
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Save Pokemon Set</h5>
+                    <button type="button" class="btn-close" (click)="close()"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text" placeholder="My Pokemon Set" aria-label="Number"
+                        [formControl]="myControl">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="save()" [disabled]="!myControl.valid" >Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

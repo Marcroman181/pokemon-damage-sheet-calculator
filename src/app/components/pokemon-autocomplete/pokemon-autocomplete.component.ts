@@ -71,5 +71,12 @@ export class PokemonAutocompleteComponent implements OnInit {
   getSetsByPokemon(pokemonName:string): Array<string> {
     return this.pokemonSets.get(pokemonName) || [];
   }
+
+  formatPokemonSet(setName: string): string {
+
+    return setName.startsWith(this.pokemon + ' ')
+      ? setName.slice(this.pokemon.length + 1)
+      : setName;
+  }
 }
 

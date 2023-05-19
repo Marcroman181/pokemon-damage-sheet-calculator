@@ -19,6 +19,7 @@ import { OpponentPokemonComponent } from './components/opponent-pokemon/opponent
 import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokemon-modal.component';
 import { CalcResultComponent } from './components/calc-result/calc-result.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SaveSetModalComponent } from './components/save-set-modal/save-set-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OpponentPokemonContainerComponent,
     OpponentPokemonComponent,
     EditPokemonModalComponent,
-    CalcResultComponent
+    CalcResultComponent,
+    SaveSetModalComponent
   ],
   imports: [
     BrowserModule,

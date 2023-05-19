@@ -22,12 +22,12 @@ export class IndexComponent implements OnInit {
       type: 'Grass',
       currentHp: 100,
       stats: {
-        hp: {base: 40, ivs: 31, evs: 4},
-        atk: {base: 61, ivs: 31, evs: 244},
-        def: {base: 54, ivs: 31, evs: 4},
-        spa: {base: 45, ivs: 0, evs: 0},
-        spd: {base: 45, ivs: 31, evs: 4},
-        spe: {base: 65, ivs: 31, evs: 252}
+        hp: {base: 40, ivs: 31, evs: 4, total: 116},
+        atk: {base: 61, ivs: 31, evs: 244, total: 112},
+        def: {base: 54, ivs: 31, evs: 4, total: 75},
+        spa: {base: 45, ivs: 0, evs: 0, total: 45},
+        spd: {base: 45, ivs: 31, evs: 4, total: 66},
+        spe: {base: 65, ivs: 31, evs: 252, total: 128}
       },
       move1: {
         name: 'Flower Trick',

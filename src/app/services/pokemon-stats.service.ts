@@ -27,6 +27,14 @@ export class PokemonStatsService {
     } as PokemonSet;
   }
 
+  resolveStatsFromPokemonSet(pokemon: PokemonSet): PokemonSet {
+    
+    return {
+      ...pokemon,
+      stats: this.resolvePokemonStatsByPokemonStats(pokemon.stats, pokemon.level, pokemon.nature),
+    } as PokemonSet;
+  }
+
   public calcStat(id: string, level: number, nature: string, base: number, ivs: number, evs: number): number {
 
     if (id === 'hp') {
@@ -69,6 +77,31 @@ export class PokemonStatsService {
       ivs: ivs,
       evs: evs,
       total: this.calcStat(statId, 50, '', base, ivs, evs)
+    } as PokemonStat;
+  }
+
+  public resolvePokemonStatsByPokemonStats(pokemonStats: PokemonStats, level: number, nature: string): PokemonStats {
+    return {
+      hp: this.convertToStatByPokemonSet(pokemonStats, 'hp', level, nature),
+      atk: this.convertToStatByPokemonSet(pokemonStats, 'atk', level, nature),
+      def: this.convertToStatByPokemonSet(pokemonStats, 'def', level, nature),
+      spa: this.convertToStatByPokemonSet(pokemonStats, 'spa', level, nature),
+      spd: this.convertToStatByPokemonSet(pokemonStats, 'spd', level, nature),
+      spe: this.convertToStatByPokemonSet(pokemonStats, 'spe', level, nature)
+    } as PokemonStats
+  }
+
+  private convertToStatByPokemonSet(stats: PokemonStats, statId: string, level: number, nature: string): PokemonStat {
+
+    const base = stats[statId].base;
+    const ivs = stats[statId].ivs;
+    const evs = stats[statId].evs;;
+
+    return {
+      base: base,
+      ivs: ivs,
+      evs: evs,
+      total: this.calcStat(statId, level, nature, base, ivs, evs)
     } as PokemonStat;
   }
 

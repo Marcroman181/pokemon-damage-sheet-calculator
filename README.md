@@ -2,8 +2,8 @@
 
 ##TODO
 
-Stats changes
+Stats boosts changes
 Multiplicators moves
 Tabs to change team pokemon
-Save and show sets
+Save sets
 Save sheet

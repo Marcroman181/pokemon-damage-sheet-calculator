@@ -1,0 +1,130 @@
+[
+    {
+        "setName": "test",
+        "name": "Sprigatito",
+        "level": 50,
+        "nature": "Jolly",
+        "type": "Grass",
+        "currentHp": 100,
+        "stats": {
+            "hp": {
+                "base": 40,
+                "ivs": 31,
+                "evs": 4
+            },
+            "atk": {
+                "base": 61,
+                "ivs": 31,
+                "evs": 244
+            },
+            "def": {
+                "base": 54,
+                "ivs": 31,
+                "evs": 4
+            },
+            "spa": {
+                "base": 45,
+                "ivs": 0,
+                "evs": 0
+            },
+            "spd": {
+                "base": 45,
+                "ivs": 31,
+                "evs": 4
+            },
+            "spe": {
+                "base": 65,
+                "ivs": 31,
+                "evs": 252
+            }
+        },
+        "move1": {
+            "name": "Flower Trick",
+            "bp": 105,
+            "type": "Grass",
+            "category": "Physical"
+        },
+        "move2": {
+            "name": "Knock Off",
+            "bp": 97.5,
+            "type": "Dark",
+            "category": "Physical"
+        },
+        "move3": {
+            "name": "Energy Ball",
+            "bp": 90,
+            "type": "Grass",
+            "category": "Special"
+        },
+        "move4": {
+            "name": "Dark Pulse",
+            "bp": 80,
+            "type": "Dark",
+            "category": "Special"
+        }
+    },
+    {
+        "setName": "test2",
+        "name": "Sprigatito",
+        "level": 50,
+        "nature": "Jolly",
+        "type": "Grass",
+        "currentHp": 100,
+        "stats": {
+            "hp": {
+                "base": 40,
+                "ivs": 31,
+                "evs": 4
+            },
+            "atk": {
+                "base": 61,
+                "ivs": 31,
+                "evs": 252
+            },
+            "def": {
+                "base": 54,
+                "ivs": 31,
+                "evs": 0
+            },
+            "spa": {
+                "base": 45,
+                "ivs": 0,
+                "evs": 0
+            },
+            "spd": {
+                "base": 45,
+                "ivs": 31,
+                "evs": 0
+            },
+            "spe": {
+                "base": 65,
+                "ivs": 31,
+                "evs": 252
+            }
+        },
+        "move1": {
+            "name": "Flower Trick",
+            "bp": 105,
+            "type": "Grass",
+            "category": "Physical"
+        },
+        "move2": {
+            "name": "Knock Off",
+            "bp": 97.5,
+            "type": "Dark",
+            "category": "Physical"
+        },
+        "move3": {
+            "name": "Energy Ball",
+            "bp": 90,
+            "type": "Grass",
+            "category": "Special"
+        },
+        "move4": {
+            "name": "Dark Pulse",
+            "bp": 80,
+            "type": "Dark",
+            "category": "Special"
+        }
+    }
+]

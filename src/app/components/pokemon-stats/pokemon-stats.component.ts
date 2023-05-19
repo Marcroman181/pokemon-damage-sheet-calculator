@@ -15,34 +15,30 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
 
 
   @Input() pokemonStats: PokemonStats;
-  @Input() pokemonName: string;
-  @Input() level: number;
-  @Input() nature: string;
 
   @Output() changeStats: EventEmitter<PokemonStats> = new EventEmitter<PokemonStats>();
 
   private readonly unsubscribe: Subject<void> = new Subject();
   form: FormGroup;
+  totalEvs: number = 0;
+  remainingEvs: number = 510;
 
-  constructor(private readonly pokemonStatsService: PokemonStatsService,
-    private readonly fb: FormBuilder) {
+  constructor(private readonly fb: FormBuilder) {
   }
 
   ngOnInit(): void {
     this.initializeFormWithStats();
     this.subscribePokemon();
+    this.updateTotalEvs();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.form) {
-      if (changes["pokemonName"]) {
+      if (changes["pokemonStats"]) {
         this.setForm();
+        this.updateTotalEvs();
         console.log("POKEMON STATS --> CHANGES");
-      }
-      if (this.form && (changes["nature"] || changes["level"])) {
-        this.updateStats(this.form.value);
-        console.log("POKEMON STATS --> CHANGES");
-      }
+      } 
     }
   }
 
@@ -68,8 +64,6 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       speIVs: this.pokemonStats.spe.ivs,
       speEVs: this.pokemonStats.spe.evs
     });
-
-    this.updateStats(this.form.value);
   }
 
   setForm(): void {
@@ -105,7 +99,6 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
   }
 
   private updateStats(dataForm: any): void {
-    console.log("Pokemon Stats -> update");
 
     const stats: PokemonStats = this.resolvePokemonStats(dataForm);
 
@@ -121,8 +114,7 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
     return {
       base: base,
       ivs: ivs,
-      evs: evs,
-      total: this.pokemonStatsService.calcStat(statId, this.level, this.nature, base, ivs, evs)
+      evs: evs
     } as PokemonStat;
   }
 
@@ -135,5 +127,19 @@ export class PokemonStatsComponent implements OnInit, OnChanges {
       spd: this.convertToStat(dataForm, 'spd'),
       spe: this.convertToStat(dataForm, 'spe')
     } as PokemonStats
+  }
+
+  private updateTotalEvs(): void {
+    let evs: number = 0;
+
+    evs += this.pokemonStats.hp.evs;
+    evs += this.pokemonStats.atk.evs;
+    evs += this.pokemonStats.def.evs;
+    evs += this.pokemonStats.spa.evs;
+    evs += this.pokemonStats.spd.evs;
+    evs += this.pokemonStats.spe.evs;
+
+    this.totalEvs = evs;
+    this.remainingEvs = 510 - this.totalEvs;
   }
 }

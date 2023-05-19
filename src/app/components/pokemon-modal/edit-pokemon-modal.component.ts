@@ -14,13 +14,15 @@ export class EditPokemonModalComponent implements OnInit {
   @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
 
   pokemon: PokemonSet;
-  
+
   ngOnInit(): void {
-    this.pokemon = this.initializePokemon;
+    if (this.initializePokemon) {
+      this.pokemon = { ...this.initializePokemon };
+    }
   }
 
   modifyPokemon($event: PokemonSet): void {
-    this.pokemon = $event;
+    this.pokemon = { ...$event };
   }
 
   add(): void {

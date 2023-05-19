@@ -155,6 +155,19 @@
                     <span class="form-control c-ta-center"> {{pokemonStats.spe.total || 100}}</span>
                 </td>
             </tr>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <span class="c-ta-center" [ngClass]="{'c-red': remainingEvs < 0}">{{totalEvs}}</span>
+                </td>
+                <td>
+                    <span class="c-ta-center" [ngClass]="{'c-red': remainingEvs < 0}"> {{remainingEvs}}</span>
+                </td>
+            </tr>
         </tbody>
     </table>
 

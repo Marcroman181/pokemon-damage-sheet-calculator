@@ -1,7 +1,6 @@
 <div class="container">
-    <pokemon-card [initializePokemon]="pokemon" (pokemonModified)="modifyPokemon($event)">
 
-    </pokemon-card>
+    <team (activePokemon)="modifyPokemon($event)"></team>
 
     <div class="row">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">

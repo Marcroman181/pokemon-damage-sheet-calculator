@@ -8,53 +8,10 @@ import { MoveCategory } from 'src/app/model/move/move';
   styleUrls: ['./index.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent {
 
   pokemon: PokemonSet;
   offensiveCalcs: boolean = false;
-
-  ngOnInit(): void {
-    this.pokemon = {
-      setName: 'test',
-      name: 'Sprigatito',
-      level: 50,
-      nature: 'Jolly',
-      type: 'Grass',
-      currentHp: 100,
-      stats: {
-        hp: {base: 40, ivs: 31, evs: 4, total: 116},
-        atk: {base: 61, ivs: 31, evs: 244, total: 112},
-        def: {base: 54, ivs: 31, evs: 4, total: 75},
-        spa: {base: 45, ivs: 0, evs: 0, total: 45},
-        spd: {base: 45, ivs: 31, evs: 4, total: 66},
-        spe: {base: 65, ivs: 31, evs: 252, total: 128}
-      },
-      move1: {
-        name: 'Flower Trick',
-        bp: 105,
-        type: 'Grass',
-        category: MoveCategory.Physical
-      },
-      move2: {
-        name: 'Knock Off',
-        bp: 97.5,
-        type: 'Dark',
-        category: MoveCategory.Physical
-      },
-      move3: {
-        name: 'Energy Ball',
-        bp: 90,
-        type: 'Grass',
-        category: MoveCategory.Special
-      },
-      move4: {
-        name: 'Dark Pulse',
-        bp: 80,
-        type: 'Dark',
-        category: MoveCategory.Special
-      }
-    };
-  }
 
   public modifyPokemon(pokemonModified: PokemonSet): void {
     

@@ -20,6 +20,7 @@ import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokem
 import { CalcResultComponent } from './components/calc-result/calc-result.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SaveSetModalComponent } from './components/save-set-modal/save-set-modal.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SaveSetModalComponent } from './components/save-set-modal/save-set-moda
     OpponentPokemonComponent,
     EditPokemonModalComponent,
     CalcResultComponent,
-    SaveSetModalComponent
+    SaveSetModalComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
+import { PokemonTeamService } from 'src/app/services/pokemon-team.service';
 
 @Component({
   selector: 'team',
@@ -13,10 +14,16 @@ export class TeamComponent implements OnInit {
   active: number = 0;
   pokemons: Array<PokemonSet> = [];
 
-  constructor(private ref: ChangeDetectorRef) { }
+  constructor( private readonly ref: ChangeDetectorRef,
+    private readonly teamService: PokemonTeamService) { }
 
   ngOnInit(): void {
-    this.pokemons.push(undefined);
+    let team: Array<PokemonSet> = this.teamService.getTeam();
+    if (team && team.length) {
+      this.pokemons = team;
+    } else {
+      this.pokemons.push(undefined);
+    }
   }
 
   onActiveTab(index: number): void {
@@ -46,6 +53,10 @@ export class TeamComponent implements OnInit {
       this.active--;
     }
     this.pokemons = newPokemons;
+  }
+
+  saveTeam(): void {
+    this.teamService.saveTeam(this.pokemons);
   }
 
 }

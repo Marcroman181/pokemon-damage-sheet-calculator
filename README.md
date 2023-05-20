@@ -4,5 +4,4 @@
 
 Stats boosts changes
 Multiplicators moves
-Tabs to change team pokemon
 Save sheet

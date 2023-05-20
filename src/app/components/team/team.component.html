@@ -4,9 +4,12 @@
         <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close" (click)="deletePokemon(i)"></button>
     </li>
     <li class="nav-item" *ngIf="pokemons.length < 6">
-        <a class="nav-link" (click)="addPokemon()" >Add</a>
+        <a class="nav-link" (click)="addPokemon()">Add</a>
     </li>
 </ul>
+
+<button type="button" class="btn btn-primary" (click)="saveTeam()" >Save team</button>
+
 <ng-container *ngFor="let pokemon of pokemons; let i = index">
 
     <pokemon-card *ngIf="i===active" [initializePokemon]="pokemons[active] || undefined"

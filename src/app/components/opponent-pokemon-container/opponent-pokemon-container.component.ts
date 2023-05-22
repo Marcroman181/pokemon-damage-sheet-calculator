@@ -1,13 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { IdGeneratorService } from 'src/app/services/id-generator.service';
+import { SheetService } from 'src/app/services/sheet.service';
 
 @Component({
   selector: 'opponent-pokemon-container',
   templateUrl: './opponent-pokemon-container.component.html',
   styleUrls: ['./opponent-pokemon-container.component.scss']
 })
-export class OpponentPokemonContainerComponent {
+export class OpponentPokemonContainerComponent implements OnInit {
 
   @Input() userPokemon: PokemonSet;
   @Input() offensiveCalcs: boolean = false;
@@ -17,8 +18,12 @@ export class OpponentPokemonContainerComponent {
   showModal: boolean = false;
   pokemonToEdit: PokemonSet;
 
-  constructor(private readonly idGeneratorService: IdGeneratorService) {
+  constructor(private readonly idGeneratorService: IdGeneratorService,
+    private readonly sheetService: SheetService) {
+  }
 
+  ngOnInit(): void {
+    this.initializeSheet();
   }
 
   closeModal(): void {
@@ -55,6 +60,15 @@ export class OpponentPokemonContainerComponent {
       console.log("POKEMON SAVED");
     }
     console.log(pokemon);
+  }
+
+  initializeSheet(): void {
+    this.sheetService.getSheet()
+      .forEach((pokemon:PokemonSet) => this.pokemons.set(pokemon.id, pokemon));
+  }
+
+  saveSheet(): void {
+    this.sheetService.saveSheet(Array.from(this.pokemons.values()));
   }
 
 }

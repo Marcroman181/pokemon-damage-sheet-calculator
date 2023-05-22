@@ -21,6 +21,7 @@ export class TeamComponent implements OnInit {
     let team: Array<PokemonSet> = this.teamService.getTeam();
     if (team && team.length) {
       this.pokemons = team;
+      this.activePokemon.emit(this.pokemons[this.active]);
     } else {
       this.pokemons.push(undefined);
     }

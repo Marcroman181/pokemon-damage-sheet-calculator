@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+import { DamageInfo } from 'src/app/model/damage-info/damage-info';
 import { Damage } from 'src/app/model/damage/damage';
-import { Move } from 'src/app/model/move/move';
+import { Move, MoveCategory } from 'src/app/model/move/move';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { DamageCalcService } from 'src/app/services/damage-calc.service';
 
@@ -17,7 +18,7 @@ export class CalcResultComponent implements OnChanges {
   @Input() move: Move;
   @Input() offensiveCalcs: boolean = false;
 
-  damages: Array<Damage> = [];
+  damageInfo: DamageInfo;
   min: number = 0;
   max: number = 100;
   infoText: string = '';
@@ -26,10 +27,20 @@ export class CalcResultComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-    this.damages = this.damageCalcService.calcDamage(this.pokemon, this.oponnentPokemon, this.move);
-    this.min = this.damages[0].percentatge;
-    this.max = this.damages[this.damages.length - 1].percentatge;
-    this.damages
+    this.damageInfo = this.damageCalcService.calcDamage(this.pokemon, this.oponnentPokemon, this.move);
+    this.min = this.damageInfo.damages[0].percentatge;
+    this.max = this.damageInfo.damages[this.damageInfo.damages.length - 1].percentatge;
+    this.infoText = '';
+    if(this.damageInfo.attackerBoost != 0) {
+      this.infoText += this.damageInfo.attackerBoost > 0 
+      ? '+' 
+      : '';
+      this.infoText += this.damageInfo.attackerBoost.toString();
+      this.infoText += this.move.category === MoveCategory.Physical 
+      ? ' Atk '
+      : ' SpAtk ';
+    }
+    this.damageInfo.damages
       .forEach((damage: Damage) => this.infoText += damage.hp + ' / ');
   }
 

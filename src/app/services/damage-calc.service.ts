@@ -4,6 +4,7 @@ import { Move, MoveCategory } from '../model/move/move';
 import { Damage } from '../model/damage/damage';
 import { PokemonStats } from '../model/pokemon-stats/pokemon-stats';
 import { TypeEfectivenessService } from './type-efectiveness.service';
+import { DamageInfo } from '../model/damage-info/damage-info';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,19 @@ export class DamageCalcService {
   constructor(private readonly typeEfectivenessService: TypeEfectivenessService) {
   }
 
-  calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): Array<Damage> {
+  calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
 
-    let damages: Array<Damage> = [];
+    let damages: Array<Damage> = [];    
 
-    let basePower = this.calcBasePower(attacker.level, move, attacker.stats, defender.stats);
+    const attack: number = move.category === MoveCategory.Special 
+    ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost) 
+    : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost); 
+
+    const defense: number = move.category === MoveCategory.Special 
+    ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost) 
+    : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost); 
+
+    let basePower = this.calcBasePower(attacker.level, move, attack, defense);
 
     for (var i = 0; i < 16; i++) {
 
@@ -40,14 +49,15 @@ export class DamageCalcService {
       damages.push({ hp: damage, percentatge: this.calcPercentatge(damage, defender.stats.hp.total)});
     }
 
-    return damages;
+    console.log((MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost));
+    return {
+      damages: damages,
+      attackerBoost: (move.category === MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost) || 0,
+      defenderBoost: (move.category === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0
+    } as DamageInfo;
   }
 
-  private calcBasePower(attackerLevel: number, move: Move, attackerStats: PokemonStats, defenderStats: PokemonStats): number {
-
-    const attack: number = move.category === MoveCategory.Special ? attackerStats.spa.total : attackerStats.atk.total; 
-
-    const defense: number = move.category === MoveCategory.Special ? defenderStats.spd.total : defenderStats.def.total; 
+  private calcBasePower(attackerLevel: number, move: Move, attack: number, defense: number): number {
 
     return Math.floor(Math.floor((Math.floor((2 * attackerLevel) / 5 + 2) * move.bp * attack) / defense) / 50 + 2);
   }
@@ -59,6 +69,19 @@ export class DamageCalcService {
   private calcPercentatge(damage: number, hp: number): number {
 
     return Number((damage * 100 / hp).toFixed(1));
+  }
+
+  private calcStatAfterBoost(stat:number, boost: number){
+
+    let boostMultiplier: number = 1;
+
+    if(boost) {
+      boostMultiplier = boost < 0 
+      ? Math.pow((2+(-boost))/2, -1)
+      : Math.pow((2+boost)/2, 1); 
+    }
+
+    return this.round(stat * boostMultiplier);
   }
 
 }

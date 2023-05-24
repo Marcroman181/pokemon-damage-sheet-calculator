@@ -3,4 +3,5 @@ export class PokemonStat {
     ivs: number;
     evs: number;
     total?: number;
+    boost: number;
 }

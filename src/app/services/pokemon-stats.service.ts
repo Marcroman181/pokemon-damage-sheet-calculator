@@ -76,7 +76,8 @@ export class PokemonStatsService {
       base: base,
       ivs: ivs,
       evs: evs,
-      total: this.calcStat(statId, 50, '', base, ivs, evs)
+      total: this.calcStat(statId, 50, '', base, ivs, evs),
+      boost: 0
     } as PokemonStat;
   }
 
@@ -95,13 +96,15 @@ export class PokemonStatsService {
 
     const base = stats[statId].base;
     const ivs = stats[statId].ivs;
-    const evs = stats[statId].evs;;
+    const evs = stats[statId].evs;
+    const boost = stats[statId].boost || 0;
 
     return {
       base: base,
       ivs: ivs,
       evs: evs,
-      total: this.calcStat(statId, level, nature, base, ivs, evs)
+      total: this.calcStat(statId, level, nature, base, ivs, evs),
+      boost: boost
     } as PokemonStat;
   }
 

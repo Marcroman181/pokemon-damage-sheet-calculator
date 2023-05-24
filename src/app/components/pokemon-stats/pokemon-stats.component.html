@@ -8,6 +8,7 @@
                 <th scope="col">IVs</th>
                 <th scope="col">EVs</th>
                 <th scope="col"></th>
+                <th scope="col">Boost</th>
             </tr>
         </thead>
         <tbody>
@@ -27,13 +28,14 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="hpEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="hpEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.hp.total || 100}}</span>
                 </td>
+                <td></td>
             </tr>
             <tr>
                 <th scope="row">Attack</th>
@@ -51,12 +53,21 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="atkEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="atkEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.atk.total || 100}}</span>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-select" formControlName="atkBoost">
+                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                                {{numValue > 0 ? ('+' + numValue) : numValue}}
+                            </option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -75,12 +86,21 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="defEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="defEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.def.total || 100}}</span>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-select" formControlName="defBoost">
+                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                                {{numValue > 0 ? ('+' + numValue) : numValue}}
+                            </option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -99,12 +119,21 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="spaEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="spaEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.spa.total || 100}}</span>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-select" formControlName="spaBoost">
+                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                                {{numValue > 0 ? ('+' + numValue) : numValue}}
+                            </option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -123,12 +152,21 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="spdEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="spdEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.spd.total || 100}}</span>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-select" formControlName="spdBoost">
+                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                                {{numValue > 0 ? ('+' + numValue) : numValue}}
+                            </option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -147,12 +185,21 @@
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252" [defaultValue]="0"
-                            formControlName="speEVs">
+                        <input type="number" class="form-control c-ta-center" step="4" min="0" max="252"
+                            [defaultValue]="0" formControlName="speEVs">
                     </div>
                 </td>
                 <td>
                     <span class="form-control c-ta-center"> {{pokemonStats.spe.total || 100}}</span>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-select" formControlName="speBoost">
+                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                                {{numValue > 0 ? ('+' + numValue) : numValue}}
+                            </option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>

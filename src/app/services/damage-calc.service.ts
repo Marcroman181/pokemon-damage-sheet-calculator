@@ -16,17 +16,33 @@ export class DamageCalcService {
 
   calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
 
-    let damages: Array<Damage> = [];    
+    let damages: Array<Damage> = [];
 
-    const attack: number = move.category === MoveCategory.Special 
-    ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost) 
-    : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost); 
+    let attack: number = move.category === MoveCategory.Special
+      ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost)
+      : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost);
 
-    const defense: number = move.category === MoveCategory.Special 
-    ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost) 
-    : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost); 
+    //Move Multipliers
+    if (move.multipliers && move.multipliers.length) {
+      let finalMultiplier = 1;
+      for (let i = 0; i < move.multipliers.length; i++) {
+        if (move.multipliers[i].value !== 1) {
+          finalMultiplier = finalMultiplier * move.multipliers[i].value;
+        }
+      }
+      attack = Math.floor(attack * finalMultiplier);
+    }
+
+    const defense: number = move.category === MoveCategory.Special
+      ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost)
+      : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost);
 
     let basePower = this.calcBasePower(attacker.level, move, attack, defense);
+
+    //Crit
+    if (move.crit) {
+      basePower = Math.floor(basePower * 1.5);
+    }
 
     for (var i = 0; i < 16; i++) {
 
@@ -35,6 +51,9 @@ export class DamageCalcService {
       //Resolve STAB
       if (attacker.type === move.type || attacker.type2 === move.type) {
         damage = this.round(damage * 1.5);
+      }
+      if (i == 0) {
+        console.log(damage);
       }
       //Type Effectiveness
       damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(move.type, defender));
@@ -46,14 +65,15 @@ export class DamageCalcService {
       if (damage > 65535) {
         damage %= 65536;
       }
-      damages.push({ hp: damage, percentatge: this.calcPercentatge(damage, defender.stats.hp.total)});
+      damages.push({ hp: damage, percentatge: this.calcPercentatge(damage, defender.stats.hp.total) });
     }
 
-    console.log((MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost));
     return {
       damages: damages,
       attackerBoost: (move.category === MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost) || 0,
-      defenderBoost: (move.category === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0
+      defenderBoost: (move.category === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0,
+      multipliers: move.multipliers || [],
+      crit: move.crit
     } as DamageInfo;
   }
 
@@ -71,17 +91,16 @@ export class DamageCalcService {
     return Number((damage * 100 / hp).toFixed(1));
   }
 
-  private calcStatAfterBoost(stat:number, boost: number){
+  private calcStatAfterBoost(stat: number, boost: number) {
 
     let boostMultiplier: number = 1;
 
-    if(boost) {
-      boostMultiplier = boost < 0 
-      ? Math.pow((2+(-boost))/2, -1)
-      : Math.pow((2+boost)/2, 1); 
+    if (boost) {
+      boostMultiplier = boost < 0
+        ? Math.floor(Math.pow((2 + (-boost)) / 2, -1))
+        : Math.floor(Math.pow((2 + boost) / 2, 1));
     }
 
     return this.round(stat * boostMultiplier);
   }
-
 }

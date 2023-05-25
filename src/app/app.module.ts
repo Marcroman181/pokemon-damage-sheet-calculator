@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { CdkColumnDef } from '@angular/cdk/table';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokemonAutocompleteComponent } from './components/pokemon-autocomplete/pokemon-autocomplete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonStatsComponent } from './components/pokemon-stats/pokemon-stats.component';
@@ -21,6 +21,7 @@ import { CalcResultComponent } from './components/calc-result/calc-result.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SaveSetModalComponent } from './components/save-set-modal/save-set-modal.component';
 import { TeamComponent } from './components/team/team.component';
+import { MultiplierModalComponent } from './components/multiplier-modal/multiplier-modal.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +39,14 @@ import { TeamComponent } from './components/team/team.component';
     EditPokemonModalComponent,
     CalcResultComponent,
     SaveSetModalComponent,
-    TeamComponent
+    TeamComponent,
+    MultiplierModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     NgbModule
   ],

@@ -40,7 +40,7 @@
         },
         "move1": {
             "name": "Flower Trick",
-            "bp": 105,
+            "bp": 70,
             "type": "Grass",
             "category": "Physical"
         },

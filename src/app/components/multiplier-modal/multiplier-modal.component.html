@@ -1,0 +1,26 @@
+<span>test</span>
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Move Multiplier</h5>
+                <button type="button" class="btn-close" (click)="close()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row" >
+                    <div class="col">Value</div>
+                    <div class="col">Description</div>
+                </div>
+                <div class="row" *ngFor="let multiplier of multipliers; let i = index">
+                    <input class="form-control" type="number" [(ngModel)]="multipliers[i].value">
+                    <input class="form-control" type="text" [(ngModel)]="multipliers[i].description">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="addMultiplier()">New Multiplier</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="saveMultipliers()">Save Mulitpliers</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Observable, map, startWith } from 'rxjs';
 import { Move } from 'src/app/model/move/move';
+import { Multiplier } from 'src/app/model/multiplier/multiplier';
 import { PokemonMovesService } from 'src/app/services/pokemon-moves.service';
 
 @Component({
@@ -20,17 +21,17 @@ export class PokemonMoveComponent implements OnInit {
   autocompleteControl = new FormControl('');
   moves: Map<string, Move> = new Map<string, Move>();
   filteredOptions: Observable<Array<string>>;
+  showMultiplierModal: boolean = false;
   
   @ViewChild('moveInput') formInput: ElementRef;
 
-  constructor(private readonly pokemonMovesService: PokemonMovesService,
-    private readonly fb: FormBuilder) {
+  constructor(private readonly pokemonMovesService: PokemonMovesService) {
   }
 
   ngOnInit(): void {
     this.moves = this.pokemonMovesService.getAllPokemonMoves();
 
-    this.selectedMove = this.move || this.moves.get("(No Move)");
+    this.selectedMove = {...this.move || this.moves.get("(No Move)")};
 
    // this.form = this.fb.group({
     //  name: this.selectedMove?.name
@@ -51,7 +52,7 @@ export class PokemonMoveComponent implements OnInit {
 
   private convertToMove(moveName: string): Move {
 
-    return this.moves.get(moveName);
+    return {...this.moves.get(moveName)};
   }
 
   private _filter(value: string): Array<string> {
@@ -66,7 +67,6 @@ export class PokemonMoveComponent implements OnInit {
     this.selectedMove = this.convertToMove(move);
 
     this.changeMove.emit(this.selectedMove);
-    console.log("Pokemon Move Selected => " + move);
   }
 
   initializeSearch(): void {
@@ -76,6 +76,26 @@ export class PokemonMoveComponent implements OnInit {
 
   isKeyboardActive() {
      this.formInput.nativeElement.focus();
+  }
+
+  addMultipliers(multipliers: Array<Multiplier>): void {
+
+    this.closeModal()
+    this.selectedMove.multipliers = multipliers;
+    this.changeMove.emit(this.selectedMove);
+  }
+
+  toggleCrit(): void {
+    this.selectedMove.crit = !this.selectedMove.crit;
+    this.changeMove.emit(this.selectedMove);
+  }
+
+  showModal(): void {
+    this.showMultiplierModal = true;
+  }
+
+  closeModal(): void {
+    this.showMultiplierModal = false;
   }
 
 

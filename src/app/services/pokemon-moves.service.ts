@@ -42,7 +42,6 @@ export class PokemonMovesService {
       bp: moveEntry[1].bp,
       type: moveEntry[1].type,
       category: moveEntry[1].category,
-
     } as Move;
   }
 }

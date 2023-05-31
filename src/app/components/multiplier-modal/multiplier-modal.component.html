@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" (click)="close()"></button>
             </div>
             <div class="modal-body">
-                <div class="row" >
+                <div class="row">
                     <div class="col">Value</div>
                     <div class="col">Description</div>
                 </div>
@@ -16,6 +16,47 @@
                     <input class="form-control" type="text" [(ngModel)]="multipliers[i].description">
                 </div>
                 <button type="button" class="btn btn-primary" (click)="addMultiplier()">New Multiplier</button>
+                <div class="row">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                        <input type="radio" class="btn-check" name="btnradio" id="singles" autocomplete="off"
+                            [checked]="!doubles">
+                        <label class="btn btn-secondary" [ngClass]="{'active': !doubles}"
+                            (click)="setDoubles(false)">Singles</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="doubles" autocomplete="off"
+                            [checked]="doubles">
+                        <label class="btn btn-secondary" [ngClass]="{'active': doubles}"
+                            (click)="setDoubles(true)">Doubles</label>
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6">
+                        <button class="btn btn-secondary" [ngClass]="{'active': terrain}"
+                            (click)="toggleField()">Terrain</button>
+                    </div>
+
+                    <div class="col-6">
+                        <button class="btn btn-secondary" [ngClass]="{'active': weather}"
+                            (click)="toggleWeather()">Wheater</button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col">
+                        <button class="btn btn-secondary" [ngClass]="{'active': reflect}"
+                            (click)="toggleReflect()">Screens</button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col">
+                        <button class="btn btn-secondary" [ngClass]="{'active': helpingHand}"
+                            (click)="toggleHH()">Helping Hand</button>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="close()">Close</button>

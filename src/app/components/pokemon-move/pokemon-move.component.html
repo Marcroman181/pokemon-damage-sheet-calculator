@@ -2,43 +2,39 @@
 
   <div class="dropdown">
     <div class="row">
-      <div class="col-4">
+      <div class="c-move">
 
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-          (click)="initializeSearch()">
-          {{selectedMove.name}}
-        </button>
+        <div class="dropdown-toggle" data-bs-toggle="dropdown" (click)="initializeSearch()">
+          <span>{{selectedMove.name}}</span>
+        </div>
         <ul class="dropdown-menu">
-          <input #moveInput class="form-control" type="text" placeholder="" aria-label="Number"
-            [formControl]="autocompleteControl">
+          <input #moveInput type="text" placeholder="" aria-label="Number" [formControl]="autocompleteControl">
           <ng-container *ngFor="let option of (filteredOptions | async).slice(0,10)">
             <li><a class="dropdown-item" (click)="selectMove(option)">{{option}}</a></li>
           </ng-container>
         </ul>
       </div>
-      <div class="col-1">
+      <div class="c-power">
         {{selectedMove.bp}}
       </div>
-      <div class="col-3">
+      <div class="c-type">
         {{selectedMove.type}}
       </div>
-      <div class="col-2">
+      <div class="c-category">
         {{selectedMove.category}}
       </div>
-      <div class="col-1">
-        <button class="btn btn-secondary" [ngClass]="{'active': selectedMove.crit}" (click)="toggleCrit()">CRIT</button>
+      <div class="c-crit">
+        <button [ngClass]="{'active': selectedMove.crit}" (click)="toggleCrit()">CRIT</button>
       </div>
-      <div class="col-1">
-        <button class="btn btn-secondary" (click)="showModal()">*</button>
+      <div class="c-multipliers">
+        <button (click)="showModal()">*</button>
       </div>
     </div>
   </div>
 
 </form>
 
-<multiplier-modal *ngIf="showMultiplierModal"
-  [initialMultipliers]="selectedMove.multipliers"
-  (onChangeMultipliers)="addMultipliers($event)"
-  (onClose)="closeModal()">
+<multiplier-modal *ngIf="showMultiplierModal" [initialMultipliers]="selectedMove.multipliers"
+  (onChangeMultipliers)="addMultipliers($event)" (onClose)="closeModal()">
 
 </multiplier-modal>

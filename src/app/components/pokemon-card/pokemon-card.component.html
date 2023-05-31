@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row mt-20">
 
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-6">
 
         <pokemon-autocomplete [pokedexSuggestions]="pokedexSuggestions" [pokemonSets]="pokemonSetsByPokemonName"
             [initializedPokemon]="pokemon.name" (selectedPokemon)="selectPokemon($event)"
@@ -8,43 +8,60 @@
 
         </pokemon-autocomplete>
 
-        <pokemon-level [initializedLevel]="pokemon.level" (level)="selectLevel($event)">
-        </pokemon-level>
-
-        <div class="row justify-content-start">
-            <div class="col">
+        <div class="row justify-content-start mt-20">
+            <div class="col-3">
+                <span>Type</span>
+            </div>
+            <div class="col-3">
                 <pokemon-type [type]="pokemon.type" (changeType)="selectType($event)">
                 </pokemon-type>
             </div>
-            <div class="col">
+            <div class="col-3">
                 <pokemon-type [type]="pokemon.type2" (changeType)="selectType2($event)">
                 </pokemon-type>
             </div>
         </div>
 
-        <pokemon-nature [nature]="pokemon.nature" (changeNature)="selectNature($event)">
-        </pokemon-nature>
+        <div class="row m-top-5">
+            <div class="col-3">
+                <span>Level</span>
+            </div>
+
+            <div class="col">
+                <pokemon-level [initializedLevel]="pokemon.level" (level)="selectLevel($event)">
+                </pokemon-level>
+            </div>
+        </div>
+        <div class="row m-top-5">
+            <div class="col-3">
+                <span>Nature</span>
+            </div>
+
+            <div class="col">
+                <pokemon-nature [nature]="pokemon.nature" (changeNature)="selectNature($event)">
+                </pokemon-nature>
+            </div>
+        </div>
+        <div class="row mt-20">
+
+            <pokemon-move [move]="pokemon.move1" (changeMove)="selectMove(1, $event)">
+            </pokemon-move>
+
+            <pokemon-move [move]="pokemon.move2" (changeMove)="selectMove(2, $event)">
+            </pokemon-move>
+
+            <pokemon-move [move]="pokemon.move3" (changeMove)="selectMove(3, $event)">
+            </pokemon-move>
+
+            <pokemon-move [move]="pokemon.move4" (changeMove)="selectMove(4, $event)">
+            </pokemon-move>
+        </div>
     </div>
 
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-6">
         <pokemon-stats *ngIf="pokemon && pokemon.stats" [pokemonStats]="pokemon.stats"
             (changeStats)="changeStats($event)">
         </pokemon-stats>
-    </div>
-
-
-    <div class="col-12 col-lg-4">
-        <pokemon-move [move]="pokemon.move1" (changeMove)="selectMove(1, $event)">
-        </pokemon-move>
-
-        <pokemon-move [move]="pokemon.move2" (changeMove)="selectMove(2, $event)">
-        </pokemon-move>
-
-        <pokemon-move [move]="pokemon.move3" (changeMove)="selectMove(3, $event)">
-        </pokemon-move>
-
-        <pokemon-move [move]="pokemon.move4" (changeMove)="selectMove(4, $event)">
-        </pokemon-move>
     </div>
 
     <button class="btn btn-primary" (click)="showSaveModal()">Save Set</button>

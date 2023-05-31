@@ -10,3 +10,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.m-top-5 {
+    margin-top: 5px !important;
+}

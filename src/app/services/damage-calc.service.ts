@@ -26,7 +26,7 @@ export class DamageCalcService {
     if (move.multipliers && move.multipliers.length) {
       let finalMultiplier = 1;
       for (let i = 0; i < move.multipliers.length; i++) {
-        if (move.multipliers[i].value !== 1) {
+        if (move.multipliers[i].value !== 1 && (!move.multipliers[i].modificatorType || move.multipliers[i].modificatorType > 1)) {
           finalMultiplier = finalMultiplier * move.multipliers[i].value;
         }
       }
@@ -43,6 +43,18 @@ export class DamageCalcService {
     if (move.crit) {
       basePower = Math.floor(basePower * 1.5);
     }
+
+    //move multiplier TYPE 2
+    if (move.multipliers && move.multipliers.length) {
+      let finalMultiplier = 1;
+      for (let i = 0; i < move.multipliers.length; i++) {
+        if (move.multipliers[i].modificatorType === 2) {
+          finalMultiplier = finalMultiplier * move.multipliers[i].value;
+        }
+      }
+      basePower = Math.floor(basePower * finalMultiplier);
+    }
+
 
     for (var i = 0; i < 16; i++) {
 

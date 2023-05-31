@@ -1,14 +1,19 @@
-<ul class="nav nav-tabs">
-    <li class="nav-item" *ngFor="let pokemon of pokemons; let i = index">
-        <a class="nav-link" [ngClass]="{'active':  active === i}" (click)="onActiveTab(i)">{{pokemon?.name}}</a>
-        <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close" (click)="deletePokemon(i)"></button>
-    </li>
-    <li class="nav-item" *ngIf="pokemons.length < 6">
-        <a class="nav-link" (click)="addPokemon()">Add</a>
-    </li>
-</ul>
-
-<button type="button" class="btn btn-primary" (click)="saveTeam()" >Save team</button>
+<div class="c-team-tabs-container">
+    <div class="c-team-tabs">
+        <ul class="nav nav-tabs">
+            <li class="nav-item" *ngFor="let pokemon of pokemons; let i = index">
+                <a class="nav-link" [ngClass]="{'active':  active === i}" (click)="onActiveTab(i)">{{pokemon?.name}}</a>
+                <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close"
+                    (click)="deletePokemon(i)"></button>
+            </li>
+            <li class="nav-item" *ngIf="pokemons.length < 6">
+                <a class="nav-link" (click)="addPokemon()">Add</a>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="c-save-team btn btn-primary" (click)="saveTeam()">Save
+        team</button>
+</div>
 
 <ng-container *ngFor="let pokemon of pokemons; let i = index">
 

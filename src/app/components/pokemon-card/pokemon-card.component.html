@@ -2,11 +2,22 @@
 
     <div class="col-12 col-lg-6">
 
-        <pokemon-autocomplete [pokedexSuggestions]="pokedexSuggestions" [pokemonSets]="pokemonSetsByPokemonName"
-            [initializedPokemon]="pokemon.name" (selectedPokemon)="selectPokemon($event)"
-            (selectedPokemonSet)="selectPokemonSet($event)">
+        <div class="row">
 
-        </pokemon-autocomplete>
+            <div class="col-9">
+
+                <pokemon-autocomplete [pokedexSuggestions]="pokedexSuggestions" [pokemonSets]="pokemonSetsByPokemonName"
+                    [initializedPokemon]="pokemon.name" (selectedPokemon)="selectPokemon($event)"
+                    (selectedPokemonSet)="selectPokemonSet($event)">
+
+                </pokemon-autocomplete>
+
+            </div>
+
+            <div class="col-3">
+                <button class="btn btn-primary" (click)="showSaveModal()">Save Set</button>
+            </div>
+        </div>
 
         <div class="row justify-content-start mt-20">
             <div class="col-3">
@@ -63,8 +74,6 @@
             (changeStats)="changeStats($event)">
         </pokemon-stats>
     </div>
-
-    <button class="btn btn-primary" (click)="showSaveModal()">Save Set</button>
 
     <save-set-modal *ngIf="showModal" (onClose)="closeModal()" (onSaveSet)="saveSet($event)"></save-set-modal>
 </div>

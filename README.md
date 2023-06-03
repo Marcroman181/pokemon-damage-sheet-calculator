@@ -2,4 +2,6 @@
 
 ##TODO
 
-Multiplicators moves
+fix Multiplicators moves
+styles
+order pokemons

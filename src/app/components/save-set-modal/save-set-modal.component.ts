@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 
 @Component({
   selector: 'save-set-modal',

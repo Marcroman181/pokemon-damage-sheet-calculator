@@ -16,6 +16,8 @@ export class OpponentPokemonContainerComponent implements OnInit {
   pokemons: Map<number, PokemonSet> = new Map<number, PokemonSet>();
 
   showModal: boolean = false;
+  showExportModal: boolean = false;
+  showImportModal: boolean = false;
   pokemonToEdit: PokemonSet;
 
   constructor(private readonly idGeneratorService: IdGeneratorService,
@@ -69,6 +71,27 @@ export class OpponentPokemonContainerComponent implements OnInit {
 
   saveSheet(): void {
     this.sheetService.saveSheet(Array.from(this.pokemons.values()));
+  }
+
+  importSheet(pokemonSheet: Array<PokemonSet>): void {
+    const newSheet: Map<number, PokemonSet> = new Map<number, PokemonSet>();
+    pokemonSheet
+      .forEach((pokemon:PokemonSet) => newSheet.set(pokemon.id, pokemon));
+    this.pokemons = newSheet;
+    this.showImportModal = false;
+  }
+
+  setExportModal(showExportModal: boolean): void {
+    this.showExportModal = showExportModal;
+  }
+
+  setImportModal(showImportModal: boolean): void {
+    this.showImportModal = showImportModal;
+  }
+
+  exportSheet(fileName: string): void {
+    this.sheetService.exportSheet(Array.from(this.pokemons.values()), fileName);
+    this.showExportModal = false;
   }
 
 }

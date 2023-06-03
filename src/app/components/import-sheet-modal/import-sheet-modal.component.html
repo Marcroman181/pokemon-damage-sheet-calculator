@@ -1,0 +1,18 @@
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Import pokemon sheet</h5>
+                <button type="button" class="btn-close" (click)="close()"></button>
+            </div>
+            <div class="modal-body">                
+                <span class="c-ta-center">Import file sheet</span>
+                <input type="file" class="file-upload" (change)="changeFile($event)">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" class="btn btn-primary" [disabled]="!file" (click)="importSheet()">Import</button>
+            </div>
+        </div>
+    </div>
+</div>

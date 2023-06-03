@@ -1,9 +1,10 @@
-{{move.name}} => {{min}}% ~ {{max}}% 
+
 <button
 	type="button"
-	class="btn btn-outline-secondary me-2"
+	class="c-calc-button"
+	[ngClass]="color"
 	placement="top"
 	ngbPopover="{{infoText}}"
 >
-	Info
+{{move.name}} => {{min}}% ~ {{max}}% 
 </button>

@@ -22,6 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SaveSetModalComponent } from './components/save-set-modal/save-set-modal.component';
 import { TeamComponent } from './components/team/team.component';
 import { MultiplierModalComponent } from './components/multiplier-modal/multiplier-modal.component';
+import { ShowExportModalComponent } from './components/show-export-modal/show-export-modal.component';
+import { ImportSheetModalComponent } from './components/import-sheet-modal/import-sheet-modal.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MultiplierModalComponent } from './components/multiplier-modal/multipli
     CalcResultComponent,
     SaveSetModalComponent,
     TeamComponent,
-    MultiplierModalComponent
+    MultiplierModalComponent,
+    ShowExportModalComponent,
+    ImportSheetModalComponent
   ],
   imports: [
     BrowserModule,

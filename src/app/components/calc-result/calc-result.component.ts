@@ -22,6 +22,7 @@ export class CalcResultComponent implements OnChanges {
   min: number = 0;
   max: number = 100;
   infoText: string = '';
+  color: string = '';
 
   constructor(private readonly damageCalcService: DamageCalcService) {
   }
@@ -42,6 +43,24 @@ export class CalcResultComponent implements OnChanges {
     }
     this.damageInfo.damages
       .forEach((damage: Damage) => this.infoText += damage.hp + ' / ');
+
+    this.resolveColor();
+  }
+
+  private resolveColor(): void {
+
+    if(this.max < 25) {
+      this.color = 'bg-light-blue';
+    } else if(this.max < 50) {
+      this.color = 'bg-green';
+    } else if(this.max < 75) {
+      this.color = 'bg-yellow';
+    } else if(this.max < 100) {
+      this.color = 'bg-orange';
+    } else {
+      this.color = 'bg-red';
+    }
+  
   }
 
 }

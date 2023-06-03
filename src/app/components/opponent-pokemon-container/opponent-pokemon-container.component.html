@@ -1,14 +1,25 @@
+<div class="row justify-content-start">
 
+  <div class="c-control-btn-container">
+    <button class="c-control-btn" (click)="saveSheet()">Save sheet</button>
+  </div>
+  <div class="c-control-btn-container">
+    <button class="c-control-btn" (click)="addPokemon()">Add Pokemon</button>
+  </div>
 
-<button type="button" class="btn btn-primary" (click)="saveSheet()" >Save sheet</button>
-<div>
-  <button mat-raised-button color="primary" (click)="addPokemon()">Add Pokemon</button>
+  <div class="c-control-btn-container">
+    <button class="c-control-btn" (click)="setImportModal(true)">Import sheet</button>
+  </div>
+  <div class="c-control-btn-container">
+    <button class="c-control-btn" (click)="setExportModal(true)">Export Pokemon</button>
+  </div>
 </div>
 
 <div class="row">
   <ng-container *ngFor="let pokemon of pokemons.values()">
     <div class="col-lg-4 col-md-6 col-12">
-      <opponent-pokemon [pokemon]="userPokemon" [oponnentPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs" (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)">
+      <opponent-pokemon [pokemon]="userPokemon" [oponnentPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs"
+        (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)">
 
       </opponent-pokemon>
     </div>
@@ -19,3 +30,7 @@
   (closeModal)="closeModal()">
 
 </edit-pokemon-modal>
+
+
+<show-export-modal *ngIf="showExportModal" (onClose)="setExportModal(false)" (onExportSheet)="exportSheet($event)"></show-export-modal>
+<import-sheet-modal *ngIf="showImportModal" (onClose)="setImportModal(false)" (onImportSheet)="importSheet($event)"></import-sheet-modal>

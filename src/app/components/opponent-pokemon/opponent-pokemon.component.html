@@ -1,12 +1,13 @@
-<h3>{{oponnentPokemon.setName || oponnentPokemon.name}}</h3>
-<div>
-  <button color="accent" (click)="edit()">Edit</button>
-</div>
+<div class="c-title-oponent-container row mt-20 mb-20">
+  <span class="c-pokemon-title col-8">{{oponnentPokemon.setName || oponnentPokemon.name}}</span>
+  <div class="c-btn-icon">
+    <button (click)="edit()">Edit</button>
+  </div>
 
-<div>
-  <button color="warn" (click)="delete()">Delete</button>
+  <div class="c-btn-icon" >
+    <button (click)="delete()">Delete</button>
+  </div>
 </div>
-
 <ng-container *ngIf="pokemon && oponnentPokemon">
 
   <ng-container *ngIf="offensiveCalcs">
@@ -32,7 +33,7 @@
   </ng-container>
 
   <ng-container *ngIf="!offensiveCalcs">
-    
+
     <div class="row" *ngIf="oponnentPokemon.move1">
       <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move1"
         [offensiveCalcs]="offensiveCalcs"></calc-result>

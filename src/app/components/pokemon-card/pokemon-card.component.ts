@@ -6,6 +6,7 @@ import { PokemonStatsService } from 'src/app/services/pokemon-stats.service';
 import { PokemonStats } from 'src/app/model/pokemon-stats/pokemon-stats';
 import { Move } from 'src/app/model/move/move';
 import { PokemonSetsService } from 'src/app/services/pokemon-sets.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'pokemon-card',
@@ -27,7 +28,8 @@ export class PokemonCardComponent implements OnInit {
 
   constructor(private readonly pokedexService: PokedexService,
     private readonly pokemonStatsService: PokemonStatsService,
-    private readonly pokemonSetsService: PokemonSetsService) {
+    private readonly pokemonSetsService: PokemonSetsService,
+    private readonly toast: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -129,6 +131,7 @@ export class PokemonCardComponent implements OnInit {
   saveSet(setName: string): void {
     this.pokemonSetsService.saveSet({...this.pokemon, setName: this.pokemon.name + ' ' + setName});
     this.showModal = false;
+    this.toast.success('Pokemon Set saved');
   }
 
 }

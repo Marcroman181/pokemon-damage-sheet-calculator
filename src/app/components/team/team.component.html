@@ -2,9 +2,11 @@
     <div class="c-team-tabs">
         <ul class="nav nav-tabs">
             <li class="nav-item" *ngFor="let pokemon of pokemons; let i = index">
-                <a class="nav-link" [ngClass]="{'active':  active === i}" (click)="onActiveTab(i)">{{pokemon?.name}}</a>
-                <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close"
-                    (click)="deletePokemon(i)"></button>
+                <div class="nav-link" [ngClass]="{'active':  active === i}">
+                    <a  (click)="onActiveTab(i)">{{pokemon?.name}}</a>
+                    <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close"
+                        (click)="deletePokemon(i)"></button>
+                </div>
             </li>
             <li class="nav-item" *ngIf="pokemons.length < 6">
                 <a class="nav-link" (click)="addPokemon()">Add</a>
@@ -27,5 +29,7 @@
 
 </ng-container>
 
-<show-export-modal *ngIf="showExportTeamModal" [title]="'Export pokemon team'" (onClose)="setExportModal(false)" (onExportSheet)="exportTeam($event)"></show-export-modal>
-<import-sheet-modal *ngIf="showImportTeamModal" [title]="'Import pokemon team'"  (onClose)="setImportModal(false)" (onImportSheet)="importTeam($event)"></import-sheet-modal>
+<show-export-modal *ngIf="showExportTeamModal" [title]="'Export pokemon team'" (onClose)="setExportModal(false)"
+    (onExportSheet)="exportTeam($event)"></show-export-modal>
+<import-sheet-modal *ngIf="showImportTeamModal" [title]="'Import pokemon team'" (onClose)="setImportModal(false)"
+    (onImportSheet)="importTeam($event)"></import-sheet-modal>

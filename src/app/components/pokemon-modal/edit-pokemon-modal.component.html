@@ -1,17 +1,22 @@
-<div class="modal-overlay">
-    <div class="edit-modal-container">
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content edit-modal-container">
+            <div class="modal-header">
+                <h5 class="modal-title" [innerText]="initializePokemon ? 'Edit Pokemon': 'Add new pokemon'"></h5>
+                <button type="button" class="btn-close" (click)="close()"></button>
+            </div>
+            <div class="modal-body">               
 
-        <pokemon-card [initializePokemon]="pokemon" (pokemonModified)="modifyPokemon($event)">
+                <pokemon-card [initializePokemon]="pokemon" (pokemonModified)="modifyPokemon($event)">
 
-        </pokemon-card>
+                </pokemon-card>     
 
-        <div>
-            <button mat-raised-button color="primary" (click)="add()"
-                [innerText]="initializePokemon ? 'Edit Pokemon': 'Add Pokemon'"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button  type="button" class="btn btn-primary" (click)="add()"
+                    [innerText]="initializePokemon ? 'Edit Pokemon': 'Add Pokemon'"></button>
+            </div>
         </div>
-        <div>
-            <button mat-raised-button (click)="close()">Close</button>
-        </div>
-
     </div>
 </div>

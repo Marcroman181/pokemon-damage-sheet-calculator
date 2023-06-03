@@ -24,6 +24,12 @@
       </opponent-pokemon>
     </div>
   </ng-container>
+  
+  <div class="col-lg-4 col-md-6 col-12">
+    <div class="c-control-btn-container">
+      <button class="c-control-btn" (click)="addPokemon()">Add Pokemon</button>
+    </div>
+  </div>
 </div>
 
 <edit-pokemon-modal *ngIf="showModal" [initializePokemon]="pokemonToEdit" (addPokemon)="savePokemon($event)"
@@ -32,5 +38,7 @@
 </edit-pokemon-modal>
 
 
-<show-export-modal *ngIf="showExportModal" [title]="'Export pokemon sheet'" (onClose)="setExportModal(false)" (onExportSheet)="exportSheet($event)"></show-export-modal>
-<import-sheet-modal *ngIf="showImportModal" [title]="'Import pokemon sheet'" (onClose)="setImportModal(false)" (onImportSheet)="importSheet($event)"></import-sheet-modal>
+<show-export-modal *ngIf="showExportModal" [title]="'Export pokemon sheet'" (onClose)="setExportModal(false)"
+  (onExportSheet)="exportSheet($event)"></show-export-modal>
+<import-sheet-modal *ngIf="showImportModal" [title]="'Import pokemon sheet'" (onClose)="setImportModal(false)"
+  (onImportSheet)="importSheet($event)"></import-sheet-modal>

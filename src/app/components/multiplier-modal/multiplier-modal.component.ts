@@ -56,6 +56,16 @@ export class MultiplierModalComponent implements OnInit {
     this.multipliers.push({value: 1, description: ''});
   }
 
+  removeMultiplier(index: number): void {
+    let newMultipliers: Array<Multiplier> = [];
+    for (let i = 0; i < this.multipliers.length; i++) {
+      if (i !== index) {
+        newMultipliers.push(this.multipliers[i]);
+      }
+    }
+    this.multipliers = newMultipliers;
+  }
+
   saveMultipliers(): void {
 
     if(this.doubles) {

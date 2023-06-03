@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { PokemonTeamService } from 'src/app/services/pokemon-team.service';
 
@@ -18,7 +19,8 @@ export class TeamComponent implements OnInit {
   showImportTeamModal:boolean = false;
 
   constructor( private readonly ref: ChangeDetectorRef,
-    private readonly teamService: PokemonTeamService) { }
+    private readonly teamService: PokemonTeamService,
+    private readonly toast: ToastrService) { }
 
   ngOnInit(): void {
     let team: Array<PokemonSet> = this.teamService.getTeam();
@@ -61,6 +63,7 @@ export class TeamComponent implements OnInit {
 
   saveTeam(): void {
     this.teamService.saveTeam(this.pokemons);
+    this.toast.success('Team saved');
   }
 
   importTeam(importedTeam: Array<PokemonSet>): void {
@@ -71,6 +74,7 @@ export class TeamComponent implements OnInit {
     }
     this.pokemons = newTeam;
     this.showImportTeamModal = false;
+    this.toast.success('Team imported');
   }
 
   setImportModal(showImportTeamModal: boolean): void {

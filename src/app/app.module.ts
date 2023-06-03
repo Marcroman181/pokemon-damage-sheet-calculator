@@ -24,6 +24,10 @@ import { TeamComponent } from './components/team/team.component';
 import { MultiplierModalComponent } from './components/multiplier-modal/multiplier-modal.component';
 import { ShowExportModalComponent } from './components/show-export-modal/show-export-modal.component';
 import { ImportSheetModalComponent } from './components/import-sheet-modal/import-sheet-modal.component';
+import { ToastrModule } from 'ngx-toastr';
+import { provideAnimations } from '@angular/platform-browser/animations';
+
+import { provideToastr } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -52,9 +56,14 @@ import { ImportSheetModalComponent } from './components/import-sheet-modal/impor
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+    ToastrModule,
     NgbModule
   ],
-  providers: [CdkColumnDef],
+  providers: [
+    CdkColumnDef, 
+    provideAnimations(), 
+    provideToastr()
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

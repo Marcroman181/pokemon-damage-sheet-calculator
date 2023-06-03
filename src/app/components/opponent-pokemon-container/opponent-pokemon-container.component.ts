@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { IdGeneratorService } from 'src/app/services/id-generator.service';
 import { SheetService } from 'src/app/services/sheet.service';
@@ -21,7 +22,8 @@ export class OpponentPokemonContainerComponent implements OnInit {
   pokemonToEdit: PokemonSet;
 
   constructor(private readonly idGeneratorService: IdGeneratorService,
-    private readonly sheetService: SheetService) {
+    private readonly sheetService: SheetService,
+    private readonly toast: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -71,6 +73,7 @@ export class OpponentPokemonContainerComponent implements OnInit {
 
   saveSheet(): void {
     this.sheetService.saveSheet(Array.from(this.pokemons.values()));
+    this.toast.success('Sheet saved');
   }
 
   importSheet(pokemonSheet: Array<PokemonSet>): void {
@@ -79,6 +82,7 @@ export class OpponentPokemonContainerComponent implements OnInit {
       .forEach((pokemon:PokemonSet) => newSheet.set(pokemon.id, pokemon));
     this.pokemons = newSheet;
     this.showImportModal = false;
+    this.toast.success('Sheet imported');
   }
 
   setExportModal(showExportModal: boolean): void {

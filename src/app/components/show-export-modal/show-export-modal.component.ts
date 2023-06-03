@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'show-export-modal',
@@ -6,6 +6,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./show-export-modal.component.scss']
 })
 export class ShowExportModalComponent {
+
+  @Input() title: string;
 
   @Output() onExportSheet: EventEmitter<string> = new EventEmitter<string>();
   @Output() onClose: EventEmitter<void> = new EventEmitter<void>();

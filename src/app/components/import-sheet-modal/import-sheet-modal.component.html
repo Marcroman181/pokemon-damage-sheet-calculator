@@ -2,11 +2,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Import pokemon sheet</h5>
+                <h5 class="modal-title">{{title}}</h5>
                 <button type="button" class="btn-close" (click)="close()"></button>
             </div>
             <div class="modal-body">                
-                <span class="c-ta-center">Import file sheet</span>
+                <span class="c-ta-center">Import file</span>
                 <input type="file" class="file-upload" (change)="changeFile($event)">
             </div>
             <div class="modal-footer">

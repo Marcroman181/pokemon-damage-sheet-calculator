@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 
 @Component({
@@ -8,6 +8,8 @@ import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 })
 export class ImportSheetModalComponent {
 
+  @Input() title: string;
+  
   @Output() onImportSheet: EventEmitter<Array<PokemonSet>> = new EventEmitter<Array<PokemonSet>>();
   @Output() onClose: EventEmitter<void> = new EventEmitter<void>();
 
@@ -26,7 +28,6 @@ export class ImportSheetModalComponent {
   }
 
   changeFile(event: any): void {
-    console.log(event);
     this.file = event.target.files[0];
   }
 

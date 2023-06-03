@@ -14,6 +14,9 @@ export class TeamComponent implements OnInit {
   active: number = 0;
   pokemons: Array<PokemonSet> = [];
 
+  showExportTeamModal:boolean = false;
+  showImportTeamModal:boolean = false;
+
   constructor( private readonly ref: ChangeDetectorRef,
     private readonly teamService: PokemonTeamService) { }
 
@@ -58,6 +61,29 @@ export class TeamComponent implements OnInit {
 
   saveTeam(): void {
     this.teamService.saveTeam(this.pokemons);
+  }
+
+  importTeam(importedTeam: Array<PokemonSet>): void {
+    console.log(importedTeam);
+    const newTeam: Array<PokemonSet> = new Array<PokemonSet>();
+    for(let i = 0; i < importedTeam.length && i < 6; i++) {
+      newTeam.push(importedTeam[i]);
+    }
+    this.pokemons = newTeam;
+    this.showImportTeamModal = false;
+  }
+
+  setImportModal(showImportTeamModal: boolean): void {
+    this.showImportTeamModal = showImportTeamModal;
+  }
+
+  setExportModal(showExportTeamModal: boolean): void {
+    this.showExportTeamModal = showExportTeamModal;
+  }
+
+  exportTeam(fileName: string): void {
+    this.teamService.exportTeam(this.pokemons, fileName);
+    this.showExportTeamModal = false;
   }
 
 }

@@ -32,5 +32,5 @@
 </edit-pokemon-modal>
 
 
-<show-export-modal *ngIf="showExportModal" (onClose)="setExportModal(false)" (onExportSheet)="exportSheet($event)"></show-export-modal>
-<import-sheet-modal *ngIf="showImportModal" (onClose)="setImportModal(false)" (onImportSheet)="importSheet($event)"></import-sheet-modal>
+<show-export-modal *ngIf="showExportModal" [title]="'Export pokemon sheet'" (onClose)="setExportModal(false)" (onExportSheet)="exportSheet($event)"></show-export-modal>
+<import-sheet-modal *ngIf="showImportModal" [title]="'Import pokemon sheet'" (onClose)="setImportModal(false)" (onImportSheet)="importSheet($event)"></import-sheet-modal>

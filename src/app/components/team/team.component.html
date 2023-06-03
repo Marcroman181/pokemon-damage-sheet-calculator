@@ -13,6 +13,10 @@
     </div>
     <button type="button" class="c-save-team btn btn-primary" (click)="saveTeam()">Save
         team</button>
+    <button type="button" class="c-save-team btn btn-primary" (click)="setExportModal(true)">Export
+        team</button>
+    <button type="button" class="c-save-team btn btn-primary" (click)="setImportModal(true)">Import
+        team</button>
 </div>
 
 <ng-container *ngFor="let pokemon of pokemons; let i = index">
@@ -22,3 +26,6 @@
     </pokemon-card>
 
 </ng-container>
+
+<show-export-modal *ngIf="showExportTeamModal" [title]="'Export pokemon team'" (onClose)="setExportModal(false)" (onExportSheet)="exportTeam($event)"></show-export-modal>
+<import-sheet-modal *ngIf="showImportTeamModal" [title]="'Import pokemon team'"  (onClose)="setImportModal(false)" (onImportSheet)="importTeam($event)"></import-sheet-modal>

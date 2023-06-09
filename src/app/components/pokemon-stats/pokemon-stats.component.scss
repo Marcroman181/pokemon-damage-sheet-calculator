@@ -1,7 +1,14 @@
+@import '../../../styles/colors.scss';
+
 .c-red {
     color: red;
 }
 
 input {
     height: 23px;
+    width: 100%;
+}
+
+table {
+    color: $text-color-100;
 }

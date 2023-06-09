@@ -1,8 +1,8 @@
 <form [formGroup]="form">
     <div class="form-group">
-        <select formControlName="nature">
-            <option value="">(None)</option>
-            <option *ngFor="let natureEntry of natures | keyvalue" [value]="natureEntry.key">
+        <select formControlName="nature" class="c-input-primary">
+            <option class="c-option-primary" value="">(None)</option>
+            <option class="c-option-primary" *ngFor="let natureEntry of natures | keyvalue" [value]="natureEntry.key">
                 {{natureEntry.key}} <ng-container *ngIf="natureEntry.value[0] && natureEntry.value[1]">(+{{natureEntry.value[0]}}, -{{natureEntry.value[1]}})</ng-container>
             </option>
         </select>

@@ -1,0 +1,21 @@
+@import '../../../styles/colors.scss';
+
+.container-lg {
+    background-color: $surface-100;
+    color: $text-color-100;
+}
+
+.active {    
+    color: #fff !important;
+    background-color: $primary-200 !important;
+    border-color: $primary-300 !important;
+}
+
+.c-control-panel-container {
+    background-color: $surface-300;
+    padding: 20px;
+}
+
+.c-offensive-btn {
+    width: 100%;
+}

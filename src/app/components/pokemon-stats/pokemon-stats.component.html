@@ -16,19 +16,19 @@
                 <th scope="row">HP</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="hpBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="hpIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="hpEVs">
                     </div>
                 </td>
@@ -41,19 +41,19 @@
                 <th scope="row">Attack</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="atkBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="atkIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="atkEVs">
                     </div>
                 </td>
@@ -62,8 +62,8 @@
                 </td>
                 <td>
                     <div class="">
-                        <select class="" formControlName="atkBoost">
-                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                        <select class="c-input-primary" formControlName="atkBoost">
+                            <option class="c-option-primary" *ngFor="let numValue of boosts" [value]="numValue">
                                 {{numValue > 0 ? ('+' + numValue) : numValue}}
                             </option>
                         </select>
@@ -74,19 +74,19 @@
                 <th scope="row">Defense</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="defBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="defIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="defEVs">
                     </div>
                 </td>
@@ -95,8 +95,8 @@
                 </td>
                 <td>
                     <div class="">
-                        <select class="" formControlName="defBoost">
-                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                        <select class="c-input-primary" formControlName="defBoost">
+                            <option class="c-option-primary" *ngFor="let numValue of boosts" [value]="numValue">
                                 {{numValue > 0 ? ('+' + numValue) : numValue}}
                             </option>
                         </select>
@@ -107,19 +107,19 @@
                 <th scope="row">Sp. Attack</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="spaBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="spaIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="spaEVs">
                     </div>
                 </td>
@@ -128,8 +128,8 @@
                 </td>
                 <td>
                     <div class="">
-                        <select class="" formControlName="spaBoost">
-                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                        <select class="c-input-primary" formControlName="spaBoost">
+                            <option class="c-option-primary" *ngFor="let numValue of boosts" [value]="numValue">
                                 {{numValue > 0 ? ('+' + numValue) : numValue}}
                             </option>
                         </select>
@@ -140,19 +140,19 @@
                 <th scope="row">Sp. Defense</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="spdBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="spdIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="spdEVs">
                     </div>
                 </td>
@@ -161,8 +161,8 @@
                 </td>
                 <td>
                     <div class="">
-                        <select class="" formControlName="spdBoost">
-                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                        <select class="c-input-primary" formControlName="spdBoost">
+                            <option class="c-option-primary" *ngFor="let numValue of boosts" [value]="numValue">
                                 {{numValue > 0 ? ('+' + numValue) : numValue}}
                             </option>
                         </select>
@@ -173,19 +173,19 @@
                 <th scope="row">Speed</th>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="255" [defaultValue]="80"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="255" [defaultValue]="80"
                             formControlName="speBase">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" min="0" max="31" [defaultValue]="31"
+                        <input type="number" class="c-ta-center c-input-primary" min="0" max="31" [defaultValue]="31"
                             formControlName="speIVs">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" class="c-ta-center" step="4" min="0" max="252"
+                        <input type="number" class="c-ta-center c-input-primary" step="4" min="0" max="252"
                             [defaultValue]="0" formControlName="speEVs">
                     </div>
                 </td>
@@ -194,8 +194,8 @@
                 </td>
                 <td>
                     <div class="">
-                        <select class="" formControlName="speBoost">
-                            <option *ngFor="let numValue of boosts" [value]="numValue">
+                        <select class="c-input-primary" formControlName="speBoost">
+                            <option class="c-option-primary" *ngFor="let numValue of boosts" [value]="numValue">
                                 {{numValue > 0 ? ('+' + numValue) : numValue}}
                             </option>
                         </select>

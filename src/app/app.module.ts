@@ -18,7 +18,7 @@ import { OpponentPokemonContainerComponent } from './components/opponent-pokemon
 import { OpponentPokemonComponent } from './components/opponent-pokemon/opponent-pokemon.component';
 import { EditPokemonModalComponent } from './components/pokemon-modal/edit-pokemon-modal.component';
 import { CalcResultComponent } from './components/calc-result/calc-result.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { SaveSetModalComponent } from './components/save-set-modal/save-set-modal.component';
 import { TeamComponent } from './components/team/team.component';
 import { MultiplierModalComponent } from './components/multiplier-modal/multiplier-modal.component';
@@ -57,7 +57,8 @@ import { provideToastr } from 'ngx-toastr';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule,
-    NgbModule
+    NgbModule,
+    NgbTooltipModule
   ],
   providers: [
     CdkColumnDef, 

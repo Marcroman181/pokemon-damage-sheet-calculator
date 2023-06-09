@@ -2,11 +2,11 @@
 
 
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" (click)="initializeSearch()">
+    <button class="btn c-btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" (click)="initializeSearch()">
       {{pokemon}} <ng-container *ngIf="pokemonSet">({{formatPokemonSet(pokemonSet)}})</ng-container>
     </button>
     <ul class="dropdown-menu">
-      <input #pokemonInput class="form-control" type="text" placeholder="" aria-label="Number" [formControl]="myControl">
+      <input #pokemonInput class="form-control c-input-primary" type="text" placeholder="" aria-label="Number" [formControl]="myControl">
       <ng-container *ngFor="let option of (filteredOptions | async).slice(0,10)">
         <li class="dropdown-item"(click)="selectPokemon(option)">{{option}}</li>
         <ng-container *ngFor="let setOption of getSetsByPokemon(option)">

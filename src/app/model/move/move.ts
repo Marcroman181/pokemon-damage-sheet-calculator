@@ -11,5 +11,6 @@ export class Move {
 
 export enum MoveCategory {
     Physical = 'Physical',
-    Special = 'Special'
+    Special = 'Special',
+    Status = 'Status'
 }

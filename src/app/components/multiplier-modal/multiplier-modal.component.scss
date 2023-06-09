@@ -1,8 +1,11 @@
+@import '../../../styles/colors.scss';
+
 .modal {
     display: block!important;
-    background-color: #0000006b;
+    background-color: $overlay-color;
 }
 
-.modal-dialog {
-    background-color: white;
+.modal-content {
+    background-color: $surface-300;
+    color: $text-color-100;
 }

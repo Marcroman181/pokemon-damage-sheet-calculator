@@ -1,8 +1,8 @@
 <form [formGroup]="form">
     <div class="form-group">
-        <select formControlName="type">
-            <option selected value="None">None</option>
-            <option *ngFor="let pokemonType of types" [value]="pokemonType">
+        <select formControlName="type" class="c-input-primary">
+            <option class="c-option-primary" selected value="None">None</option>
+            <option class="c-option-primary" *ngFor="let pokemonType of types" [value]="pokemonType">
                 {{pokemonType}}
             </option>
         </select>

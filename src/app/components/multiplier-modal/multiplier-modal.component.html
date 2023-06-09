@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add Move Multiplier</h5>
-                <button type="button" class="btn-close" (click)="close()"></button>
+                <button type="button" class="btn-close btn-close-white" (click)="close()"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -11,22 +11,22 @@
                     <div class="col">Description</div>
                 </div>
                 <div class="row" *ngFor="let multiplier of multipliers; let i = index">
-                    <input class="form-control" type="number" [(ngModel)]="multipliers[i].value">
-                    <input class="form-control" type="text" [(ngModel)]="multipliers[i].description">
-                    <button type="button" class="btn-close" aria-label="Close" (click)="removeMultiplier(i)"></button>
+                    <input class="form-control c-input-primary" type="number" [(ngModel)]="multipliers[i].value">
+                    <input class="form-control c-input-primary" type="text" [(ngModel)]="multipliers[i].description">
+                    <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="removeMultiplier(i)"></button>
                 </div>
-                <button type="button" class="btn btn-primary" (click)="addMultiplier()">New Multiplier</button>
+                <button type="button" class="btn c-btn-primary" (click)="addMultiplier()">New Multiplier</button>
                 <div class="row">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
                         <input type="radio" class="btn-check" name="btnradio" id="singles" autocomplete="off"
                             [checked]="!doubles">
-                        <label class="btn btn-secondary" [ngClass]="{'active': !doubles}"
+                        <label class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': !doubles}"
                             (click)="setDoubles(false)">Singles</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="doubles" autocomplete="off"
                             [checked]="doubles">
-                        <label class="btn btn-secondary" [ngClass]="{'active': doubles}"
+                        <label class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': doubles}"
                             (click)="setDoubles(true)">Doubles</label>
 
                     </div>
@@ -34,33 +34,33 @@
                 <div class="row">
 
                     <div class="col-6">
-                        <button class="btn btn-secondary" [ngClass]="{'active': terrain}"
+                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': terrain}"
                             (click)="toggleField()">Terrain</button>
                     </div>
 
                     <div class="col-6">
-                        <button class="btn btn-secondary" [ngClass]="{'active': weather}"
+                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': weather}"
                             (click)="toggleWeather()">Wheater</button>
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col">
-                        <button class="btn btn-secondary" [ngClass]="{'active': reflect}"
+                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': reflect}"
                             (click)="toggleReflect()">Screens</button>
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col">
-                        <button class="btn btn-secondary" [ngClass]="{'active': helpingHand}"
+                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': helpingHand}"
                             (click)="toggleHH()">Helping Hand</button>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
-                <button type="button" class="btn btn-primary" (click)="saveMultipliers()">Save Mulitpliers</button>
+                <button type="button" class="btn c-btn-primary" (click)="saveMultipliers()">Save Mulitpliers</button>
             </div>
         </div>
     </div>

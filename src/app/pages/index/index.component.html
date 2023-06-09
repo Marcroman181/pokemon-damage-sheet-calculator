@@ -2,23 +2,26 @@
 
     <team (activePokemon)="modifyPokemon($event)"></team>
 
-    <div class="row mt-20">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div class="mt-20 c-control-panel-container">
+        <div class="row justify-content-md-center" data-toggle="buttons">
 
-            <input type="radio" class="btn-check" name="btnradio" id="defensiveCalcs" autocomplete="off"
-                [checked]="!offensiveCalcs">
-            <label class="btn btn-secondary" [ngClass]="{'active': !offensiveCalcs}"
-                (click)="setOffensivecalcs(false)">Defensive</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="offensiveCalcs" autocomplete="off"
-                [checked]="offensiveCalcs">
-            <label class="btn btn-secondary" [ngClass]="{'active': offensiveCalcs}"
-                (click)="setOffensivecalcs(true)">Offensive</label>
+            <div class="col-auto col-md-3">
+                <input type="radio" class="btn-check" name="btnradio" id="defensiveCalcs" autocomplete="off"
+                    [checked]="!offensiveCalcs">
+                <label class="c-offensive-btn btn c-btn-primary" [ngClass]="{'active': !offensiveCalcs}"
+                    (click)="setOffensivecalcs(false)">Defensive</label>
+            </div>
+            <div class="col-auto col-md-3">
+                <input type="radio" class="btn-check" name="btnradio" id="offensiveCalcs" autocomplete="off"
+                    [checked]="offensiveCalcs">
+                <label class="c-offensive-btn btn c-btn-primary" [ngClass]="{'active': offensiveCalcs}"
+                    (click)="setOffensivecalcs(true)">Offensive</label>
+            </div>
 
         </div>
     </div>
 
-    <div class="mt-20">
+    <div class="mt-20 mb-20">
         <opponent-pokemon-container [userPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs">
 
         </opponent-pokemon-container>

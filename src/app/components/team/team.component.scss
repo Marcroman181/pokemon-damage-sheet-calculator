@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 .c-save-team {
     float: right;
     margin-left: 5px;
@@ -10,8 +12,45 @@
 
 .c-team-tabs {
     display: inline-block;
+    height: 50px;
+}
+
+.nav-tabs, .nav-item, .nav-link {
+    //height: 100%;
 }
 
 .nav-link > a {
     text-decoration: none;
+}
+
+.c-team-tabs-container {
+    background-color: $surface-300;
+}
+
+.c-tabs-buttons {    
+    display: inline-block;
+    float: right;
+}
+
+.active {
+    background-color: $surface-300 !important;
+    border-color: $surface-600 !important;
+    color: $text-color-100 !important;
+}
+
+.nav-link:active {
+    background-color: $surface-300 !important;
+    border-color: $surface-600 !important;
+    color: $text-color-100 !important;
+}
+
+.nav-link:not(:active) {
+    cursor: pointer;
+    background-color: $surface-400;
+    border-color: $surface-600 !important;
+    color: $text-color-100;
+}
+.nav-link:not(:active):hover {
+    border-color: $surface-600 !important;
+    background-color: $surface-300 !important;
 }

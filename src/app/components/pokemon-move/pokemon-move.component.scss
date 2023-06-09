@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 .dropdown-toggle {
     width: 100%;
 }
@@ -26,3 +28,15 @@ width: 50px;
     display: inline-block;
 width: 50px;
 }
+
+.dropdown-menu {
+    background-color: $surface-400;
+}
+
+.dropdown-item {
+    color: $text-color-100;
+}
+.dropdown-item:hover {
+    background-color: $primary-600;
+}
+

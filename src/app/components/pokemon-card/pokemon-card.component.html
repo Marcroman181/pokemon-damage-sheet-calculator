@@ -1,5 +1,5 @@
-<div class="row mt-20">
-
+<div class="c-pokemon-card p-15">
+    <div class="c-pokemon-panel row">
     <div class="col-12 col-lg-6">
 
         <div class="row">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="col-3">
-                <button class="btn btn-primary" (click)="showSaveModal()">Save Set</button>
+                <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Save Set" (click)="showSaveModal()"><i class="fa-solid fa-floppy-disk"></i></button>
             </div>
         </div>
 
@@ -76,4 +76,5 @@
     </div>
 
     <save-set-modal *ngIf="showModal" (onClose)="closeModal()" (onSaveSet)="saveSet($event)"></save-set-modal>
+    </div>
 </div>

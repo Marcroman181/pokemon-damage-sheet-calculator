@@ -2,13 +2,13 @@
 
   <div class="dropdown">
     <div class="row">
-      <div class="c-move">
+      <div class="c-move c-input-primary">
 
         <div class="dropdown-toggle" data-bs-toggle="dropdown" (click)="initializeSearch()">
           <span>{{selectedMove.name}}</span>
         </div>
         <ul class="dropdown-menu">
-          <input #moveInput type="text" placeholder="" aria-label="Number" [formControl]="autocompleteControl">
+          <input #moveInput class="c-input-primary" type="text" placeholder="" aria-label="Number" [formControl]="autocompleteControl">
           <ng-container *ngFor="let option of (filteredOptions | async).slice(0,10)">
             <li><a class="dropdown-item" (click)="selectMove(option)">{{option}}</a></li>
           </ng-container>
@@ -24,10 +24,10 @@
         {{selectedMove.category}}
       </div>
       <div class="c-crit">
-        <button [ngClass]="{'active': selectedMove.crit}" (click)="toggleCrit()">CRIT</button>
+        <button class="c-input-primary" [ngClass]="{'c-input-primary-active': selectedMove.crit}" (click)="toggleCrit()">CRIT</button>
       </div>
       <div class="c-multipliers">
-        <button (click)="showModal()">*</button>
+        <button class="c-input-primary" (click)="showModal()">*</button>
       </div>
     </div>
   </div>

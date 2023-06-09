@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 button, .select-pokemon-container {
     width: 100%;
 }
@@ -5,4 +7,14 @@ button, .select-pokemon-container {
 .dropdown-menu {
     width: 100%;
     transform: translate(0px, 37px) !important;
+    background-color: $surface-400;
+}
+
+.c-item-set, .dropdown-item {
+    color: $text-color-100;
+
+}
+
+.dropdown-item:hover {
+    background-color: $primary-600;
 }

@@ -1,24 +1,34 @@
-.c-calc-button {
-    width: 100%;
+@import '../../../styles/colors.scss';
+
+.c-input-primary {
+    width: calc(100% - 30px);
     margin: 3px;
+    text-align: center;
+}
+
+.c-color-calc {
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: solid 1px $surface-100;
 }
 
 .bg-light-blue {
-    background-color: rgb(88, 214, 197);
+    background-color: #bafffb
 }
 
 .bg-green {
-    background-color: rgb(91, 201, 91);
+    background-color: #b9ffae
 }
 
 .bg-yellow {
-    background-color: rgb(194, 186, 73);
+    background-color: #fff6af
 }
 
 .bg-orange {
-    background-color: rgb(235, 150, 53);
+    background-color: #ffd19b
 }
 
 .bg-red {
-    background-color: rgb(216, 76, 76);
+    background-color: #ffb2a1
 }

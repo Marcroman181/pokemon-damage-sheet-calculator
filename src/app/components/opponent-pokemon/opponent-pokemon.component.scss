@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 .c-pokemon-title {
     font-weight: bold;
     display: inline-block;
@@ -6,10 +8,18 @@
 .c-btn-icon {
     display: inline-block;
     float: right;
-    width: 40px;
+    width: 20px;
     margin-left: 5px;
 }
 
 .c-title-oponent-container {
     width: 100%;
+}
+
+.c-title-oponent-container {
+    background-color: $surface-300;
+}
+
+.c-calc-results-container {
+    background-color: $surface-400;
 }

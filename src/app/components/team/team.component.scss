@@ -33,24 +33,29 @@
 }
 
 .active {
-    background-color: $surface-300 !important;
+    background-color: $surface-400 !important;
     border-color: $surface-600 !important;
     color: $text-color-100 !important;
 }
 
 .nav-link:active {
-    background-color: $surface-300 !important;
+    background-color: $surface-400 !important;
     border-color: $surface-600 !important;
     color: $text-color-100 !important;
 }
 
 .nav-link:not(:active) {
     cursor: pointer;
-    background-color: $surface-400;
+    background-color: $surface-500;
     border-color: $surface-600 !important;
     color: $text-color-100;
 }
 .nav-link:not(:active):hover {
     border-color: $surface-600 !important;
-    background-color: $surface-300 !important;
+    background-color: $surface-400 !important;
+}
+
+.c-team-container {    
+    background-color: $surface-200;
+    padding: 20px;
 }

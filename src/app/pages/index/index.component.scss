@@ -3,6 +3,7 @@
 .container-lg {
     background-color: $surface-100;
     color: $text-color-100;
+    padding-bottom: 20px;
 }
 
 .active {    
@@ -11,11 +12,17 @@
     border-color: $primary-300 !important;
 }
 
-.c-control-panel-container {
-    background-color: $surface-300;
+.c-control-panel-container, .c-opponent-pokemon-container {
+    background-color: $surface-200;
     padding: 20px;
 }
 
 .c-offensive-btn {
     width: 100%;
+}
+
+.c-control-panel {
+    background-color: $surface-400;
+    padding: 20px;
+    margin: 0;
 }

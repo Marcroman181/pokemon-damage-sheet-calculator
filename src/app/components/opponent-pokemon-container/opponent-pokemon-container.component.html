@@ -1,35 +1,40 @@
-<div class="row justify-content-start">
+<div class="c-control-btn-panel">
 
-  <div class="c-control-btn-container">
-    <button class="c-control-btn" (click)="saveSheet()">Save sheet</button>
+  <div class="c-control-btn-plus-container">
+    <button type="button" class="c-add-pokemon btn c-btn-primary" ngbTooltip="Add Pokemon" (click)="addPokemon()"><i
+        class="fa-solid fa-plus"></i></button>
   </div>
-  <div class="c-control-btn-container">
-    <button class="c-control-btn" (click)="addPokemon()">Add Pokemon</button>
-  </div>
-
-  <div class="c-control-btn-container">
-    <button class="c-control-btn" (click)="setImportModal(true)">Import sheet</button>
-  </div>
-  <div class="c-control-btn-container">
-    <button class="c-control-btn" (click)="setExportModal(true)">Export Pokemon</button>
+  <div class="c-save-buttons-container">
+    <div class="c-control-btn-container">
+      <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Save sheet" (click)="saveSheet()"><i
+          class="fa-solid fa-floppy-disk"></i></button>
+    </div>
+    <div class="c-control-btn-container">
+      <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Import sheet"
+        (click)="setImportModal(true)"><i class="fa-solid fa-upload"></i></button>
+    </div>
+    <div class="c-control-btn-container">
+      <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Export Sheet"
+        (click)="setExportModal(true)"><i class="fa-solid fa-download"></i></button>
+    </div>
   </div>
 </div>
 
 <div class="row">
   <ng-container *ngFor="let pokemon of pokemons.values()">
-    <div class="col-lg-4 col-md-6 col-12">
+    <div class="col-lg-4 col-md-6 col-12 mt-20">
       <opponent-pokemon [pokemon]="userPokemon" [oponnentPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs"
         (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)">
 
       </opponent-pokemon>
     </div>
   </ng-container>
-  
-  <div class="col-lg-4 col-md-6 col-12">
-    <div class="c-control-btn-container">
-      <button class="c-control-btn" (click)="addPokemon()">Add Pokemon</button>
-    </div>
-  </div>
+</div>
+
+<div class="c-control-btn-plus-container mt-20" *ngIf="pokemons.size">
+
+  <button type="button" class="c-add-pokemon btn c-btn-primary" ngbTooltip="Add Pokemon" (click)="addPokemon()"><i
+      class="fa-solid fa-plus"></i></button>
 </div>
 
 <edit-pokemon-modal *ngIf="showModal" [initializePokemon]="pokemonToEdit" (addPokemon)="savePokemon($event)"

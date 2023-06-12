@@ -1,35 +1,41 @@
-<div class="c-team-tabs-container">
-    <div class="c-team-tabs">
-        <ul class="nav nav-tabs">
-            <li class="nav-item" *ngFor="let pokemon of pokemons; let i = index">
-                <div class="nav-link" [ngClass]="{'active':  active === i}">
-                    <a (click)="onActiveTab(i)">{{pokemon?.name}}</a>
-                    <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close"
-                        (click)="deletePokemon(i)"></button>
-                </div>
-            </li>
-            <li class="nav-item" *ngIf="pokemons.length < 6">
-                <a class="nav-link c-add-icon" (click)="addPokemon()"><span><i class="fa-solid fa-plus"></i></span></a>
-                
-            </li>
-        </ul>
+<div class="c-team-container">
+    <div class="c-team-tabs-container">
+        <div class="c-team-tabs">
+            <ul class="nav nav-tabs">
+                <li class="nav-item" *ngFor="let pokemon of pokemons; let i = index">
+                    <div class="nav-link" [ngClass]="{'active':  active === i}">
+                        <a (click)="onActiveTab(i)">{{pokemon?.name}}</a>
+                        <button type="button" class="btn-close" [disabled]="pokemons.length === 1" aria-label="Close"
+                            (click)="deletePokemon(i)"></button>
+                    </div>
+                </li>
+                <li class="nav-item" *ngIf="pokemons.length < 6">
+                    <a class="nav-link c-add-icon" (click)="addPokemon()"><span><i
+                                class="fa-solid fa-plus"></i></span></a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="c-tabs-buttons p-15">
+            <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Export team"
+                (click)="setExportModal(true)"><i class="fa-solid fa-download"></i></button>
+            <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Import Team"
+                (click)="setImportModal(true)"><i class="fa-solid fa-upload"></i></button>
+            <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Save Team" (click)="saveTeam()"><i
+                    class="fa-solid fa-floppy-disk"></i></button>
+        </div>
     </div>
-    <div class="c-tabs-buttons p-15">
-        <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Export team" (click)="setExportModal(true)"><i class="fa-solid fa-download"></i></button>
-        <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Import Team" (click)="setImportModal(true)"><i class="fa-solid fa-upload"></i></button>
-        <button type="button" class="c-save-team btn c-btn-primary" ngbTooltip="Save Team" (click)="saveTeam()"><i class="fa-solid fa-floppy-disk"></i></button>
-    </div>
+
+    <ng-container *ngFor="let pokemon of pokemons; let i = index">
+
+        <pokemon-card *ngIf="i===active" [initializePokemon]="pokemons[active] || undefined"
+            (pokemonModified)="modifyPokemon($event)">
+        </pokemon-card>
+
+    </ng-container>
+
+    <show-export-modal *ngIf="showExportTeamModal" [title]="'Export pokemon team'" (onClose)="setExportModal(false)"
+        (onExportSheet)="exportTeam($event)"></show-export-modal>
+    <import-sheet-modal *ngIf="showImportTeamModal" [title]="'Import pokemon team'" (onClose)="setImportModal(false)"
+        (onImportSheet)="importTeam($event)"></import-sheet-modal>
 </div>
-
-<ng-container *ngFor="let pokemon of pokemons; let i = index">
-
-    <pokemon-card *ngIf="i===active" [initializePokemon]="pokemons[active] || undefined"
-        (pokemonModified)="modifyPokemon($event)">
-    </pokemon-card>
-
-</ng-container>
-
-<show-export-modal *ngIf="showExportTeamModal" [title]="'Export pokemon team'" (onClose)="setExportModal(false)"
-    (onExportSheet)="exportTeam($event)"></show-export-modal>
-<import-sheet-modal *ngIf="showImportTeamModal" [title]="'Import pokemon team'" (onClose)="setImportModal(false)"
-    (onImportSheet)="importTeam($event)"></import-sheet-modal>

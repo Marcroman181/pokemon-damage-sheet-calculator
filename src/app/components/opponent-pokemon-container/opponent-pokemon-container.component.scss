@@ -1,9 +1,38 @@
+@import '../../../styles/colors.scss';
+
 .c-control-btn {
     display: inline-block;
-    float: left;
     margin-left: 5px;
 }
 
 .c-control-btn-container {
+    display: inline-block;
+    margin-left: 5px;
     width: auto;
+}
+
+.c-control-btn-plus-container {
+    display: inline-block;
+    width: 100%;
+}
+
+.c-save-buttons-container {
+    display: inline-block;
+    width: 160px;
+    padding: 0px;
+}
+
+.c-control-btn-panel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+}
+
+.c-add-pokemon {
+    width: 100%;
+}
+
+.mt-70 {
+    margin-top: 70px;
 }

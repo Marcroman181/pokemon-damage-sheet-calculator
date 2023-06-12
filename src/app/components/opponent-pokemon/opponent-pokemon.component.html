@@ -1,57 +1,61 @@
-<div class="c-title-oponent-container row mt-20 mb-20">
-  <span class="c-pokemon-title col-8">{{oponnentPokemon.setName || oponnentPokemon.name}}</span>
+<div class="c-title-oponent-container p-15 c-ta-center">
+  <span class="c-pokemon-title">{{oponnentPokemon.setName || oponnentPokemon.name}}</span>
   <div class="c-btn-icon">
-    <button (click)="edit()">Edit</button>
+    <span type="button" ngbTooltip="Delete"
+      (click)="delete()"><i class="fa-solid fa-trash"></i></span>
+  </div>
+  <div class="c-btn-icon">
+    <span type="button" ngbTooltip="Edit"
+      (click)="edit()"><i class="fa-solid fa-pen-to-square"></i></span>
   </div>
 
-  <div class="c-btn-icon" >
-    <button (click)="delete()">Delete</button>
-  </div>
 </div>
-<ng-container *ngIf="pokemon && oponnentPokemon">
+<div class="c-calc-results-container p-15">
+  <ng-container *ngIf="pokemon && oponnentPokemon">
 
-  <ng-container *ngIf="offensiveCalcs">
-    <div class="row" *ngIf="pokemon.move1">
-      <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move1"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
-    </div>
-    <div class="row" *ngIf="pokemon.move2">
-      <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move2"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
+    <ng-container *ngIf="offensiveCalcs">
+      <div class="" *ngIf="pokemon.move1">
+        <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move1"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
+      </div>
+      <div class="" *ngIf="pokemon.move2">
+        <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move2"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
 
-    </div>
-    <div class="row" *ngIf="pokemon.move3">
-      <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move3"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
+      </div>
+      <div class="" *ngIf="pokemon.move3">
+        <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move3"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
 
-    </div>
-    <div class="row" *ngIf="pokemon.move4">
-      <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move4"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
+      </div>
+      <div class="" *ngIf="pokemon.move4">
+        <calc-result [pokemon]="pokemon" [oponnentPokemon]="oponnentPokemon" [move]="pokemon.move4"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
 
-    </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="!offensiveCalcs">
+
+      <div class="" *ngIf="oponnentPokemon.move1">
+        <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move1"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
+      </div>
+      <div class="" *ngIf="oponnentPokemon.move2">
+        <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move2"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
+
+      </div>
+      <div class="" *ngIf="oponnentPokemon.move3">
+        <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move3"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
+
+      </div>
+      <div class="" *ngIf="oponnentPokemon.move4">
+        <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move4"
+          [offensiveCalcs]="offensiveCalcs"></calc-result>
+      </div>
+
+    </ng-container>
   </ng-container>
-
-  <ng-container *ngIf="!offensiveCalcs">
-
-    <div class="row" *ngIf="oponnentPokemon.move1">
-      <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move1"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
-    </div>
-    <div class="row" *ngIf="oponnentPokemon.move2">
-      <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move2"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
-
-    </div>
-    <div class="row" *ngIf="oponnentPokemon.move3">
-      <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move3"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
-
-    </div>
-    <div class="row" *ngIf="oponnentPokemon.move4">
-      <calc-result [pokemon]="oponnentPokemon" [oponnentPokemon]="pokemon" [move]="oponnentPokemon.move4"
-        [offensiveCalcs]="offensiveCalcs"></calc-result>
-    </div>
-
-  </ng-container>
-</ng-container>
+</div>

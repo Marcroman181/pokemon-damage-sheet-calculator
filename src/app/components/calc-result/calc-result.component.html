@@ -1,10 +1,7 @@
+<ng-container *ngIf="move.bp > 0">
+	<span type="button" class="c-input-primary" placement="top" ngbPopover="{{infoText}}">
+		{{move.name}} => {{min}}% ~ {{max}}%
+	</span>
 
-<button
-	type="button"
-	class="c-calc-button"
-	[ngClass]="color"
-	placement="top"
-	ngbPopover="{{infoText}}"
->
-{{move.name}} => {{min}}% ~ {{max}}% 
-</button>
+	<span [ngClass]="'c-color-calc ' + color"></span>
+</ng-container>

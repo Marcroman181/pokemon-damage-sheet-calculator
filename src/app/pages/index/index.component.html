@@ -3,7 +3,7 @@
     <team (activePokemon)="modifyPokemon($event)"></team>
 
     <div class="mt-20 c-control-panel-container">
-        <div class="row justify-content-md-center" data-toggle="buttons">
+        <div class="row justify-content-md-center c-control-panel" data-toggle="buttons">
 
             <div class="col-auto col-md-3">
                 <input type="radio" class="btn-check" name="btnradio" id="defensiveCalcs" autocomplete="off"
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="mt-20 mb-20">
+    <div class="mt-20 mb-20 c-opponent-pokemon-container">
         <opponent-pokemon-container [userPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs">
 
         </opponent-pokemon-container>

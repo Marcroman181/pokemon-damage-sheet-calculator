@@ -1,11 +1,24 @@
 @import '../../../styles/colors.scss';
 
-.modal {
-    display: block!important;
-    background-color: $overlay-color;
+
+.row {
+    margin-top: 15px;
 }
 
-.modal-content {
-    background-color: $surface-300;
-    color: $text-color-100;
+.c-new-multiplier-text {
+    margin-left: 10px;
+}
+
+.c-multiplier-btn {
+    width: 150px;
+    max-width: 90%;
+}
+
+.c-icon-info {
+    color: $primary-600;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 25px;
 }

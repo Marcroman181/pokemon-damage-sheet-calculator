@@ -3,11 +3,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">{{title}}</h5>
-                <button type="button" class="btn-close" (click)="close()"></button>
+                <button type="button" class="btn-close btn-close-white" (click)="close()"></button>
             </div>
-            <div class="modal-body">                
-                <span class="c-ta-center">File name</span>
-                <input class="form-control" type="text" placeholder="File Name" aria-label="Number" [(ngModel)]="fileName">
+            <div class="modal-body">
+                <div class="c-export-text">
+                    <span class="c-ta-center">File name</span>
+                </div>
+                <input class="form-control" type="text" placeholder="File Name" aria-label="Number"
+                    [(ngModel)]="fileName">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="close()">Close</button>

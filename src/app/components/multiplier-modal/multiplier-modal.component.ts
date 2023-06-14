@@ -88,7 +88,7 @@ export class MultiplierModalComponent implements OnInit {
       this.multipliers.push(this.createMultiplier(0.75, 'Screen', 1));
     }
 
-    this.onChangeMultipliers.emit(this.multipliers);
+    this.onChangeMultipliers.emit(this.multipliers.filter((multiplier: Multiplier) => multiplier.value !== 0));
   }
 
   close(): void {

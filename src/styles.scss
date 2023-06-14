@@ -31,3 +31,20 @@ body {
 .p-15 {
     padding: 15px;
 }
+
+.p-30 {
+    padding: 30px;
+}
+
+.modal-content {
+    background-color: $surface-200 !important;
+}
+
+.modal {
+    display: block!important;
+    background-color: $overlay-color;
+}
+
+.modal-body, .modal-header, .modal-footer {
+    background-color: $surface-400 !important;
+}

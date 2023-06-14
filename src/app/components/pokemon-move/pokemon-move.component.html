@@ -2,7 +2,7 @@
 
   <div class="dropdown">
     <div class="row">
-      <div class="c-move c-input-primary">
+      <div class="c-move c-input-primary col-4">
 
         <div class="dropdown-toggle" data-bs-toggle="dropdown" (click)="initializeSearch()">
           <span>{{selectedMove.name}}</span>
@@ -14,20 +14,18 @@
           </ng-container>
         </ul>
       </div>
-      <div class="c-power">
+      <div class="c-power col-1">
         {{selectedMove.bp}}
       </div>
-      <div class="c-type">
+      <div class="c-type col-2">
         {{selectedMove.type}}
       </div>
-      <div class="c-category">
+      <div class="c-category col-2">
         {{selectedMove.category}}
       </div>
-      <div class="c-crit">
+      <div class="c-crit col-3">
         <button class="c-input-primary" [ngClass]="{'c-input-primary-active': selectedMove.crit}" (click)="toggleCrit()">CRIT</button>
-      </div>
-      <div class="c-multipliers">
-        <button class="c-input-primary" (click)="showModal()">*</button>
+        <button class="c-input-primary c-btn-multipliers" (click)="showModal()">* ({{(!selectedMove.multipliers || !selectedMove.multipliers.length) ? 0 : selectedMove.multipliers.length}})</button>
       </div>
     </div>
   </div>

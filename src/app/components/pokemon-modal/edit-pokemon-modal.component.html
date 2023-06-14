@@ -3,7 +3,7 @@
         <div class="modal-content edit-modal-container">
             <div class="modal-header">
                 <h5 class="modal-title" [innerText]="initializePokemon ? 'Edit Pokemon': 'Add new pokemon'"></h5>
-                <button type="button" class="btn-close" (click)="close()"></button>
+                <button type="button" class="btn-close btn-close-white" (click)="close()"></button>
             </div>
             <div class="modal-body">               
 
@@ -12,7 +12,7 @@
                 </pokemon-card>     
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer c-ta-center">
                 <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
                 <button  type="button" class="btn btn-primary" (click)="add()"
                     [innerText]="initializePokemon ? 'Edit Pokemon': 'Add Pokemon'"></button>

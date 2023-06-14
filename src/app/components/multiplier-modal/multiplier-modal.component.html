@@ -7,15 +7,36 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col">Value</div>
-                    <div class="col">Description</div>
+                    <div class="col-4 col-md-3">
+                        <h6>Value</h6>
+                    </div>
+                    <div class="col-8 col-md-9">
+                        <h6>Description</h6>
+                    </div>
                 </div>
                 <div class="row" *ngFor="let multiplier of multipliers; let i = index">
-                    <input class="form-control c-input-primary" type="number" [(ngModel)]="multipliers[i].value">
-                    <input class="form-control c-input-primary" type="text" [(ngModel)]="multipliers[i].description">
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="removeMultiplier(i)"></button>
+                    <div class="col-4 col-md-3">
+                        <input class="form-control c-input-primary" type="number" [(ngModel)]="multipliers[i].value">
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <input class="form-control c-input-primary" type="text"
+                            [(ngModel)]="multipliers[i].description">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" class="btn-close btn-close-white" aria-label="Close"
+                            (click)="removeMultiplier(i)"></button>
+                    </div>
                 </div>
-                <button type="button" class="btn c-btn-primary" (click)="addMultiplier()">New Multiplier</button>
+                <div class="row">
+                    <div class="col-4 col-md-3">
+                        <button type="button" class="btn c-btn-primary" (click)="addMultiplier()">New
+                            Multiplier</button>
+                    </div>
+                    <div class="col-8 col-md-9">
+                        <span class="c-new-multiplier-text">You can add personalized attack multipliers</span>
+                        <span class="c-icon-info" ngbTooltip="A multiplier is an amplifier/reducer of the power of the move. For example abilities like Guts, its value is 1.5"> +info</span>
+                    </div>        
+                </div>
                 <div class="row">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
@@ -33,28 +54,28 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-6">
-                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': terrain}"
+                    <div class="col-6 c-ta-center">
+                        <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': terrain}"
                             (click)="toggleField()">Terrain</button>
                     </div>
 
-                    <div class="col-6">
-                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': weather}"
+                    <div class="col-6 c-ta-center">
+                        <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': weather}"
                             (click)="toggleWeather()">Wheater</button>
                     </div>
                 </div>
                 <div class="row">
 
-                    <div class="col">
-                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': reflect}"
+                    <div class="col c-ta-center">
+                        <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': reflect}"
                             (click)="toggleReflect()">Screens</button>
                     </div>
                 </div>
                 <div class="row">
 
-                    <div class="col">
-                        <button class="btn c-btn-primary" [ngClass]="{'c-btn-primary-active': helpingHand}"
-                            (click)="toggleHH()">Helping Hand</button>
+                    <div class="col c-ta-center">
+                        <button class="btn c-btn-primary c-multiplier-btn"
+                            [ngClass]="{'c-btn-primary-active': helpingHand}" (click)="toggleHH()">Helping Hand</button>
                     </div>
                 </div>
             </div>

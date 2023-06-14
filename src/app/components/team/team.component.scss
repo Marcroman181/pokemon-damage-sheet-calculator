@@ -12,11 +12,7 @@
 
 .c-team-tabs {
     display: inline-block;
-    height: 50px;
-}
-
-.nav-tabs, .nav-item, .nav-link {
-    //height: 100%;
+    margin-top: 24px;
 }
 
 .nav-link > a {
@@ -42,6 +38,10 @@
     background-color: $surface-400 !important;
     border-color: $surface-600 !important;
     color: $text-color-100 !important;
+}
+
+.nav-link {
+    height: 44px;
 }
 
 .nav-link:not(:active) {

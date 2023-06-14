@@ -1,23 +1,14 @@
+@import '../../../styles/colors.scss';
+
 .edit-modal-container {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 800px;
     max-height: 100%;
     width: 80%;
     padding: 2%;
     max-width: 100%;
     z-index: 1010;
     overflow-y: auto;
-    background-color: white;
-}
-
-.modal {
-    display: block!important;
-    background-color: #0000006b;
-}
-
-.modal-dialog {
-    background-color: white;
 }

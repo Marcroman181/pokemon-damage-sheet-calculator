@@ -14,8 +14,10 @@ export class DamageCalcService {
   constructor(private readonly typeEfectivenessService: TypeEfectivenessService) {
   }
 
-  calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
+  readonly STAB_MULTIPLIER: number = 1.5;
+  readonly TERA_STAB_MULTIPLIER: number = 2;
 
+  calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
     if(move.category === MoveCategory.Status || move.bp === 0) {
       return {
         damages: [{ hp: 0, percentatge:  0} as Damage],
@@ -71,8 +73,8 @@ export class DamageCalcService {
       let damage: number = Math.floor(basePower * (85 + i) / 100);
 
       //Resolve STAB
-      if (attacker.type === move.type || attacker.type2 === move.type) {
-        damage = this.round(damage * 1.5);
+      if (attacker.type === move.type || attacker.type2 === move.type || (attacker.teraType === move.type && attacker.enabledTera)) {
+        damage = this.round(damage * this.resolveStab(attacker, move.type));
       }
       //Type Effectiveness
       damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(move.type, defender));
@@ -121,5 +123,12 @@ export class DamageCalcService {
     }
 
     return this.round(stat * boostMultiplier);
+  }
+
+  private resolveStab(pokemon: PokemonSet, moveType:string): number {
+
+    return pokemon.enabledTera && pokemon.teraType === moveType && (pokemon.type === moveType || pokemon.type2 === moveType)
+      ? this.TERA_STAB_MULTIPLIER
+      : this.STAB_MULTIPLIER;
   }
 }

@@ -52,6 +52,12 @@ export class OpponentPokemonContainerComponent implements OnInit {
     console.log(this.pokemons);
   }
 
+  toggleTera(pokemonId: number): void {
+    let pokemon: PokemonSet = this.pokemons.get(pokemonId);
+    this.pokemons.set(pokemonId, {...pokemon, enabledTera: !pokemon.enabledTera});
+    console.log("TOGGLE TERA: " + !pokemon.enabledTera);
+  }
+
   savePokemon(pokemon: PokemonSet): void {
     this.showModal = false;
     if(pokemon.id) {

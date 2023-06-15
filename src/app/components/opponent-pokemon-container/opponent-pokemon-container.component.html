@@ -24,7 +24,7 @@
   <ng-container *ngFor="let pokemon of pokemons.values()">
     <div class="col-lg-4 col-md-6 col-12 mt-20">
       <opponent-pokemon [pokemon]="userPokemon" [oponnentPokemon]="pokemon" [offensiveCalcs]="offensiveCalcs"
-        (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)">
+        (editPokemon)="editPokemon($event)" (deletePokemon)="deletePokemon($event)" (onToggleTera)="toggleTera($event)">
 
       </opponent-pokemon>
     </div>

@@ -10,6 +10,8 @@ export class PokemonSet {
     nature: string; //TODO enum
     type: string; //TODO enum?
     type2?: string; // TODO enum?
+    teraType: string; 
+    enabledTera: boolean;
     currentHp: number;
     move1?: Move;
     move2?: Move;

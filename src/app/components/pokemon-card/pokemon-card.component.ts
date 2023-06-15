@@ -76,6 +76,21 @@ export class PokemonCardComponent implements OnInit {
     this.pokemonModified.emit(this.pokemon);
   }
 
+  selectTeraType(teraType: string): void {
+    if(!!teraType && teraType !== 'None') {
+      this.pokemon.teraType = teraType;
+    } else {
+      this.pokemon.teraType = undefined;
+      this.pokemon.enabledTera = false;
+    }
+    this.pokemonModified.emit(this.pokemon);
+  }
+
+  toggleEnabledTera(): void {
+   // this.pokemon.enabledTera = !this.pokemon.enabledTera;
+    this.pokemonModified.emit(this.pokemon);
+  }
+
   selectNature(nature: string): void {
     this.pokemon.nature = nature;
     this.pokemon.stats = this.pokemonStatsService.resolvePokemonStatsByPokemonStats(this.pokemon.stats, this.pokemon.level, nature);

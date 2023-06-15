@@ -22,12 +22,23 @@ export class TypeEfectivenessService {
 
     const moveEfectiveness: Map<String, number> = this.typeEfectivenesses.get(moveType);
 
-    if(moveEfectiveness && pokemon.type && moveEfectiveness.has(pokemon.type)) {
-      effectiveness = effectiveness * moveEfectiveness.get(pokemon.type);
-    }
+    if (pokemon.enabledTera && pokemon.teraType && pokemon.teraType !== 'None') {
 
-    if(moveEfectiveness && pokemon.type2 && moveEfectiveness.has(pokemon.type2)) {
-      effectiveness = effectiveness * moveEfectiveness.get(pokemon.type2);
+      //TERA ENABLED
+      if (moveEfectiveness && moveEfectiveness.has(pokemon.teraType)) {
+        effectiveness = effectiveness * moveEfectiveness.get(pokemon.teraType);
+      }
+
+    } else {
+
+      //TERA DISABLED
+      if (moveEfectiveness && pokemon.type && moveEfectiveness.has(pokemon.type)) {
+        effectiveness = effectiveness * moveEfectiveness.get(pokemon.type);
+      }
+
+      if (moveEfectiveness && pokemon.type2 && moveEfectiveness.has(pokemon.type2)) {
+        effectiveness = effectiveness * moveEfectiveness.get(pokemon.type2);
+      }
     }
 
     return effectiveness;

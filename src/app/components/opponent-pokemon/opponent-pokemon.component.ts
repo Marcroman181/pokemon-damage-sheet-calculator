@@ -13,6 +13,7 @@ export class OpponentPokemonComponent {
   @Input() offensiveCalcs: boolean = false;
 
   @Output() editPokemon: EventEmitter<number> = new EventEmitter<number>();
+  @Output() onToggleTera: EventEmitter<number> = new EventEmitter<number>();
   @Output() deletePokemon: EventEmitter<number> = new EventEmitter<number>();
 
   edit(): void {
@@ -21,6 +22,10 @@ export class OpponentPokemonComponent {
   
   delete(): void {
     this.deletePokemon.emit(this.oponnentPokemon.id);
+  }
+  
+  toggleTera(): void {
+    this.onToggleTera.emit(this.oponnentPokemon.id);
   }
   
 }

@@ -34,6 +34,17 @@
                 </div>
             </div>
 
+            <div class="row justify-content-start mt-20">
+                <div class="col-3">
+                    <span>Tera Type</span>
+                </div>
+                <div class="col">
+                    <pokemon-type [type]="pokemon.teraType" (changeType)="selectTeraType($event)">
+                    </pokemon-type>
+                    <input *ngIf="!!pokemon.teraType" class="form-check-input c-tera-check" type="checkbox" [(ngModel)]="pokemon.enabledTera" (change)="toggleEnabledTera()">
+                </div>
+            </div>
+
             <div class="row m-top-5">
                 <div class="col-3">
                     <span>Level</span>

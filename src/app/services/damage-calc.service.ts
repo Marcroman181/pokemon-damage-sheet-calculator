@@ -18,19 +18,24 @@ export class DamageCalcService {
   readonly TERA_STAB_MULTIPLIER: number = 2;
 
   calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
+
     if(move.category === MoveCategory.Status || move.bp === 0) {
+      //Status move 0 damage
       return {
         damages: [{ hp: 0, percentatge:  0} as Damage],
-        attackerBoost: (move.category === MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost) || 0,
-        defenderBoost: (move.category === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0,
-        multipliers: move.multipliers || [],
-        crit: move.crit
+        attackerBoost: 0,
+        defenderBoost: 0,
+        multipliers: [],
+        crit: false
       } as DamageInfo;
     }
 
     let damages: Array<Damage> = [];
 
-    let attack: number = move.category === MoveCategory.Special
+    const moveCategory: MoveCategory = this.resolveCategoryType(move, attacker);
+    const moveType: string = this.resolveMoveType(move, attacker);
+
+    let attack: number = moveCategory === MoveCategory.Special
       ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost)
       : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost);
 
@@ -45,7 +50,7 @@ export class DamageCalcService {
       attack = Math.floor(attack * finalMultiplier);
     }
 
-    const defense: number = move.category === MoveCategory.Special
+    const defense: number = moveCategory === MoveCategory.Special
       ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost)
       : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost);
 
@@ -73,11 +78,11 @@ export class DamageCalcService {
       let damage: number = Math.floor(basePower * (85 + i) / 100);
 
       //Resolve STAB
-      if (attacker.type === move.type || attacker.type2 === move.type || (attacker.teraType === move.type && attacker.enabledTera)) {
-        damage = this.round(damage * this.resolveStab(attacker, move.type));
+      if (attacker.type === moveType || attacker.type2 === moveType || (attacker.teraType === moveType && attacker.enabledTera)) {
+        damage = this.round(damage * this.resolveStab(attacker, moveType));
       }
       //Type Effectiveness
-      damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(move.type, defender));
+      damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(moveType, defender));
 
       //Min Damage Check
       damage = Math.max(1, damage);
@@ -91,8 +96,8 @@ export class DamageCalcService {
 
     return {
       damages: damages,
-      attackerBoost: (move.category === MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost) || 0,
-      defenderBoost: (move.category === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0,
+      attackerBoost: (moveCategory === MoveCategory.Special ? attacker.stats.spa.boost : attacker.stats.atk.boost) || 0,
+      defenderBoost: (moveCategory === MoveCategory.Special ? attacker.stats.spd.boost : attacker.stats.def.boost) || 0,
       multipliers: move.multipliers || [],
       crit: move.crit
     } as DamageInfo;
@@ -130,5 +135,19 @@ export class DamageCalcService {
     return pokemon.enabledTera && pokemon.teraType === moveType && (pokemon.type === moveType || pokemon.type2 === moveType)
       ? this.TERA_STAB_MULTIPLIER
       : this.STAB_MULTIPLIER;
+  }
+
+  private resolveMoveType(move: Move, attacker: PokemonSet): string {
+
+    return move.name === 'Tera Blast' && attacker.enabledTera && attacker.teraType
+    ? attacker.teraType
+    : move.type;
+  }
+
+  private resolveCategoryType(move: Move, attacker: PokemonSet): MoveCategory {
+
+    return move.name === 'Tera Blast' && attacker.enabledTera && attacker.teraType
+    ? this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost) > this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost) ? MoveCategory.Physical : MoveCategory.Special 
+    : move.category;
   }
 }

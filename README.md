@@ -2,6 +2,5 @@
 
 ##TODO
 
-fix Multiplicators moves
-styles
-order pokemons
+mobile styles
+reflect has some decimals error

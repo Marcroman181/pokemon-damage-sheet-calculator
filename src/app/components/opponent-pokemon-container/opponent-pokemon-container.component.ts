@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { PokemonSet } from 'src/app/model/pokemon-set/pokemonSet';
 import { IdGeneratorService } from 'src/app/services/id-generator.service';
@@ -7,7 +7,8 @@ import { SheetService } from 'src/app/services/sheet.service';
 @Component({
   selector: 'opponent-pokemon-container',
   templateUrl: './opponent-pokemon-container.component.html',
-  styleUrls: ['./opponent-pokemon-container.component.scss']
+  styleUrls: ['./opponent-pokemon-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OpponentPokemonContainerComponent implements OnInit {
 

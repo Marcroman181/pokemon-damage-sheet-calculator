@@ -20,6 +20,7 @@ export class MultiplierModalComponent implements OnInit {
   weather: boolean = false;
   reflect: boolean = false;
   helpingHand: boolean = false;  
+  
 
   ngOnInit(): void {
     if(this.initialMultipliers && this.initialMultipliers.length) {
@@ -28,19 +29,19 @@ export class MultiplierModalComponent implements OnInit {
         .map((multiplier: Multiplier) => this.copyMultiplier(multiplier));
       
       this.doubles = this.initialMultipliers
-        .some((multiplier: Multiplier) => multiplier.modificatorType === 1 && multiplier.description === 'Doubles' && multiplier.value === 0.75);
+        .some((multiplier: Multiplier) => multiplier.modificatorType === 3 && multiplier.description === 'Doubles' && multiplier.value === 0.75);
       
       this.helpingHand = this.initialMultipliers
-        .some((multiplier: Multiplier) => multiplier.modificatorType === 0 && multiplier.description === 'HH' && multiplier.value === 1.5);
+        .some((multiplier: Multiplier) => multiplier.modificatorType === 2 && multiplier.description === 'HH' && multiplier.value === 1.5);
       
       this.terrain = this.initialMultipliers
-        .some((multiplier: Multiplier) => multiplier.modificatorType === 1 && multiplier.description === 'Weather' && multiplier.value === 1.3);
+        .some((multiplier: Multiplier) => multiplier.modificatorType === 3 && multiplier.description === 'Terrain' && multiplier.value === 1.3);
       
       this.weather = this.initialMultipliers
-        .some((multiplier: Multiplier) => multiplier.modificatorType === 1 && multiplier.description === 'Terrain' && multiplier.value === 1.5);
+        .some((multiplier: Multiplier) => multiplier.modificatorType === 3 && multiplier.description === 'Weather' && multiplier.value === 1.5);
       
       this.reflect = this.initialMultipliers
-        .some((multiplier: Multiplier) => multiplier.modificatorType === 1 && multiplier.description === 'Reflect' && multiplier.value === 0.75);
+        .some((multiplier: Multiplier) => multiplier.modificatorType === 4 && multiplier.description === 'Screen' && multiplier.value === 2/3);
     }
     
   }
@@ -69,24 +70,26 @@ export class MultiplierModalComponent implements OnInit {
   saveMultipliers(): void {
 
     if(this.doubles) {
-      this.multipliers.push(this.createMultiplier(0.75, 'Doubles', 1));
+      this.multipliers.push(this.createMultiplier(0.75, 'Doubles', 3, 1));
     }
 
     if(this.terrain) {
-      this.multipliers.push(this.createMultiplier(1.3, 'Terrain', 1));
+      this.multipliers.push(this.createMultiplier(1.3, 'Terrain', 3, 3));
     }
 
     if(this.weather) {
-      this.multipliers.push(this.createMultiplier(1.5, 'Weather', 1));
+      this.multipliers.push(this.createMultiplier(1.5, 'Weather', 3, 3));
     }
 
     if(this.helpingHand) {
-      this.multipliers.push(this.createMultiplier(1.5, 'HH', 2));
+      this.multipliers.push(this.createMultiplier(1.5, 'HH', 2, 99));
     }
 
     if(this.reflect) {
-      this.multipliers.push(this.createMultiplier(0.75, 'Screen', 1));
+      this.multipliers.push(this.createMultiplier(2/3, 'Screen', 4, 101));
     }
+
+    this.multipliers = this.multipliers.sort((m1, m2) => m1.priority - m2.priority);
 
     this.onChangeMultipliers.emit(this.multipliers.filter((multiplier: Multiplier) => multiplier.value !== 0));
   }
@@ -115,12 +118,13 @@ export class MultiplierModalComponent implements OnInit {
     this.helpingHand = !this.helpingHand;
   }
 
-  private createMultiplier(value: number, description: string, type: number): Multiplier {
+  private createMultiplier(value: number, description: string, type: number, priority: number): Multiplier {
     
     return {
       value: value, 
       description: description,
-      modificatorType: type
+      modificatorType: type,
+      priority: priority
     } as Multiplier
   }
 

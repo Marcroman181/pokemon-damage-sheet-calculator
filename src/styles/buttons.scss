@@ -32,7 +32,7 @@
 
 .c-input-primary-active {
     color: $text-color-100;
-    background-color: $surface-400;
+    background-color: $surface-400 !important;
 }
 
 .c-option-primary {

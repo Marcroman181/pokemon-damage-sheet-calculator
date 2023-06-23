@@ -19,6 +19,29 @@
             </div>
 
         </div>
+        <div class="row justify-content-md-center c-control-panel" data-toggle="buttons">
+
+            <div class="col-6 col-md-3 c-ta-center">
+                <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': ruinMods?.includes('Tablets of Ruin (-Atk)')}"
+                    (click)="setRuinMod('Tablets of Ruin (-Atk)')">Tablets of Ruin (-Atk)</button>
+            </div>
+
+            <div class="col-6 col-md-3 c-ta-center">
+                <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': ruinMods?.includes('Vessel of Ruin (-SAtk)')}"
+                    (click)="setRuinMod('Vessel of Ruin (-SAtk)')">Vessel of Ruin (-SAtk)</button>
+            </div>
+            
+            <div class="col-6 col-md-3 c-ta-center">
+                <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': ruinMods?.includes('Sword of Ruin (-Def)')}"
+                    (click)="setRuinMod('Sword of Ruin (-Def)')">Sword of Ruin (-Def)</button>
+            </div>
+            
+            <div class="col-6 col-md-3 c-ta-center">
+                <button class="btn c-btn-primary c-multiplier-btn" [ngClass]="{'c-btn-primary-active': ruinMods?.includes('Beads of Ruin (-SDef)')}"
+                    (click)="setRuinMod('Beads of Ruin (-SDef)')">Beads of Ruin (-SDef)</button>
+            </div>
+
+        </div>
     </div>
 
     <div class="mt-20 mb-20 c-opponent-pokemon-container">

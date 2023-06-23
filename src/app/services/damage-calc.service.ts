@@ -5,19 +5,25 @@ import { Damage } from '../model/damage/damage';
 import { PokemonStats } from '../model/pokemon-stats/pokemon-stats';
 import { TypeEfectivenessService } from './type-efectiveness.service';
 import { DamageInfo } from '../model/damage-info/damage-info';
+import { Multiplier } from '../model/multiplier/multiplier';
+import { ModsService } from './mods.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DamageCalcService {
 
-  constructor(private readonly typeEfectivenessService: TypeEfectivenessService) {
+  constructor(private readonly typeEfectivenessService: TypeEfectivenessService,
+              private readonly modsService: ModsService) {
   }
 
   readonly STAB_MULTIPLIER: number = 1.5;
   readonly TERA_STAB_MULTIPLIER: number = 2;
 
   calcDamage(attacker: PokemonSet, defender: PokemonSet, move: Move): DamageInfo {
+
+    const ruinMods = this.modsService.getRuinMods();
+    console.log("CALCULATING");
 
     if(move.category === MoveCategory.Status || move.bp === 0) {
       //Status move 0 damage
@@ -36,46 +42,58 @@ export class DamageCalcService {
     const moveType: string = this.resolveMoveType(move, attacker);
 
     let attack: number = moveCategory === MoveCategory.Special
-      ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost)
-      : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost);
+      ? this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost, ruinMods.includes('Vessel of Ruin (-SAtk)'))
+      : this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost, ruinMods.includes('Tablets of Ruin (-Atk)'));
+    
+    let finalMultiplierType1: number = 1; 
 
-    //Move Multipliers
+    //Move MultipliersType 1 (STATS)
     if (move.multipliers && move.multipliers.length) {
-      let finalMultiplier = 1;
       for (let i = 0; i < move.multipliers.length; i++) {
-        if (move.multipliers[i].value !== 1 && (!move.multipliers[i].modificatorType || move.multipliers[i].modificatorType >= 1)) {
-          finalMultiplier = finalMultiplier * move.multipliers[i].value;
+        if (move.multipliers[i].value !== 1 && (!move.multipliers[i].modificatorType || move.multipliers[i].modificatorType === 1)) {
+          finalMultiplierType1 = finalMultiplierType1 * move.multipliers[i].value;
         }
       }
-      attack = Math.floor(attack * finalMultiplier);
     }
+
+    attack = Math.floor(attack * finalMultiplierType1);
 
     const defense: number = moveCategory === MoveCategory.Special
-      ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost)
-      : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost);
+      ? this.calcStatAfterBoost(defender.stats.spd.total, defender.stats.spd.boost, ruinMods.includes('Beads of Ruin (-SDef)'))
+      : this.calcStatAfterBoost(defender.stats.def.total, defender.stats.def.boost, ruinMods.includes('Sword of Ruin (-Def)'));
 
-    let basePower = this.calcBasePower(attacker.level, move, attack, defense);
 
-    //Crit
-    if (move.crit) {
-      basePower = Math.floor(basePower * 1.5);
-    }
+    let baseDamage = this.calcBaseDamage(attacker.level, move, attack, defense);
 
-    //move multiplier TYPE 2
-    if (move.multipliers && move.multipliers.length) {
-      let finalMultiplier = 1;
+    //move multiplier TYPE 2 
+
+    /*if (move.multipliers && move.multipliers.length) {
       for (let i = 0; i < move.multipliers.length; i++) {
         if (move.multipliers[i].modificatorType === 2) {
-          finalMultiplier = finalMultiplier * move.multipliers[i].value;
+          baseDamage = Math.floor(baseDamage * move.multipliers[i].value);
         }
       }
-      basePower = Math.floor(basePower * finalMultiplier);
+    }*/
+
+    //move multiplier TYPE 3 target, weather
+    //basePower = this.round(basePower * this.resolveFinalMultiplier(move, 3));
+    if (move.multipliers && move.multipliers.length) {
+      for (let i = 0; i < move.multipliers.length; i++) {
+        if (move.multipliers[i].modificatorType === 3) {
+          baseDamage = this.round(baseDamage * move.multipliers[i].value);
+        }
+      }
+    }
+    
+    //Crit
+    if (move.crit) {
+      baseDamage = Math.floor(baseDamage * 1.5);
     }
 
 
     for (var i = 0; i < 16; i++) {
 
-      let damage: number = Math.floor(basePower * (85 + i) / 100);
+      let damage: number = Math.floor(baseDamage * (85 + i) / 100);
 
       //Resolve STAB
       if (attacker.type === moveType || attacker.type2 === moveType || (attacker.teraType === moveType && attacker.enabledTera)) {
@@ -83,6 +101,17 @@ export class DamageCalcService {
       }
       //Type Effectiveness
       damage = Math.floor(damage * this.typeEfectivenessService.resolveEfectiveness(moveType, defender));
+
+      //Multipliers Type 4
+     /* if (move.multipliers && move.multipliers.length) {
+        for (let i = 0; i < move.multipliers.length; i++) {
+          if (move.multipliers[i].modificatorType === 4) {
+            damage = this.round(damage * move.multipliers[i].value);
+          }
+        }
+      }*/
+      //Multipliers Type 4
+      damage = this.round(damage * this.resolveFinalMultiplier(move, 4));
 
       //Min Damage Check
       damage = Math.max(1, damage);
@@ -103,9 +132,13 @@ export class DamageCalcService {
     } as DamageInfo;
   }
 
-  private calcBasePower(attackerLevel: number, move: Move, attack: number, defense: number): number {
+  private calcBaseDamage(attackerLevel: number, move: Move, attack: number, defense: number): number {
 
-    return Math.floor(Math.floor((Math.floor((2 * attackerLevel) / 5 + 2) * move.bp * attack) / defense) / 50 + 2);
+    let bp = this.round(move.bp * this.resolveFinalMultiplier(move, 2));
+
+    let basePower = Math.floor((Math.floor((2 * attackerLevel) / 5 + 2) * bp * attack) / defense) / 50;
+
+    return Math.floor(basePower + 2);
   }
 
   private round(num: number): number {
@@ -117,17 +150,22 @@ export class DamageCalcService {
     return Number((damage * 100 / hp).toFixed(1));
   }
 
-  private calcStatAfterBoost(stat: number, boost: number) {
+  private calcStatAfterBoost(stat: number, boost: number, ruin: boolean) {
 
     let boostMultiplier: number = 1;
-
+    let resultStat: number = stat;
     if (boost) {
       boostMultiplier = boost < 0
         ? Math.pow((2 + (-boost)) / 2, -1)
         : Math.pow((2 + boost) / 2, 1);
+      resultStat = this.round(resultStat * boostMultiplier);
     }
 
-    return this.round(stat * boostMultiplier);
+    if(ruin) {
+      resultStat = this.round(resultStat * 3/4);
+    }
+
+    return resultStat;
   }
 
   private resolveStab(pokemon: PokemonSet, moveType:string): number {
@@ -147,7 +185,21 @@ export class DamageCalcService {
   private resolveCategoryType(move: Move, attacker: PokemonSet): MoveCategory {
 
     return move.name === 'Tera Blast' && attacker.enabledTera && attacker.teraType
-    ? this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost) > this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost) ? MoveCategory.Physical : MoveCategory.Special 
+    ? this.calcStatAfterBoost(attacker.stats.atk.total, attacker.stats.atk.boost, false) > this.calcStatAfterBoost(attacker.stats.spa.total, attacker.stats.spa.boost, false) ? MoveCategory.Physical : MoveCategory.Special 
     : move.category;
+  }
+
+  private resolveFinalMultiplier(move: Move, type: number): number {
+
+    var M = 1;
+    if (move.multipliers && move.multipliers.length) {
+      for (let i = 0; i < move.multipliers.length; i++) {
+        if (move.multipliers[i].modificatorType === type) {
+          
+          M = Math.round(M * move.multipliers[i].value * 0x1000) / 0x1000;
+        }
+      }
+    }
+    return M;
   }
 }

@@ -1,0 +1,3872 @@
+[
+    {
+        "name": "Meta",
+        "pokemons": [
+            {
+                "name": "Flutter Mane",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 220,
+                        "total": 158,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 55,
+                        "ivs": 0,
+                        "evs": 0,
+                        "total": 54,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 132,
+                        "total": 92,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 36,
+                        "total": 176,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 156,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 116,
+                        "total": 170,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Ghost",
+                "type2": "Fairy",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fairy",
+                "item": "Booster Energy",
+                "weight": 4,
+                "move1": {
+                    "name": "Shadow Ball",
+                    "bp": 80,
+                    "type": "Ghost",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Moonblast",
+                    "bp": 95,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Thunderbolt",
+                    "bp": 90,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "setName": "Bulky SpAtk Booster Energy",
+                "higherStat": "spa",
+                "id": 1,
+                "enableAbility": false
+            },
+            {
+                "name": "Flutter Mane",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 130,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 67,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 75,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 205,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 156,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 187,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Ghost",
+                "type2": "Fairy",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fairy",
+                "item": "Choice Specs",
+                "weight": 4,
+                "move1": {
+                    "name": "Shadow Ball",
+                    "bp": 80,
+                    "type": "Ghost",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Moonblast",
+                    "bp": 95,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Thunderbolt",
+                    "bp": 90,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "setName": "Specs Set",
+                "higherStat": "spa",
+                "id": 2,
+                "order": 1
+            },
+            {
+                "name": "Flutter Mane",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 212,
+                        "total": 157,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 55,
+                        "ivs": 0,
+                        "evs": 0,
+                        "total": 54,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 132,
+                        "total": 92,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 36,
+                        "total": 160,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 156,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 124,
+                        "total": 188,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Ghost",
+                "type2": "Fairy",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fairy",
+                "item": "Booster Energy",
+                "weight": 4,
+                "move1": {
+                    "name": "Shadow Ball",
+                    "bp": 80,
+                    "type": "Ghost",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Moonblast",
+                    "bp": 95,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Icy Wind",
+                    "bp": 55,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "setName": "Bulky Speed Booster Energy",
+                "higherStat": "spe",
+                "id": 4,
+                "order": 2
+            },
+            {
+                "name": "Incineroar",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 236,
+                        "total": 200,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 136,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 100,
+                        "total": 123,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 90,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 156,
+                        "total": 143,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 12,
+                        "total": 82,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Careful",
+                "type": "Fire",
+                "type2": "Dark",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "None",
+                "weight": 83,
+                "move1": {
+                    "name": "Flare Blitz",
+                    "bp": 120,
+                    "type": "Fire",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Knock Off",
+                    "bp": 65,
+                    "type": "Dark",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Fake Out",
+                    "bp": 40,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Intimidate",
+                "enableAbility": true,
+                "setName": "Careful Set",
+                "higherStat": "spd",
+                "id": 5,
+                "order": 3
+            },
+            {
+                "name": "Rillaboom",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 207,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 116,
+                        "total": 176,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 111,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 124,
+                        "total": 106,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 12,
+                        "total": 107,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Grass",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fire",
+                "item": "Assault Vest",
+                "weight": 90,
+                "move1": {
+                    "name": "Wood Hammer",
+                    "bp": 120,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Grassy Glide",
+                    "bp": 55,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "High Horsepower",
+                    "bp": 95,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Fake Out",
+                    "bp": 40,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Assault Vest Set",
+                "id": 6,
+                "order": 4
+            },
+            {
+                "name": "Urshifu-Rapid Strike",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 176,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 130,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 182,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 120,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 63,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 74,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 80,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 97,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 163,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Jolly",
+                "type": "Fighting",
+                "type2": "Water",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "Mystic Water",
+                "weight": 105,
+                "move1": {
+                    "name": "Surging Strikes",
+                    "bp": 25,
+                    "type": "Water",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": true,
+                    "minHits": 3,
+                    "maxHits": 3,
+                    "hits": 3,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Close Combat",
+                    "bp": 120,
+                    "type": "Fighting",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Aqua Jet",
+                    "bp": 40,
+                    "type": "Water",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "Mystic Water Set",
+                "id": 7,
+                "order": 5
+            },
+            {
+                "name": "Tornadus",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 79,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 155,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 121,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 90,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 111,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 179,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Flying",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Ghost",
+                "item": "",
+                "weight": 63,
+                "move1": {
+                    "name": "Bleakwind Storm",
+                    "bp": 100,
+                    "type": "Flying",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Icy Wind",
+                    "bp": 55,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Defiant",
+                "setName": "Offensive Set",
+                "id": 8,
+                "order": 6
+            },
+            {
+                "name": "Tornadus",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 79,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 186,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 121,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 134,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 145,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 101,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 111,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 131,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Bold",
+                "type": "Flying",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "",
+                "item": "",
+                "weight": 63,
+                "move1": {
+                    "name": "Bleakwind Storm",
+                    "bp": 100,
+                    "type": "Flying",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Icy Wind",
+                    "bp": 55,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Defiant",
+                "setName": "Bulky Set",
+                "id": 9,
+                "order": 7
+            },
+            {
+                "name": "Landorus",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 89,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 164,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 130,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 110,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 167,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 101,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 101,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 168,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Ground",
+                "type2": "Flying",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Poison",
+                "item": "Life Orb",
+                "weight": 68,
+                "move1": {
+                    "name": "Sandsear Storm",
+                    "bp": 100,
+                    "type": "Ground",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Earth Power",
+                    "bp": 90,
+                    "type": "Ground",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Sludge Bomb",
+                    "bp": 90,
+                    "type": "Poison",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "LO Set",
+                "id": 10,
+                "order": 8,
+                "ability": "Sheer Force"
+            },
+            {
+                "name": "Raging Bolt",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 232,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 73,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 83,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 111,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 137,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 207,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 89,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 110,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 95,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Electric",
+                "type2": "Dragon",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Grass",
+                "item": "None",
+                "weight": 480,
+                "move1": {
+                    "name": "Thunderbolt",
+                    "bp": 90,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Thunderclap",
+                    "bp": 70,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dragon Pulse",
+                    "bp": 85,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "enableAbility": false,
+                "setName": "Modest Set",
+                "higherStat": "spa",
+                "id": 12,
+                "order": 9
+            },
+            {
+                "name": "Ogerpon-Wellspring",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 187,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 76,
+                        "total": 165,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 84,
+                        "ivs": 31,
+                        "evs": 148,
+                        "total": 123,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 96,
+                        "ivs": 31,
+                        "evs": 28,
+                        "total": 120,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 110,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 131,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Grass",
+                "type2": "Water",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "Wellspring Mask",
+                "weight": 39.8,
+                "teraAbility": "Embody Aspect",
+                "move1": {
+                    "name": "Ivy Cudgel",
+                    "bp": 100,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Horn Leech",
+                    "bp": 75,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Wood Hammer",
+                    "bp": 120,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Water Absorb",
+                "setName": "Offensive Support",
+                "id": 11,
+                "order": 10
+            },
+            {
+                "name": "Chien-Pao",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 156,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 172,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 99,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 85,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 205,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Jolly",
+                "type": "Dark",
+                "type2": "Ice",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Ghost",
+                "item": "",
+                "weight": 152.2,
+                "move1": {
+                    "name": "Icicle Crash",
+                    "bp": 85,
+                    "type": "Ice",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Sucker Punch",
+                    "bp": 70,
+                    "type": "Dark",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Lash Out",
+                    "bp": 75,
+                    "type": "Dark",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "canDouble": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Sacred Sword",
+                    "bp": 90,
+                    "type": "Fighting",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Sword of Ruin",
+                "id": 13,
+                "setName": "Sash Set",
+                "order": 11
+            },
+            {
+                "name": "Archaludon",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 197,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 112,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 130,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 151,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 164,
+                        "total": 182,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 68,
+                        "total": 94,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 20,
+                        "total": 108,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Steel",
+                "type2": "Dragon",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "Assault Vest",
+                "weight": 60,
+                "move1": {
+                    "name": "Draco Meteor",
+                    "bp": 130,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Flash Cannon",
+                    "bp": 80,
+                    "type": "Steel",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Electro Shot",
+                    "bp": 130,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Body Press",
+                    "bp": 80,
+                    "type": "Fighting",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "Assault Vest Set",
+                "id": 14,
+                "order": 12
+            },
+            {
+                "name": "Amoonguss",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 114,
+                        "ivs": 31,
+                        "evs": 236,
+                        "total": 219,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 85,
+                        "ivs": 0,
+                        "evs": 0,
+                        "total": 81,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 156,
+                        "total": 121,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 105,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 116,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 30,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 50,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Bold",
+                "type": "Grass",
+                "type2": "Poison",
+                "currentHp": 100,
+                "move1": {
+                    "name": "Pollen Puff",
+                    "bp": 90,
+                    "type": "Bug",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Clear Smog",
+                    "bp": 50,
+                    "type": "Poison",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Rage Powder",
+                    "type": "Bug",
+                    "category": "Status",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Spore",
+                    "type": "Grass",
+                    "category": "Status",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "id": 15,
+                "teraType": "Water",
+                "enabledTera": false,
+                "weight": 10.5,
+                "order": 13,
+                "setName": "Bold Set",
+                "higherStat": "def",
+                "item": "None"
+            },
+            {
+                "name": "Walking Wake",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 99,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 175,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 83,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 92,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 112,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 244,
+                        "total": 176,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 83,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 104,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 109,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Water",
+                "type2": "Dragon",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fire",
+                "item": "Life Orb",
+                "weight": 280,
+                "move1": {
+                    "name": "Hydro Steam",
+                    "bp": 80,
+                    "type": "Water",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Flamethrower",
+                    "bp": 90,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Draco Meteor",
+                    "bp": 130,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "setName": "LO Speed Boost",
+                "id": 17,
+                "order": 14,
+                "enableAbility": false
+            },
+            {
+                "name": "Walking Wake",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 99,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 175,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 83,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 92,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 111,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 83,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 103,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 109,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Water",
+                "type2": "Dragon",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fire",
+                "item": "Life Orb",
+                "weight": 280,
+                "move1": {
+                    "name": "Hydro Steam",
+                    "bp": 80,
+                    "type": "Water",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Flamethrower",
+                    "bp": 90,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Draco Meteor",
+                    "bp": 130,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Protosynthesis",
+                "enableAbility": false,
+                "setName": "LO SpAtk Boost",
+                "higherStat": "spe",
+                "id": 18,
+                "order": 15
+            },
+            {
+                "name": "Kingambit",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 207,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 205,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 140,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 106,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 50,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 70,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Dark",
+                "type2": "Steel",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fire",
+                "item": "Assault Vest",
+                "weight": 120,
+                "move1": {
+                    "name": "Knock Off",
+                    "bp": 65,
+                    "type": "Dark",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Sucker Punch",
+                    "bp": 70,
+                    "type": "Dark",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Iron Head",
+                    "bp": 80,
+                    "type": "Steel",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Low Kick",
+                    "bp": 1,
+                    "type": "Fighting",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Defiant",
+                "setName": "Assault Vest Set",
+                "id": 19,
+                "order": 16
+            },
+            {
+                "name": "Entei",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 191,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 148,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 137,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 99,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 95,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 152,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Fire",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Normal",
+                "item": "Choice Band",
+                "weight": 198,
+                "move1": {
+                    "name": "Sacred Fire",
+                    "bp": 100,
+                    "type": "Fire",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Flare Blitz",
+                    "bp": 120,
+                    "type": "Fire",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Stomping Tantrum",
+                    "bp": 75,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "canDouble": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Extreme Speed",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Inner Focus",
+                "setName": "Choice Band",
+                "id": 20,
+                "order": 17
+            },
+            {
+                "name": "Gholdengo",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 87,
+                        "ivs": 31,
+                        "evs": 196,
+                        "total": 187,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 140,
+                        "total": 133,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 133,
+                        "ivs": 31,
+                        "evs": 52,
+                        "total": 176,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 112,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 84,
+                        "ivs": 31,
+                        "evs": 116,
+                        "total": 119,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Steel",
+                "type2": "Ghost",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "",
+                "weight": 30,
+                "move1": {
+                    "name": "Make It Rain",
+                    "bp": 120,
+                    "type": "Steel",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Shadow Ball",
+                    "bp": 80,
+                    "type": "Ghost",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Bulky Set",
+                "id": 21,
+                "order": 18
+            },
+            {
+                "name": "Gholdengo",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 87,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 163,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 133,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 203,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 111,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 84,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 136,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Steel",
+                "type2": "Ghost",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Steel",
+                "item": "Choice Specs",
+                "weight": 30,
+                "move1": {
+                    "name": "Make It Rain",
+                    "bp": 120,
+                    "type": "Steel",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Shadow Ball",
+                    "bp": 80,
+                    "type": "Ghost",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Thunderbolt",
+                    "bp": 90,
+                    "type": "Electric",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Specs Set",
+                "id": 22,
+                "order": 19
+            },
+            {
+                "name": "Landorus-Therian",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 89,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 165,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 145,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 216,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 110,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 112,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 143,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Ground",
+                "type2": "Flying",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Flying",
+                "item": "",
+                "weight": 68,
+                "move1": {
+                    "name": "Stomping Tantrum",
+                    "bp": 75,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "canDouble": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Tera Blast",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "U-turn",
+                    "bp": 70,
+                    "type": "Bug",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Rock Slide",
+                    "bp": 75,
+                    "type": "Rock",
+                    "category": "Physical",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Intimidate",
+                "enableAbility": true,
+                "setName": "Scarf Set",
+                "id": 23,
+                "order": 20
+            },
+            {
+                "name": "Latias",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 204,
+                        "total": 181,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 90,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 36,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 110,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 131,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 130,
+                        "ivs": 31,
+                        "evs": 76,
+                        "total": 160,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 110,
+                        "ivs": 31,
+                        "evs": 188,
+                        "total": 169,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Dragon",
+                "type2": "Psychic",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Poison",
+                "item": "",
+                "weight": 40,
+                "ability": "Levitate",
+                "move1": {
+                    "name": "Mist Ball",
+                    "bp": 95,
+                    "type": "Psychic",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Draco Meteor",
+                    "bp": 130,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Ice Beam",
+                    "bp": 90,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Icy Wind",
+                    "bp": 55,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Bulky Set",
+                "id": 24,
+                "order": 21
+            },
+            {
+                "name": "Dondozo",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 150,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 225,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 167,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 115,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 135,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 76,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 86,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 35,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 87,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Water",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Grass",
+                "item": "",
+                "weight": 220,
+                "move1": {
+                    "name": "Wave Crash",
+                    "bp": 120,
+                    "type": "Water",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Earthquake",
+                    "bp": 100,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Order Up",
+                    "bp": 80,
+                    "type": "Dragon",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Tera Blast",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Unaware",
+                "commander": true,
+                "setName": "Offensive Grass Set",
+                "id": 25,
+                "order": 22
+            },
+            {
+                "name": "Tatsugiri",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 68,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 144,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 50,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 63,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 80,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 172,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 82,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 147,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Timid",
+                "type": "Dragon",
+                "type2": "Water",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Steel",
+                "item": "",
+                "weight": 8,
+                "move1": {
+                    "name": "Draco Meteor",
+                    "bp": 130,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Muddy Water",
+                    "bp": 90,
+                    "type": "Water",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Icy Wind",
+                    "bp": 55,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Dragon Pulse",
+                    "bp": 85,
+                    "type": "Dragon",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "None",
+                "setName": "Scarf Set",
+                "id": 26,
+                "order": 23
+            },
+            {
+                "name": "Chi-Yu",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 131,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 90,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 205,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 140,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 152,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Dark",
+                "type2": "Fire",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Ghost",
+                "item": "",
+                "weight": 4.9,
+                "move1": {
+                    "name": "Heat Wave",
+                    "bp": 95,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Overheat",
+                    "bp": 130,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Dark Pulse",
+                    "bp": 80,
+                    "type": "Dark",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Snarl",
+                    "bp": 55,
+                    "type": "Dark",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "ability": "Beads of Ruin",
+                "setName": "Modest Set",
+                "id": 27,
+                "order": 24
+            },
+            {
+                "name": "Heatran",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 91,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 198,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 99,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 106,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 126,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 130,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 200,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 106,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 126,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 77,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 98,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Fire",
+                "type2": "Steel",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Grass",
+                "item": "",
+                "weight": 430,
+                "move1": {
+                    "name": "Heat Wave",
+                    "bp": 95,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Flash Cannon",
+                    "bp": 80,
+                    "type": "Steel",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Earth Power",
+                    "bp": 90,
+                    "type": "Ground",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Tera Blast",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Flash Fire",
+                "setName": "Modest Set",
+                "id": 28,
+                "order": 25
+            }
+        ]
+    },
+    {
+        "name": "Trick Room",
+        "pokemons": [
+            {
+                "name": "Armarouge",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 192,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 100,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 120,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 125,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 194,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 95,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Fire",
+                "type2": "Psychic",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Grass",
+                "item": "Twisted Spoon",
+                "weight": 85,
+                "move1": {
+                    "name": "Expanding Force",
+                    "bp": 80,
+                    "type": "Psychic",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Heat Wave",
+                    "bp": 95,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Aura Sphere",
+                    "bp": 80,
+                    "type": "Fighting",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "ability": "Flash Fire",
+                "setName": "Twisted Spoon Set",
+                "id": 1,
+                "order": 0
+            },
+            {
+                "name": "Hatterene",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 57,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 164,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 99,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 116,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 136,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 206,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 103,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 123,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 29,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 49,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Psychic",
+                "type2": "Fairy",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "Life Orb",
+                "weight": 5.1,
+                "move1": {
+                    "name": "Expanding Force",
+                    "bp": 80,
+                    "type": "Psychic",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Tera Blast",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "LO Set",
+                "id": 2,
+                "order": 1
+            },
+            {
+                "name": "Indeedee-F",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 55,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 67,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 128,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 126,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 105,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Bold",
+                "type": "Psychic",
+                "type2": "Normal",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fairy",
+                "item": "",
+                "weight": 28,
+                "move1": {
+                    "name": "Dazzling Gleam",
+                    "bp": 80,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Psychic",
+                    "bp": 90,
+                    "type": "Psychic",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Bold Set",
+                "higherStat": "def",
+                "id": 3,
+                "order": 2
+            },
+            {
+                "name": "Araquanid",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 68,
+                        "ivs": 31,
+                        "evs": 52,
+                        "total": 150,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 134,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 92,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 113,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 50,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 63,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 132,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 152,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 42,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 62,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Water",
+                "type2": "Bug",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Water",
+                "item": "",
+                "weight": 82,
+                "move1": {
+                    "name": "Liquidation",
+                    "bp": 85,
+                    "type": "Water",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Lunge",
+                    "bp": 80,
+                    "type": "Bug",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Offensive TR Set",
+                "id": 4,
+                "order": 3,
+                "ability": "Water Bubble"
+            },
+            {
+                "name": "Ursaluna",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 130,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 237,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 140,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 211,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 125,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 45,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 58,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 50,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 70,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Adamant",
+                "type": "Ground",
+                "type2": "Normal",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Normal",
+                "item": "",
+                "weight": 290,
+                "move1": {
+                    "name": "Facade",
+                    "bp": 70,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "canDouble": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Headlong Rush",
+                    "bp": 120,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Earthquake",
+                    "bp": 100,
+                    "type": "Ground",
+                    "category": "Physical",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "Guts Set",
+                "ability": "Guts",
+                "id": 5,
+                "order": 4,
+                "move4": {
+                    "name": "Facade",
+                    "bp": 70,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "canDouble": true,
+                    "doublePower": true
+                },
+                "enableAbility": false
+            },
+            {
+                "name": "Ursaluna-Bloodmoon",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 113,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 220,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 81,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 140,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 135,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 205,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 65,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 86,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 52,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Ground",
+                "type2": "Normal",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Normal",
+                "item": "Life Orb",
+                "weight": 333,
+                "move1": {
+                    "name": "Blood Moon",
+                    "bp": 140,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Hyper Voice",
+                    "bp": 90,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Earth Power",
+                    "bp": 90,
+                    "type": "Ground",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "LO Set",
+                "id": 6,
+                "order": 5,
+                "ability": "Mind's Eye"
+            },
+            {
+                "name": "Torkoal",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 177,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 94,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 140,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 160,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 150,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 90,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 20,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 40,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Modest",
+                "type": "Fire",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fire",
+                "item": "Charcoal",
+                "weight": 80.4,
+                "move1": {
+                    "name": "Eruption",
+                    "bp": 150,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Heat Wave",
+                    "bp": 95,
+                    "type": "Fire",
+                    "category": "Special",
+                    "spread": true,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move3": {
+                    "name": "Solar Beam",
+                    "bp": 120,
+                    "type": "Grass",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move4": {
+                    "name": "Earth Power",
+                    "bp": 90,
+                    "type": "Ground",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Charcoal Set",
+                "id": 7,
+                "order": 6
+            },
+            {
+                "name": "Cresselia",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 228,
+                        "total": 224,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 81,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 110,
+                        "ivs": 31,
+                        "evs": 196,
+                        "total": 155,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 8,
+                        "total": 96,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 120,
+                        "ivs": 31,
+                        "evs": 76,
+                        "total": 165,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 105,
+                        "natureBoost": 1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Calm",
+                "type": "Psychic",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Fairy",
+                "item": "",
+                "weight": 85.6,
+                "move1": {
+                    "name": "Psychic",
+                    "bp": 90,
+                    "type": "Psychic",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Moonblast",
+                    "bp": 95,
+                    "type": "Fairy",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "setName": "Calm Set",
+                "id": 8,
+                "order": 7
+            },
+            {
+                "name": "Porygon2",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 85,
+                        "ivs": 31,
+                        "evs": 244,
+                        "total": 191,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 80,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 100,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 90,
+                        "ivs": 31,
+                        "evs": 12,
+                        "total": 112,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 172,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 95,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 115,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 60,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 72,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    }
+                },
+                "nature": "Quiet",
+                "type": "Normal",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Ghost",
+                "item": "Eviolite",
+                "canEvolve": true,
+                "weight": 32.5,
+                "move1": {
+                    "name": "Ice Beam",
+                    "bp": 90,
+                    "type": "Ice",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "hasSecondaryEffect": true,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Tera Blast",
+                    "bp": 80,
+                    "type": "Normal",
+                    "category": "Special",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "Offensive Set",
+                "id": 9,
+                "move3": {
+                    "name": "Double-Edge",
+                    "bp": 120,
+                    "type": "Normal",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "order": 8,
+                "ability": "Download",
+                "enableAbility": false
+            },
+            {
+                "name": "Lilligant-Hisui",
+                "level": 50,
+                "stats": {
+                    "hp": {
+                        "base": 70,
+                        "ivs": 31,
+                        "evs": 4,
+                        "total": 146,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "atk": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 157,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "def": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 95,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spa": {
+                        "base": 50,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 63,
+                        "natureBoost": 0.9,
+                        "boost": 0
+                    },
+                    "spd": {
+                        "base": 75,
+                        "ivs": 31,
+                        "evs": 0,
+                        "total": 95,
+                        "natureBoost": 1,
+                        "boost": 0
+                    },
+                    "spe": {
+                        "base": 105,
+                        "ivs": 31,
+                        "evs": 252,
+                        "total": 172,
+                        "natureBoost": 1.1,
+                        "boost": 0
+                    }
+                },
+                "nature": "Jolly",
+                "type": "Grass",
+                "type2": "Fighting",
+                "currentHp": 100,
+                "enabledTera": false,
+                "teraType": "Ghost",
+                "item": "",
+                "weight": 19.2,
+                "move1": {
+                    "name": "Solar Blade",
+                    "bp": 125,
+                    "type": "Grass",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "move2": {
+                    "name": "Close Combat",
+                    "bp": 120,
+                    "type": "Fighting",
+                    "category": "Physical",
+                    "spread": false,
+                    "crit": false,
+                    "minHits": 1,
+                    "maxHits": 1,
+                    "hits": 0,
+                    "doublePower": false
+                },
+                "setName": "Sash Set",
+                "id": 10,
+                "order": 9
+            }
+        ]
+    }
+]

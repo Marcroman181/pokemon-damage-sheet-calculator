@@ -1,11 +1,4 @@
 {
-    "Struggle": {
-      "bp": 50,
-      "type": "Typeless",
-      "category": "Physical",
-      "makesContact": true,
-      "zp": 1
-    },
     "(No Move)": {
       "type": "Typeless",
       "category": "Status"
@@ -2443,6 +2436,13 @@
       "category": "Physical",
       "makesContact": true,
       "alwaysCrit": true
+    },
+    "Struggle": {
+      "bp": 50,
+      "type": "Typeless",
+      "category": "Physical",
+      "makesContact": true,
+      "zp": 1
     },
     "Struggle Bug": {
       "bp": 50,

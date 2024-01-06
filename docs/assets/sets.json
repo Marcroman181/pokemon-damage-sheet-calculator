@@ -1084,7 +1084,9 @@
             "crit": false,
             "minHits": 1,
             "maxHits": 1,
-            "hits": 0
+            "hits": 0,
+            "hasSecondaryEffect": true,
+            "doublePower": false
         },
         "move2": {
             "name": "Earth Power",
@@ -1095,7 +1097,9 @@
             "crit": false,
             "minHits": 1,
             "maxHits": 1,
-            "hits": 0
+            "hits": 0,
+            "hasSecondaryEffect": true,
+            "doublePower": false
         },
         "move3": {
             "name": "Sludge Bomb",
@@ -1106,11 +1110,14 @@
             "crit": false,
             "minHits": 1,
             "maxHits": 1,
-            "hits": 0
+            "hits": 0,
+            "hasSecondaryEffect": true,
+            "doublePower": false
         },
         "setName": "LO Set",
         "id": 10,
-        "order": 8
+        "order": 8,
+        "ability": "Sheer Force"
     },
     {
         "name": "Raging Bolt",
@@ -2188,7 +2195,7 @@
                 "boost": 0
             }
         },
-        "nature": "",
+        "nature": "Adamant",
         "type": "Water",
         "currentHp": 100,
         "enabledTera": false,
@@ -2520,6 +2527,7 @@
             "maxHits": 1,
             "hits": 0
         },
+        "ability": "Guts",
         "setName": "Guts Set"
     },
     {
@@ -2688,6 +2696,7 @@
         "teraType": "Fairy",
         "item": "",
         "weight": 85.6,
+        "ability": "Levitate",
         "move1": {
             "name": "Psychic",
             "bp": 90,

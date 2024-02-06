@@ -1725,7 +1725,7 @@
         },
         "ability": "Protosynthesis",
         "setName": "SpAtk Boost Energy",
-        "higherStat": "spe"
+        "higherStat": "spa"
     },
     {
         "name": "Walking Wake",
